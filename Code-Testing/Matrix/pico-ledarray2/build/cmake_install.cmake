@@ -1,4 +1,4 @@
-# Install script for directory: E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Matrix/pico-ledarray2
+# Install script for directory: C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Matrix/pico-ledarray2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/gcc-arm-none-eabi/bin/arm-none-eabi-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/pico-sdk/cmake_install.cmake")
+  include("C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/pico-sdk/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

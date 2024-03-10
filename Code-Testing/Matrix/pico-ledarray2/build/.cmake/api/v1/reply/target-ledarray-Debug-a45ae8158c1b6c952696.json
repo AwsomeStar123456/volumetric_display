@@ -93,7 +93,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g -std=gnu11"
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
 				},
 				{
 					"backtrace" : 2,
@@ -102,6 +102,9 @@
 				{
 					"backtrace" : 2,
 					"fragment" : "-fdata-sections"
+				},
+				{
+					"fragment" : "-std=gnu11"
 				}
 			],
 			"defines" : 
@@ -271,7 +274,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/generated/pico_base"
+					"path" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -650,7 +653,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/generated/pico_base"
+					"path" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
@@ -817,7 +820,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g -std=gnu++17"
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
 				},
 				{
 					"backtrace" : 2,
@@ -842,6 +845,9 @@
 				{
 					"backtrace" : 2,
 					"fragment" : "-fno-use-cxa-atexit"
+				},
+				{
+					"fragment" : "-std=gnu++17"
 				}
 			],
 			"defines" : 
@@ -1011,7 +1017,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"path" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/generated/pico_base"
+					"path" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Matrix/pico-ledarray2/build/generated/pico_base"
 				},
 				{
 					"backtrace" : 2,
