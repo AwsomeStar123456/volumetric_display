@@ -1,0 +1,12 @@
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\bin\Debug\net7.0\Converter.deps.json
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\bin\Debug\net7.0\Converter.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\bin\Debug\net7.0\Converter.pdb
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.csproj.AssemblyReference.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.GeneratedMSBuildEditorConfig.editorconfig
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.AssemblyInfoInputs.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.AssemblyInfo.cs
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.csproj.CoreCompileInputs.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\refint\Converter.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\Converter.pdb
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\FileConverter\V1.0\BWImageConverter\Converter\obj\Debug\net7.0\ref\Converter.dll

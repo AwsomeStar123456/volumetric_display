@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "f0L3f9lxms8wFzjXYG5Tr9I6J4wKtfe9aJGDTFH82m5JM1DhJCHazpcbw9mlyd1o+0gZHogVQ9LOGAQ6eFUiZw==",
+  "success": true,
+  "projectFilePath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\ConsoleAppConverter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Semra\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Semra\\.nuget\\packages\\system.drawing.common\\8.0.2\\system.drawing.common.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
