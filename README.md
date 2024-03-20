@@ -3,7 +3,9 @@
 
 ## Team Members
 Semrah Odobasic | u1293090 | semrahodobasic@icloud.com <br />
-Logan Allen | u1190764 | Logan.Allen@utah.edu
+Logan Allen | u1190764 | Logan.Allen@utah.edu <br />
+Jin Jeong   | u1375534 | djwls97865@gmail.com <br />
+
 
 ## Parts List
 Waveshare RP2040 Tiny: Microcontroller <br />
