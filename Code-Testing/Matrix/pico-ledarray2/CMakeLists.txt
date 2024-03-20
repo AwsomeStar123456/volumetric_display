@@ -19,5 +19,6 @@ add_executable(ledarray
 target_link_libraries(ledarray pico_stdlib)
 target_link_libraries(ledarray hardware_pio)
 target_link_libraries(ledarray hardware_i2c)
+target_link_libraries(ledarray hardware_pwm)
 
 pico_add_extra_outputs(ledarray)
