@@ -13,7 +13,7 @@ Adafruit IS31FL3731: Matrix Controller <br />
 Adafruit Dot Matrix Module: Charlieplexed LED Matrix <br />
 Vishay TCRT5000: IR Sensor <br />
 RF-410CA: Motor <br />
-INSERT: Motor Driver <br />
+ADAFRUIT DRV8833: Motor Driver <br />
 
 ## Projects (Under Code-Testing)
 Pico - Example projects downloaded from rasperri pi <br />
