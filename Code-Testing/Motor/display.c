@@ -87,19 +87,19 @@ int main()
 
     while (1) {
         // //For Person
-        //  displayFrame(i2c1, ISSI_ADDR_DEFAULT, 0);
-        // sleep_ms(1000);
-        //  displayFrame(i2c1, ISSI_ADDR_DEFAULT, 1);
-        //  sleep_ms(1000);
+          displayFrame(i2c1, ISSI_ADDR_DEFAULT, 0);
+         sleep_ms(1000);
+          displayFrame(i2c1, ISSI_ADDR_DEFAULT, 1);
+          sleep_ms(1000);
 
-        set_motor_pwm(MTR_LEFT, 100);
-        sleep_ms(1000);
-        stop_motor();  
-        sleep_ms(1000);
-        set_motor_pwm(MTR_RIGHT, 100);
-        sleep_ms(1000);
-        stop_motor();
-        sleep_ms(1000);
+        // set_motor_pwm(MTR_LEFT, 100);
+        // sleep_ms(5000);
+        // stop_motor();  
+        // sleep_ms(5000);
+        // set_motor_pwm(MTR_RIGHT, 100);
+        // sleep_ms(5000);
+        // stop_motor();
+        // sleep_ms(5000);
     }
 
     return 0;
