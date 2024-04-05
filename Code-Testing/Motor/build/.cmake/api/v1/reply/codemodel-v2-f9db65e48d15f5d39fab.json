@@ -1138,7 +1138,7 @@
 				{
 					"directoryIndex" : 43,
 					"id" : "bs2_default::@bc554eaed616d198a22d",
-					"jsonFile" : "target-bs2_default-Debug-5258deb84c5cf15925bd.json",
+					"jsonFile" : "target-bs2_default-Debug-7b3e0273bc7af5e67129.json",
 					"name" : "bs2_default",
 					"projectIndex" : 1
 				},
@@ -1166,7 +1166,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "display::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-display-Debug-5cd04ee793ef8b5bd254.json",
+					"jsonFile" : "target-display-Debug-76766a47929af997a1a1.json",
 					"name" : "display",
 					"projectIndex" : 0
 				},
@@ -1190,8 +1190,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Motor/build",
-		"source" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/Motor"
+		"build" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Motor/build",
+		"source" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/Motor"
 	},
 	"version" : 
 	{

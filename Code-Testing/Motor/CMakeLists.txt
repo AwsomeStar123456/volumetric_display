@@ -17,6 +17,7 @@ add_executable(display
 	)
 	
 target_link_libraries(display pico_stdlib)
+target_link_libraries(display pico_multicore)
 target_link_libraries(display hardware_pio)
 target_link_libraries(display hardware_i2c)
 target_link_libraries(display hardware_pwm)
