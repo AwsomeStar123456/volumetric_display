@@ -48,6 +48,9 @@ void init_i2c()
     gpio_pull_up(15);
 }
 
+/*
+    This method initializes the PWM for pins 12 and 13 of the pico.
+*/
 void init_motor()
 {
     // PWM
@@ -66,25 +69,30 @@ void init_motor()
     gpio_put(11, 1);
 }
 
-bool timer_callback(repeating_timer_t *rt) {
+/*
+    This methods sets the reset for the RPM after 1 seconds of inactivity.
+*/
+bool rpm_timer(repeating_timer_t *rt) {
     if (!rpm_updated) {
-        // No falling edge detected since last update, set RPM to zero
         rpm = 0;
     }
 
     rpm_updated = false;
 
-    // Must return true to keep the timer repeating
     return true;
 }
 
+/*
+    This methods initiates the RPM timer to tick every second
+*/
 void init_timer() {
-    // Set up our repeating timer
     static repeating_timer_t timer;
-    add_repeating_timer_ms(1000, timer_callback, NULL, &timer);
+    add_repeating_timer_ms(1000, rpm_timer, NULL, &timer);
 }
 
-//Read from time and set the global RPM variable
+/*
+    This methods calculates the RPM of the motor based on the time between revolutions.
+*/
 void calc_rpm(uint gpio, uint32_t events)
 {
     uint32_t current_time = to_us_since_boot(get_absolute_time());
@@ -102,7 +110,9 @@ void calc_rpm(uint gpio, uint32_t events)
     rpm_updated = true;
 }
 
-
+/*
+    This method initiates the IR sensor as well as the falling edge trigger.
+*/
 void init_ir_sense()
 {
     // IR Sensor
@@ -112,6 +122,9 @@ void init_ir_sense()
     gpio_set_irq_enabled_with_callback(26, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
 }
 
+/*
+    This method takes in a direction and speed in percent and sets the PWM of the GPIO pins.
+*/
 void set_motor_pwm(bool direction, uint8_t speed) // Speed in terms of percentage
 {
     // Convert speed in percentage to 16-bit value
@@ -129,12 +142,18 @@ void set_motor_pwm(bool direction, uint8_t speed) // Speed in terms of percentag
     }
 }
 
+/*
+    This methods stops the motor.
+*/
 void stop_motor()
 {
     pwm_set_gpio_level(13, 0);
     pwm_set_gpio_level(12, 0);
 }
 
+/*
+    This methods runs on cpu1 and is responsible for controlling the motor and doing the rpm detection.
+*/
 void core1_entry() {
     //Initalize
     init_ir_sense();
@@ -156,6 +175,9 @@ void core1_entry() {
     }
 }
 
+/*
+    This is the main method that runs on cpu0 and is responsible for controlling the display.
+*/
 int main()
 {
     //Initialize
@@ -201,6 +223,9 @@ int main()
     return 0;
 }
 
+/*
+    This methods sets frame 0 and 1 of the display to show a person.
+*/
 void person(){
     frame = 0;
 
@@ -312,99 +337,9 @@ void person(){
     setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
 }
 
-/*int digits[10][7][4] = {
-    {
-        {0, 1, 1, 0},  // 0
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {0, 1, 1, 0}
-    },
-    {
-        {0, 0, 1, 0},  // 1
-        {0, 1, 1, 0},
-        {0, 0, 1, 0},
-        {0, 0, 1, 0},
-        {0, 0, 1, 0},
-        {0, 0, 1, 0},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 1, 1, 0},  // 2
-        {1, 0, 0, 1},
-        {0, 0, 1, 0},
-        {0, 1, 0, 0},
-        {1, 0, 0, 0},
-        {1, 0, 0, 0},
-        {1, 1, 1, 1}
-    },
-    {
-        {1, 1, 1, 0},  // 3
-        {0, 0, 0, 1},
-        {0, 0, 0, 1},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 1},
-        {1, 1, 1, 0}
-    },
-    {
-        {0, 0, 1, 1},  // 4
-        {0, 1, 0, 1},
-        {1, 0, 0, 1},
-        {1, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 1}
-    },
-    {
-        {0, 1, 1, 0},  // 5
-        {1, 0, 0, 0},
-        {1, 0, 0, 0},
-        {0, 1, 1, 0},
-        {0, 0, 0, 1},
-        {1, 0, 0, 1},
-        {0, 1, 1, 0}
-    },
-    {
-        {0, 1, 1, 0},  // 6
-        {1, 0, 0, 0},
-        {1, 0, 0, 0},
-        {0, 1, 1, 0},
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {0, 1, 1, 0}
-    },
-    {
-        {1, 1, 1, 1},  // 7
-        {0, 0, 0, 1},
-        {0, 0, 1, 0},
-        {0, 1, 0, 0},
-        {1, 0, 0, 0},
-        {1, 0, 0, 0},
-        {1, 0, 0, 0}
-    },
-    {
-        {0, 1, 1, 0},  // 8
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {0, 1, 1, 0},
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {0, 1, 1, 0}
-    },
-    {
-        {0, 1, 1, 0},  // 9
-        {1, 0, 0, 1},
-        {1, 0, 0, 1},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 0}
-    }
-};*/
-
+/*
+    This methods hardcodes the different digits of numbers on a 3x5 grid.
+*/
 int digits[10][7][4] = {
     {
         {0, 0, 0, 0},  // 0
@@ -498,6 +433,9 @@ int digits[10][7][4] = {
     }
 };
 
+/*
+    This method displays a number on the display at a specific position.
+*/
 void display_number(int number, int position, int frame) {
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 4; j++) {
@@ -508,6 +446,9 @@ void display_number(int number, int position, int frame) {
     }
 }
 
+/*
+    This method displays an array of numbers on the display.
+*/
 void display_numbers(int numbers[4]) {
     for (int i = 0; i < 4; i++) {
         display_number(numbers[i], 4 * i, frame);
