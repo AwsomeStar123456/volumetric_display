@@ -14,6 +14,7 @@ pico_sdk_init()
 add_executable(display
 	display.c
 	IS31FL3731.c
+	DisplayAddons.c
 	)
 	
 target_link_libraries(display pico_stdlib)

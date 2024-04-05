@@ -10,6 +10,7 @@
 #include "hardware/clocks.h"
 #include "hardware/pwm.h"
 #include "IS31FL3731.h"
+#include "DisplayAddons.h"
 
 #define MTR_LEFT 0
 #define MTR_RIGHT 1
@@ -26,13 +27,10 @@ void init_motor();
 void set_motor_pwm(bool direction, uint8_t speed);
 void stop_motor();
 void init_ir_sense();
-void person();
-void display_numbers(int numbers[4]);
-void display_number(int number, int position, int frame);
 
 void calc_rpm(uint gpio, uint32_t events);
 
-volatile uint8_t frame;
+volatile uint8_t frame = 0;
 volatile bool core1_uninitialized = true;
 volatile bool rpm_updated = false;
 
@@ -41,9 +39,14 @@ volatile bool rpm_updated = false;
 */
 void init_i2c()
 {
+    //Set the speed of the I2C to be 400k.
     i2c_init(i2c1, 400000);
+
+    //Set both GPIO pins 14 and 15 to I2C mode.
     gpio_set_function(14, GPIO_FUNC_I2C);
     gpio_set_function(15, GPIO_FUNC_I2C);
+
+    //Enable the pull-up resistors for ping 14 and 15 for I2C.
     gpio_pull_up(14);
     gpio_pull_up(15);
 }
@@ -53,30 +56,37 @@ void init_i2c()
 */
 void init_motor()
 {
-    // PWM
+    //Set the GPIO functions of pins 13 and 12 to PWM.
     gpio_set_function(13, GPIO_FUNC_PWM);
     gpio_set_function(12, GPIO_FUNC_PWM);
 
-    uint slice_num = pwm_gpio_to_slice_num(13); // Get the PWM slice for the GPIO pin
+    //Get the PWM slice for pin 13. This will be the same as
+    //pin 12 so we just get the slice once. Set it to true.
+    uint slice_num = pwm_gpio_to_slice_num(13);
     pwm_set_enabled(slice_num, true);
 
+    //Ensure that the PWM is set to off.
     pwm_set_gpio_level(13, 0x0);
     pwm_set_gpio_level(12, 0x0);
 
-    // High Pin for Sleep
+    //Set pin 11 to high so we can use it for the enable of the motor controller board.
     gpio_init(11);
     gpio_set_dir(11, GPIO_OUT);
     gpio_put(11, 1);
 }
 
 /*
-    This methods sets the reset for the RPM after 1 seconds of inactivity.
+    This methods sets the reset for the RPM after 1 second of inactivity. This ensures
+    that the RPM will go to zero even if we are not triggering any falling edge events.
 */
 bool rpm_timer(repeating_timer_t *rt) {
+    //If the RPM has not been updated since the last time this method was called, set it
+    //to zero.
     if (!rpm_updated) {
         rpm = 0;
     }
 
+    //Set the RPM_Updated to zero for our falling edge method to reset it.
     rpm_updated = false;
 
     return true;
@@ -86,7 +96,10 @@ bool rpm_timer(repeating_timer_t *rt) {
     This methods initiates the RPM timer to tick every second
 */
 void init_timer() {
+    //Initiate a repeating timer so that we have constant method calls.
     static repeating_timer_t timer;
+
+    //Every 1000ms (1 second) call the rpm_timer method.
     add_repeating_timer_ms(1000, rpm_timer, NULL, &timer);
 }
 
@@ -95,8 +108,10 @@ void init_timer() {
 */
 void calc_rpm(uint gpio, uint32_t events)
 {
+    // Get the current time in microseconds since boot.
     uint32_t current_time = to_us_since_boot(get_absolute_time());
 
+    //We want to calculate the RPM based on the time between revolutions.
     if (last_times[rpm_index] != 0) {
         // Calculate the time for one revolution (in microseconds)
         uint32_t revolution_time = current_time - last_times[rpm_index];
@@ -111,31 +126,34 @@ void calc_rpm(uint gpio, uint32_t events)
 }
 
 /*
-    This method initiates the IR sensor as well as the falling edge trigger.
+    This method initiates the IR sensor as well as the falling edge trigger for the IR sensor.
 */
 void init_ir_sense()
 {
-    // IR Sensor
+    //Initiate GPIO 26 to be an input pin so that we can read the value from the IR sensor.
     gpio_init(26);
     gpio_set_dir(26, GPIO_IN);
 
+    //We will enable the falling edge trigger on pin 26 so that it will call our calc RPM
+    //method when the GPIO detects an edge.
     gpio_set_irq_enabled_with_callback(26, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
 }
 
 /*
     This method takes in a direction and speed in percent and sets the PWM of the GPIO pins.
 */
-void set_motor_pwm(bool direction, uint8_t speed) // Speed in terms of percentage
+void set_motor_pwm(bool direction, uint8_t speed)
 {
-    // Convert speed in percentage to 16-bit value
+    //Convert speed in percentage to 16-bit value that the motor register uses.
     uint16_t reg_speed = (speed * 65535) / 100;
     
-    if (direction == MTR_LEFT)
+    //Set the direction of the motor depending on the direction boolean.
+    if (direction == MTR_LEFT) //Left
     {
         pwm_set_gpio_level(13, reg_speed);
         pwm_set_gpio_level(12, 0);
     }
-    else // Right
+    else //Right
     {
         pwm_set_gpio_level(13, 0);
         pwm_set_gpio_level(12, reg_speed);
@@ -147,6 +165,7 @@ void set_motor_pwm(bool direction, uint8_t speed) // Speed in terms of percentag
 */
 void stop_motor()
 {
+    //Set the PWM levels to zero to stop the motor.
     pwm_set_gpio_level(13, 0);
     pwm_set_gpio_level(12, 0);
 }
@@ -155,11 +174,11 @@ void stop_motor()
     This methods runs on cpu1 and is responsible for controlling the motor and doing the rpm detection.
 */
 void core1_entry() {
-    //Initalize
+    //Initalize the IR sensor and the timer for RPM detection.
     init_ir_sense();
     init_timer();
 
-
+    //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
     while (1) {
 
@@ -180,13 +199,13 @@ void core1_entry() {
 */
 int main()
 {
-    //Initialize
+    //Initialize all peripherals.
     stdio_init_all();
     init_i2c();
     init_ledDisplay(0);
     init_motor();
     clear(i2c1, ISSI_ADDR_DEFAULT, frame);
-    //person();
+    person();
 
     //Launch Core 1
     multicore_launch_core1(core1_entry);
@@ -221,236 +240,4 @@ int main()
     }
 
     return 0;
-}
-
-/*
-    This methods sets frame 0 and 1 of the display to show a person.
-*/
-void person(){
-    frame = 0;
-
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 1, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 7, 100, frame);
-
-    frame = 1;
-
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 1, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 7, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
-
-    frame = 2;
-
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 1, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 7, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
-
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
-}
-
-/*
-    This methods hardcodes the different digits of numbers on a 3x5 grid.
-*/
-int digits[10][7][4] = {
-    {
-        {0, 0, 0, 0},  // 0
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 1, 0, 1},
-        {0, 1, 0, 1},
-        {0, 1, 0, 1},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 1
-        {0, 0, 0, 0},
-        {0, 0, 1, 0},
-        {0, 1, 1, 0},
-        {0, 0, 1, 0},
-        {0, 0, 1, 0},
-        {0, 0, 1, 0}
-    },
-    {
-        {0, 0, 0, 0},  // 2
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 1, 0},
-        {0, 1, 0, 0},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 3
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 1, 1},
-        {0, 0, 0, 1},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 4
-        {0, 0, 0, 0},
-        {0, 1, 0, 1},
-        {0, 1, 0, 1},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 5
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 1, 0, 0},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 6
-        {0, 0, 0, 0},
-        {0, 1, 1, 0},
-        {0, 1, 0, 0},
-        {0, 1, 1, 1},
-        {0, 1, 0, 1},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 7
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 1, 0},
-        {0, 1, 0, 0},
-        {0, 1, 0, 0}
-    },
-    {
-        {0, 0, 0, 0},  // 8
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 1, 0, 1},
-        {0, 1, 1, 1},
-        {0, 1, 0, 1},
-        {0, 1, 1, 1}
-    },
-    {
-        {0, 0, 0, 0},  // 9
-        {0, 0, 0, 0},
-        {0, 1, 1, 1},
-        {0, 1, 0, 1},
-        {0, 1, 1, 1},
-        {0, 0, 0, 1},
-        {0, 0, 0, 1}
-    }
-};
-
-/*
-    This method displays a number on the display at a specific position.
-*/
-void display_number(int number, int position, int frame) {
-    for (int i = 0; i < 7; i++) {
-        for (int j = 0; j < 4; j++) {
-            if (digits[number][i][j]) {
-                setPixel(i2c1, ISSI_ADDR_DEFAULT, position + j, i + 1, 100, frame);
-            }
-        }
-    }
-}
-
-/*
-    This method displays an array of numbers on the display.
-*/
-void display_numbers(int numbers[4]) {
-    for (int i = 0; i < 4; i++) {
-        display_number(numbers[i], 4 * i, frame);
-    }
 }
