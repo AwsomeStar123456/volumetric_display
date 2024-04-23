@@ -11,6 +11,7 @@
 #include "hardware/pwm.h"
 #include "IS31FL3731.h"
 #include "DisplayAddons.h"
+#include "imagedata.h"
 
 #define MTR_LEFT 0
 #define MTR_RIGHT 1
@@ -21,6 +22,8 @@ volatile uint32_t last_times[RPM_AVERAGE_COUNT] = {0};
 volatile uint32_t rpm = 0;
 volatile uint32_t rpm_index = 0;
 
+bool enabled = false;
+
 
 void init_i2c();
 void init_motor();
@@ -29,26 +32,34 @@ void stop_motor();
 void init_ir_sense();
 
 void calc_rpm(uint gpio, uint32_t events);
+void displayImage(int *imageData);
 
 volatile uint8_t frame = 0;
 volatile bool core1_uninitialized = true;
 volatile bool rpm_updated = false;
 
+int *images[] = {image_0001, image_0002, image_0003, image_0004, image_0005, 
+image_0006, image_0007, image_0008, image_0009, image_0010, image_0011, 
+image_0012, image_0013, image_0014, image_0015, image_0016, image_0017, 
+image_0018, image_0019, image_0020, image_0021, image_0022, image_0023, image_0024};
+
 /*
-    This method initializes the I2C bus for pins 14 and 15 of the pico.
+    This method initializes the I2C bus for pins 0 and 1 of the pico.
 */
 void init_i2c()
 {
     //Set the speed of the I2C to be 400k.
-    i2c_init(i2c1, 400000);
+    i2c_init(i2c0, 400000);
 
-    //Set both GPIO pins 14 and 15 to I2C mode.
-    gpio_set_function(14, GPIO_FUNC_I2C);
-    gpio_set_function(15, GPIO_FUNC_I2C);
+    //Set both GPIO pins 0 and 1 to I2C mode.
+    //GPIO 0 = SDA White
+    //GPIO 1 = SCL Blue
+    gpio_set_function(0, GPIO_FUNC_I2C);
+    gpio_set_function(1, GPIO_FUNC_I2C);
 
-    //Enable the pull-up resistors for ping 14 and 15 for I2C.
-    gpio_pull_up(14);
-    gpio_pull_up(15);
+    //Enable the pull-up resistors for ping 0 and 1 for I2C.
+    gpio_pull_up(0);
+    gpio_pull_up(1);
 }
 
 /*
@@ -84,6 +95,7 @@ bool rpm_timer(repeating_timer_t *rt) {
     //to zero.
     if (!rpm_updated) {
         rpm = 0;
+        enabled = false;
     }
 
     //Set the RPM_Updated to zero for our falling edge method to reset it.
@@ -110,6 +122,7 @@ void calc_rpm(uint gpio, uint32_t events)
 {
     // Get the current time in microseconds since boot.
     uint32_t current_time = to_us_since_boot(get_absolute_time());
+    enabled = true;
 
     //We want to calculate the RPM based on the time between revolutions.
     if (last_times[rpm_index] != 0) {
@@ -182,7 +195,14 @@ void core1_entry() {
     core1_uninitialized = false;
     while (1) {
 
-        set_motor_pwm(MTR_LEFT, 100);
+        //set_motor_pwm(MTR_LEFT, 100);
+
+        if(enabled) {
+            set_motor_pwm(MTR_LEFT, 100);
+        } else {
+            stop_motor();
+        }
+
         // sleep_ms(2000);
         // stop_motor();  
         // sleep_ms(2000);
@@ -204,40 +224,75 @@ int main()
     init_i2c();
     init_ledDisplay(0);
     init_motor();
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
-    person();
+    clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+    //person();
 
     //Launch Core 1
     multicore_launch_core1(core1_entry);
     while(core1_uninitialized) {}
 
     while (1) {
+
+            // for (int i = 0; i < 24; i++) {
+            //     //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+            //     displayImage(images[i]);
+            //     //(rpm / 60000) / 24
+            //     sleep_ms(1000); // Delay between images, adjust as needed
+            // }
+
+        if(rpm > 0) {
+            for (int i = 0; i < 24; i++) {
+                //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+                displayImage(images[i]);
+                //(rpm / 60000) / 24
+                sleep_ms((rpm / 60000) / 24); // Delay between images, adjust as needed
+            }
+        } else {
+            clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+        }
+
+
         // //For Person
-        // displayFrame(i2c1, ISSI_ADDR_DEFAULT, 0);
+        // displayFrame(i2c0, ISSI_ADDR_DEFAULT, 0);
         // sleep_ms(500);
-        // displayFrame(i2c1, ISSI_ADDR_DEFAULT, 1);
+        // displayFrame(i2c0, ISSI_ADDR_DEFAULT, 1);
         // sleep_ms(500);
 
 
         // if(rpm > 500) {
-        //     displayFrame(i2c1, ISSI_ADDR_DEFAULT, 0);
+        //     displayFrame(i2c0, ISSI_ADDR_DEFAULT, 0);
         // } else {
-        //     displayFrame(i2c1, ISSI_ADDR_DEFAULT, 1);
+        //     displayFrame(i2c0, ISSI_ADDR_DEFAULT, 1);
         // }
 
-        clear(i2c1, ISSI_ADDR_DEFAULT, frame);
+        // clear(i2c0, ISSI_ADDR_DEFAULT, frame);
 
-        // Convert RPM to array of digits
-        int numbers[4] = {0, 0, 0, 0};  // Initialize to 0000
-        int temp_rpm = rpm;
-        for (int i = 3; i >= 0 && temp_rpm > 0; i--) {
-            numbers[i] = temp_rpm % 10;
-            temp_rpm /= 10;
-        }
+        // // Convert RPM to array of digits
+        // int numbers[4] = {0, 0, 0, 0};  // Initialize to 0000
+        // int temp_rpm = rpm;
+        // for (int i = 3; i >= 0 && temp_rpm > 0; i--) {
+        //     numbers[i] = temp_rpm % 10;
+        //     temp_rpm /= 10;
+        // }
 
-        display_numbers(numbers);
-        sleep_ms(1000);
+        // display_numbers(numbers);
+        // sleep_ms(1000);
     }
 
     return 0;
+}
+
+void displayImage(int *imageData) {
+    int width = imageData[0];
+    int height = imageData[1];
+    int *pixels = &imageData[2];
+
+    // Code to display the image
+    for (int i = 0; i < height; i++) {
+        for (int j = width - 1; j >= 0; j--) {
+            setPixel(i2c0, ISSI_ADDR_DEFAULT, i, j, pixels[i * width + (width - j - 1)] * 20, frame);
+        }
+    }
+
+    displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
 }

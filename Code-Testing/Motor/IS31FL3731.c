@@ -7,27 +7,27 @@
 void init_ledDisplay(uint8_t frame)
 {
     //Enable the software shutdown for 10ms then disable it.
-    writeRegister8(i2c1, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_SHUTDOWN, 0x00);
+    writeRegister8(i2c0, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_SHUTDOWN, 0x00);
     sleep_ms(10);
-    writeRegister8(i2c1, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_SHUTDOWN, 0x01);
+    writeRegister8(i2c0, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_SHUTDOWN, 0x01);
 
     //Set the display to picture mode.
-    writeRegister8(i2c1, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_CONFIG, ISSI_REG_CONFIG_PICTUREMODE);
+    writeRegister8(i2c0, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_CONFIG, ISSI_REG_CONFIG_PICTUREMODE);
 
     //Ensure we are displaying the current frame.
-    displayFrame(i2c1, ISSI_ADDR_DEFAULT, frame);
+    displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
 
     //Clear the current frame.
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
+    clear(i2c0, ISSI_ADDR_DEFAULT, frame);
 
     //Enable all of the LEDs on the current frame.
     for (uint8_t f = 0; f < 8; f++) {
         for (uint8_t i = 0; i <= 0x11; i++)
-         writeRegister8(i2c1, ISSI_ADDR_DEFAULT, f, i, 0xff); // each 8 LEDs on
+         writeRegister8(i2c0, ISSI_ADDR_DEFAULT, f, i, 0xff); // each 8 LEDs on
     }
 
     //Turn off audio mode.
-    writeRegister8(i2c1, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_AUDIOSYNC, 0x0);
+    writeRegister8(i2c0, ISSI_ADDR_DEFAULT, ISSI_BANK_FUNCTIONREG, ISSI_REG_AUDIOSYNC, 0x0);
 }
 
 /*

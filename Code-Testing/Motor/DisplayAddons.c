@@ -17,114 +17,114 @@ void person(){
     //Set the display to frame 0 and set the various LEDs.
     frame = 0;
 
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
+    clear(i2c0, ISSI_ADDR_DEFAULT, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 1, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 7, 1, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 8, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 8, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 7, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 7, 7, 100, frame);
 
     //Set the display to frame 1 and set the various LEDs.
     frame = 1;
 
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
+    clear(i2c0, ISSI_ADDR_DEFAULT, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 1, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 7, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 1, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 7, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
 
     //Set the display to frame 3 and set the various LEDs.
     frame = 2;
 
-    clear(i2c1, ISSI_ADDR_DEFAULT, frame);
+    clear(i2c0, ISSI_ADDR_DEFAULT, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 1, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 7, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 11, 1, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 10, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 10, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 11, 7, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 3, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 4, 2, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 14, 2, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 5, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 3, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 13, 3, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 6, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 7, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 8, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 10, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 11, 4, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 12, 4, 100, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 2, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 5, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 9, 5, 255, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 13, 5, 255, frame);
 
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
-    setPixel(i2c1, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 3, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 4, 6, 100, frame);
+    setPixel(i2c0, ISSI_ADDR_DEFAULT, 14, 6, 100, frame);
 }
 
 /*
@@ -232,7 +232,7 @@ void display_number(int number, int position, int frame) {
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 4; j++) {
             if (digits[number][i][j]) {
-                setPixel(i2c1, ISSI_ADDR_DEFAULT, position + j, i + 1, 100, frame);
+                setPixel(i2c0, ISSI_ADDR_DEFAULT, position + j, i + 1, 100, frame);
             }
         }
     }
