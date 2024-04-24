@@ -243,14 +243,14 @@ int main()
         if(rpm > 0) {
             for (int i = 0; i < 24; i++) {
                 //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
-                displayImage(images[i]);
+                //displayImage(images[i]);
+                displayImage(image_test);
                 //(rpm / 60000) / 24
-                sleep_ms((rpm / 60000) / 24); // Delay between images, adjust as needed
+                //sleep_ms((rpm / 60000) / 24); // Delay between images, adjust as needed
             }
         } else {
             clear(i2c0, ISSI_ADDR_DEFAULT, frame);
         }
-
 
         // //For Person
         // displayFrame(i2c0, ISSI_ADDR_DEFAULT, 0);
