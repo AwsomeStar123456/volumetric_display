@@ -1294,9 +1294,9 @@ Discarded input sections
                 0x00000000       0x3e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .data.i2c1_inst
                 0x00000000        0x8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .text          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\cc6tbTP2.o
- .data          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\cc6tbTP2.o
- .bss           0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\cc6tbTP2.o
+ .text          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccW97O5f.o
+ .data          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccW97O5f.o
+ .bss           0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccW97O5f.o
  .data          0x00000000        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-calloc.o)
@@ -1512,7 +1512,7 @@ LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\Semra\AppData\Local\Temp\cc6tbTP2.o
+ .boot2         0x10000000      0x100 C:\Users\Semra\AppData\Local\Temp\ccW97O5f.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -2660,7 +2660,7 @@ LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-s
 LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-LOAD C:\Users\Semra\AppData\Local\Temp\cc6tbTP2.o
+LOAD C:\Users\Semra\AppData\Local\Temp\ccW97O5f.o
 LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -2761,7 +2761,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000642       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .ARM.attributes
-                0x0000066e       0x22 C:\Users\Semra\AppData\Local\Temp\cc6tbTP2.o
+                0x0000066e       0x22 C:\Users\Semra\AppData\Local\Temp\ccW97O5f.o
  .ARM.attributes
                 0x00000690       0x1e c:/progra~1/raspbe~1/picosd~1.1/gcc-ar~1/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
