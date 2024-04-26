@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optimizer", "Optimizer.csproj", "{C6856084-1EFD-4829-AB13-726F3411F4AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizationCode", "..\OptimizationCode\OptimizationCode.csproj", "{8C211641-5935-452A-8932-A160200281AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6856084-1EFD-4829-AB13-726F3411F4AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6856084-1EFD-4829-AB13-726F3411F4AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6856084-1EFD-4829-AB13-726F3411F4AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6856084-1EFD-4829-AB13-726F3411F4AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C211641-5935-452A-8932-A160200281AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C211641-5935-452A-8932-A160200281AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C211641-5935-452A-8932-A160200281AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C211641-5935-452A-8932-A160200281AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C3EA386-E89D-4F18-97A1-B41755641779}
+	EndGlobalSection
+EndGlobal

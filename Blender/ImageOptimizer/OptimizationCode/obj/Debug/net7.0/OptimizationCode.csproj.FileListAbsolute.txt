@@ -1,0 +1,11 @@
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\bin\Debug\net7.0\OptimizationCode.deps.json
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\bin\Debug\net7.0\OptimizationCode.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\bin\Debug\net7.0\OptimizationCode.pdb
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\OptimizationCode.GeneratedMSBuildEditorConfig.editorconfig
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\OptimizationCode.AssemblyInfoInputs.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\OptimizationCode.AssemblyInfo.cs
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\OptimizationCode.csproj.CoreCompileInputs.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\OptimizationCode.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\refint\OptimizationCode.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\OptimizationCode.pdb
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\ImageOptimizer\OptimizationCode\obj\Debug\net7.0\ref\OptimizationCode.dll
