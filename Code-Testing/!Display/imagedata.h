@@ -499,19 +499,22 @@ int image_test[] = {
 };
 
 int imageoptimized_0001[] = {
-
+    0
 };
 
 int imageoptimized_0002[] = {
+    1,
     4,5,1
 };
 
 int imageoptimized_0003[] = {
+    2,
     5,5,1,
     11,4,1
 };
 
 int imageoptimized_0004[] = {
+    6,
     5,6,1,
     6,7,1,
     9,1,1,
@@ -521,6 +524,7 @@ int imageoptimized_0004[] = {
 };
 
 int imageoptimized_0005[] = {
+    7,
     4,5,0,
     5,5,0,
     5,6,0,
@@ -531,15 +535,18 @@ int imageoptimized_0005[] = {
 };
 
 int imageoptimized_0006[] = {
+    1,
     11,3,0
 };
 
 int imageoptimized_0007[] = {
+    2,
     10,5,1,
     11,5,1
 };
 
 int imageoptimized_0008[] = {
+    5,
     4,3,1,
     5,2,1,
     5,3,1,
@@ -548,6 +555,7 @@ int imageoptimized_0008[] = {
 };
 
 int imageoptimized_0009[] = {
+    4,
     4,3,0,
     5,2,0,
     5,3,0,
@@ -555,6 +563,7 @@ int imageoptimized_0009[] = {
 };
 
 int imageoptimized_0010[] = {
+    6,
     4,5,1,
     5,5,1,
     5,6,1,
@@ -564,6 +573,7 @@ int imageoptimized_0010[] = {
 };
 
 int imageoptimized_0011[] = {
+    5,
     4,4,0,
     4,5,0,
     5,5,0,
@@ -572,10 +582,12 @@ int imageoptimized_0011[] = {
 };
 
 int imageoptimized_0012[] = {
+    1,
     11,3,0
 };
 
 int imageoptimized_0013[] = {
+    6,
     4,3,1,
     4,4,1,
     5,2,1,
@@ -585,6 +597,7 @@ int imageoptimized_0013[] = {
 };
 
 int imageoptimized_0014[] = {
+    6,
     4,3,0,
     5,2,0,
     5,3,0,
@@ -594,12 +607,14 @@ int imageoptimized_0014[] = {
 };
 
 int imageoptimized_0015[] = {
+    3,
     4,5,1,
     5,5,1,
     5,6,1
 };
 
 int imageoptimized_0016[] = {
+    7,
     4,5,0,
     5,5,0,
     5,6,0,
@@ -610,6 +625,7 @@ int imageoptimized_0016[] = {
 };
 
 int imageoptimized_0017[] = {
+    4,
     4,4,0,
     10,2,0,
     10,3,0,
@@ -617,12 +633,14 @@ int imageoptimized_0017[] = {
 };
 
 int imageoptimized_0018[] = {
+    3,
     4,4,1,
     10,5,1,
     11,5,1
 };
 
 int imageoptimized_0019[] = {
+    6,
     4,3,1,
     5,2,1,
     5,3,1,
@@ -632,6 +650,7 @@ int imageoptimized_0019[] = {
 };
 
 int imageoptimized_0020[] = {
+    7,
     5,2,0,
     6,1,0,
     9,7,0,
@@ -642,17 +661,19 @@ int imageoptimized_0020[] = {
 };
 
 int imageoptimized_0021[] = {
+    1,
     5,3,0
 };
 
 int imageoptimized_0022[] = {
+    1,
     4,3,0
 };
 
 int imageoptimized_0023[] = {
-
+    0
 };
 
 int imageoptimized_0024[] = {
-
+    0
 };

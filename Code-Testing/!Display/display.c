@@ -34,7 +34,7 @@ void init_ir_sense();
 
 void calc_rpm(uint gpio, uint32_t events);
 void displayImage(int *imageData);
-void setPixels(int* pixelData, int length);
+void setPixels(int* pixelData);
 
 volatile uint8_t frame = 0;
 volatile bool core1_uninitialized = true;
@@ -52,6 +52,26 @@ imageoptimized_0012, imageoptimized_0013, imageoptimized_0014, imageoptimized_00
 imageoptimized_0016, imageoptimized_0017, imageoptimized_0018, imageoptimized_0019,
 imageoptimized_0020, imageoptimized_0021, imageoptimized_0022, imageoptimized_0023,
 imageoptimized_0024};
+
+int imageoptimized_1[] = {
+    4,
+    4,5,1,
+    0,0,1,
+    1,1,1,
+    2,2,1
+};
+
+int imageoptimized_2[] = {
+    4,
+    4,5,0,
+    0,0,0,
+    1,1,0,
+    2,2,0
+};
+
+int *testImages[] = {imageoptimized_1, imageoptimized_2};
+
+
 /*
     This method initializes the I2C bus for pins 0 and 1 of the pico.
 */
@@ -252,8 +272,8 @@ int main()
         // if(rpm > 0) {
         //     for (int i = 0; i < 24; i++) {
         //         //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
-        //         //displayImage(images[i]);
-        //         displayImage(image_test);
+        //         displayImage(images[i]);
+        //         //displayImage(image_test);
         //         //(rpm / 60000) / 24
         //         //sleep_ms((rpm / 60000) / 24); // Delay between images, adjust as needed
         //     }
@@ -262,23 +282,40 @@ int main()
         // }
 
         if(rpm > 0) {
+            double rotation_time = 60.0 / rpm;
+            double wait_time = rotation_time / 24.0; //Seconds per frame
+
             for (int i = 0; i < 24; i++) {
                 if(lastCleared) {
-                    displayImage(imagesoptimized[i]);
+                    displayImage(images[i]);
                     lastCleared = false;
                 } else {
-                    setPixels(imagesoptimized[i], sizeof(imagesoptimized[i]) / sizeof(int));
+                    setPixels(imagesoptimized[i]);
                 }
 
                 //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
                 //setPixels(imagesoptimized[i], sizeof(imagesoptimized[i]) / sizeof(int));
                 //(rpm / 60000) / 24
-                sleep_ms((rpm / 60000) / 24); // Delay between images, adjust as needed
+                //sleep_us(((float)rpm / 60000000) / 24); // Delay between images, adjust as needed
+                //sleep_us(1000);
+                //sleep_ms(6);
+
+                sleep_us(5850); // convert wait_time to microseconds
+
+                //uint32_t start_time = to_us_since_boot(get_absolute_time());
+                //while (to_us_since_boot(get_absolute_time()) - start_time < wait_time * 1e6);
             }
         } else {
             clear(i2c0, ISSI_ADDR_DEFAULT, frame);
             lastCleared = true;
         }
+
+
+        // for (int i = 0; i < 24; i++) {
+        //     setPixels(imagesoptimized[i]);
+        //     //(rpm / 60000) / 24
+        //     sleep_ms(3000); // Delay between images, adjust as needed
+        // }
 
         // //For Person
         // displayFrame(i2c0, ISSI_ADDR_DEFAULT, 0);
@@ -325,8 +362,10 @@ void displayImage(int *imageData) {
     displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
 }
 
-void setPixels(int* pixelData, int length) {
-    for (int i = 0; i < length; i += 3) {
+void setPixels(int* pixelData) {
+    int length = pixelData[0] * 3;
+
+    for (int i = 1; i < length; i += 3) {
         int x = pixelData[i];
         int y = pixelData[i + 1];
         int value = pixelData[i + 2];

@@ -13,41 +13,41 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   4 .ram_vector_table 000000c0  20000000  20000000  0000c000  2**2
                   ALLOC
-  5 .data         00003dc4  200000c0  100066b4  000080c0  2**4
+  5 .data         00003e24  200000c0  100066b4  000080c0  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  6 .uninitialized_data 00000000  20003e84  20003e84  0000be84  2**0
+  6 .uninitialized_data 00000000  20003ee4  20003ee4  0000bee4  2**0
                   CONTENTS
-  7 .scratch_x    00000000  20040000  20040000  0000be84  2**0
+  7 .scratch_x    00000000  20040000  20040000  0000bee4  2**0
                   CONTENTS
-  8 .scratch_y    00000000  20041000  20041000  0000be84  2**0
+  8 .scratch_y    00000000  20041000  20041000  0000bee4  2**0
                   CONTENTS
-  9 .bss          00000420  20003e88  20003e88  0000be88  2**3
+  9 .bss          0000042c  20003ee8  20003ee8  0000bee8  2**3
                   ALLOC
- 10 .heap         00000800  200042a8  200042a8  0000be84  2**2
+ 10 .heap         00000800  20004314  20004314  0000bee4  2**2
                   CONTENTS, READONLY
  11 .stack1_dummy 00000800  20040000  20040000  0000c000  2**2
                   ALLOC
- 12 .stack_dummy  00000800  20041000  20041000  0000c6a0  2**5
+ 12 .stack_dummy  00000800  20041000  20041000  0000c700  2**5
                   CONTENTS, READONLY
- 13 .ARM.attributes 00000028  00000000  00000000  0000cea0  2**0
+ 13 .ARM.attributes 00000028  00000000  00000000  0000cf00  2**0
                   CONTENTS, READONLY
- 14 .comment      00000049  00000000  00000000  0000cec8  2**0
+ 14 .comment      00000049  00000000  00000000  0000cf28  2**0
                   CONTENTS, READONLY
- 15 .debug_info   0001ba0a  00000000  00000000  0000cf11  2**0
+ 15 .debug_info   0001ba4d  00000000  00000000  0000cf71  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_abbrev 0000522d  00000000  00000000  0002891b  2**0
+ 16 .debug_abbrev 00005224  00000000  00000000  000289be  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_loc    000123f4  00000000  00000000  0002db48  2**0
+ 17 .debug_loc    000123e5  00000000  00000000  0002dbe2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_aranges 00001098  00000000  00000000  0003ff40  2**3
+ 18 .debug_aranges 00001098  00000000  00000000  0003ffc8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_ranges 00003ac0  00000000  00000000  00040fd8  2**3
+ 19 .debug_ranges 00003ad8  00000000  00000000  00041060  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_line   00012495  00000000  00000000  00044a98  2**0
+ 20 .debug_line   000124bb  00000000  00000000  00044b38  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_str    00004ca1  00000000  00000000  00056f2d  2**0
+ 21 .debug_str    00004cdc  00000000  00000000  00056ff3  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_frame  00001f48  00000000  00000000  0005bbd0  2**2
+ 22 .debug_frame  00001f48  00000000  00000000  0005bcd0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display/build/display.elf:     file format elf32-littlearm
@@ -256,11 +256,11 @@ Disassembly of section .text:
 10000234 <data_cpy_table>:
 10000234:	100066b4 	.word	0x100066b4
 10000238:	200000c0 	.word	0x200000c0
-1000023c:	20003e84 	.word	0x20003e84
-10000240:	1000a478 	.word	0x1000a478
+1000023c:	20003ee4 	.word	0x20003ee4
+10000240:	1000a4d8 	.word	0x1000a4d8
 10000244:	20040000 	.word	0x20040000
 10000248:	20040000 	.word	0x20040000
-1000024c:	1000a478 	.word	0x1000a478
+1000024c:	1000a4d8 	.word	0x1000a4d8
 10000250:	20041000 	.word	0x20041000
 10000254:	20041000 	.word	0x20041000
 10000258:	00000000 	.word	0x00000000
@@ -273,10 +273,10 @@ Disassembly of section .text:
 10000266:	0000      	.short	0x0000
 10000268:	e000ed08 	.word	0xe000ed08
 1000026c:	d0000000 	.word	0xd0000000
-10000270:	20003e88 	.word	0x20003e88
-10000274:	200042a8 	.word	0x200042a8
+10000270:	20003ee8 	.word	0x20003ee8
+10000274:	20004314 	.word	0x20004314
 10000278:	10002a09 	.word	0x10002a09
-1000027c:	100005ed 	.word	0x100005ed
+1000027c:	100005f1 	.word	0x100005f1
 10000280:	100029c5 	.word	0x100029c5
 10000284:	00005657 	.word	0x00005657
 
@@ -290,7 +290,7 @@ Disassembly of section .text:
 100002a0:	50520006 9da22254 100064b8              ..RPT"...d..
 
 100002ac <__bi_22>:
-100002ac:	50520005 68f465de 1000a478              ..RP.e.hx...
+100002ac:	50520005 68f465de 1000a4d8              ..RP.e.h....
 
 100002b8 <_init>:
 100002b8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
@@ -311,7 +311,7 @@ Disassembly of section .text:
 100002d2:	2301      	movs	r3, #1
 100002d4:	7023      	strb	r3, [r4, #0]
 100002d6:	bd10      	pop	{r4, pc}
-100002d8:	20003fa0 	.word	0x20003fa0
+100002d8:	20004000 	.word	0x20004000
 100002dc:	00000000 	.word	0x00000000
 100002e0:	10005468 	.word	0x10005468
 
@@ -327,7 +327,7 @@ Disassembly of section .text:
 100002f4:	bd10      	pop	{r4, pc}
 100002f6:	46c0      	nop			; (mov r8, r8)
 100002f8:	00000000 	.word	0x00000000
-100002fc:	20003fa4 	.word	0x20003fa4
+100002fc:	20004004 	.word	0x20004004
 10000300:	10005468 	.word	0x10005468
 
 10000304 <rpm_timer>:
@@ -345,9 +345,9 @@ Disassembly of section .text:
 1000031a:	2001      	movs	r0, #1
 1000031c:	4770      	bx	lr
 1000031e:	46c0      	nop			; (mov r8, r8)
-10000320:	200042a5 	.word	0x200042a5
-10000324:	20004078 	.word	0x20004078
-10000328:	200042a1 	.word	0x200042a1
+10000320:	20004311 	.word	0x20004311
+10000324:	200040e4 	.word	0x200040e4
+10000328:	2000430d 	.word	0x2000430d
 
 1000032c <calc_rpm>:
 1000032c:	b570      	push	{r4, r5, r6, lr}
@@ -398,12 +398,12 @@ Disassembly of section .text:
 10000390:	213f      	movs	r1, #63	; 0x3f
 10000392:	4809      	ldr	r0, [pc, #36]	; (100003b8 <calc_rpm+0x8c>)
 10000394:	f002 fb1a 	bl	100029cc <__assert_func>
-10000398:	200042a1 	.word	0x200042a1
-1000039c:	2000407c 	.word	0x2000407c
-100003a0:	2000404c 	.word	0x2000404c
+10000398:	2000430d 	.word	0x2000430d
+1000039c:	200040e8 	.word	0x200040e8
+100003a0:	200040b8 	.word	0x200040b8
 100003a4:	418c9c38 	.word	0x418c9c38
-100003a8:	20004078 	.word	0x20004078
-100003ac:	200042a5 	.word	0x200042a5
+100003a8:	200040e4 	.word	0x200040e4
+100003ac:	20004311 	.word	0x20004311
 100003b0:	10005468 	.word	0x10005468
 100003b4:	100054e8 	.word	0x100054e8
 100003b8:	10005484 	.word	0x10005484
@@ -429,7 +429,7 @@ Disassembly of section .text:
 100003e6:	f000 fa3b 	bl	10000860 <gpio_set_pulls>
 100003ea:	bd10      	pop	{r4, pc}
 100003ec:	00061a80 	.word	0x00061a80
-100003f0:	20003e58 	.word	0x20003e58
+100003f0:	20003eb8 	.word	0x20003eb8
 
 100003f4 <init_motor>:
 100003f4:	b510      	push	{r4, lr}
@@ -485,7 +485,7 @@ Disassembly of section .text:
 10000464:	f001 fb3e 	bl	10001ae4 <alarm_pool_add_repeating_timer_us>
 10000468:	b005      	add	sp, #20
 1000046a:	bd00      	pop	{pc}
-1000046c:	20003f88 	.word	0x20003f88
+1000046c:	20003fe8 	.word	0x20003fe8
 10000470:	10000305 	.word	0x10000305
 10000474:	000f4240 	.word	0x000f4240
 
@@ -579,7 +579,7 @@ Disassembly of section .text:
 1000052e:	f7ff ffdd 	bl	100004ec <stop_motor>
 10000532:	e7f8      	b.n	10000526 <core1_entry+0x1a>
 10000534:	20000238 	.word	0x20000238
-10000538:	200042a1 	.word	0x200042a1
+10000538:	2000430d 	.word	0x2000430d
 
 1000053c <displayImage>:
 1000053c:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -630,114 +630,115 @@ Disassembly of section .text:
 1000059a:	bc80      	pop	{r7}
 1000059c:	46b8      	mov	r8, r7
 1000059e:	bdf0      	pop	{r4, r5, r6, r7, pc}
-100005a0:	200042a2 	.word	0x200042a2
-100005a4:	20003e58 	.word	0x20003e58
+100005a0:	2000430e 	.word	0x2000430e
+100005a4:	20003eb8 	.word	0x20003eb8
 
 100005a8 <setPixels>:
 100005a8:	b5f0      	push	{r4, r5, r6, r7, lr}
 100005aa:	b083      	sub	sp, #12
-100005ac:	0006      	movs	r6, r0
-100005ae:	000f      	movs	r7, r1
-100005b0:	2400      	movs	r4, #0
-100005b2:	e013      	b.n	100005dc <setPixels+0x34>
-100005b4:	00a0      	lsls	r0, r4, #2
-100005b6:	1c63      	adds	r3, r4, #1
-100005b8:	009b      	lsls	r3, r3, #2
-100005ba:	1ca2      	adds	r2, r4, #2
-100005bc:	0092      	lsls	r2, r2, #2
-100005be:	58b5      	ldr	r5, [r6, r2]
-100005c0:	4a08      	ldr	r2, [pc, #32]	; (100005e4 <setPixels+0x3c>)
-100005c2:	7811      	ldrb	r1, [r2, #0]
-100005c4:	5cf3      	ldrb	r3, [r6, r3]
-100005c6:	5c32      	ldrb	r2, [r6, r0]
-100005c8:	9101      	str	r1, [sp, #4]
-100005ca:	2164      	movs	r1, #100	; 0x64
-100005cc:	434d      	muls	r5, r1
-100005ce:	b2ed      	uxtb	r5, r5
-100005d0:	9500      	str	r5, [sp, #0]
-100005d2:	2174      	movs	r1, #116	; 0x74
-100005d4:	4804      	ldr	r0, [pc, #16]	; (100005e8 <setPixels+0x40>)
-100005d6:	f000 f915 	bl	10000804 <setPixel>
-100005da:	3403      	adds	r4, #3
-100005dc:	42bc      	cmp	r4, r7
-100005de:	dbe9      	blt.n	100005b4 <setPixels+0xc>
-100005e0:	b003      	add	sp, #12
-100005e2:	bdf0      	pop	{r4, r5, r6, r7, pc}
-100005e4:	200042a2 	.word	0x200042a2
-100005e8:	20003e58 	.word	0x20003e58
+100005ac:	0005      	movs	r5, r0
+100005ae:	6803      	ldr	r3, [r0, #0]
+100005b0:	005e      	lsls	r6, r3, #1
+100005b2:	18f6      	adds	r6, r6, r3
+100005b4:	2401      	movs	r4, #1
+100005b6:	e013      	b.n	100005e0 <setPixels+0x38>
+100005b8:	00a7      	lsls	r7, r4, #2
+100005ba:	1c63      	adds	r3, r4, #1
+100005bc:	009b      	lsls	r3, r3, #2
+100005be:	1ca2      	adds	r2, r4, #2
+100005c0:	0092      	lsls	r2, r2, #2
+100005c2:	58a9      	ldr	r1, [r5, r2]
+100005c4:	4a08      	ldr	r2, [pc, #32]	; (100005e8 <setPixels+0x40>)
+100005c6:	7810      	ldrb	r0, [r2, #0]
+100005c8:	5ceb      	ldrb	r3, [r5, r3]
+100005ca:	5dea      	ldrb	r2, [r5, r7]
+100005cc:	9001      	str	r0, [sp, #4]
+100005ce:	2064      	movs	r0, #100	; 0x64
+100005d0:	4341      	muls	r1, r0
+100005d2:	b2c9      	uxtb	r1, r1
+100005d4:	9100      	str	r1, [sp, #0]
+100005d6:	2174      	movs	r1, #116	; 0x74
+100005d8:	4804      	ldr	r0, [pc, #16]	; (100005ec <setPixels+0x44>)
+100005da:	f000 f913 	bl	10000804 <setPixel>
+100005de:	3403      	adds	r4, #3
+100005e0:	42b4      	cmp	r4, r6
+100005e2:	dbe9      	blt.n	100005b8 <setPixels+0x10>
+100005e4:	b003      	add	sp, #12
+100005e6:	bdf0      	pop	{r4, r5, r6, r7, pc}
+100005e8:	2000430e 	.word	0x2000430e
+100005ec:	20003eb8 	.word	0x20003eb8
 
-100005ec <main>:
-100005ec:	b510      	push	{r4, lr}
-100005ee:	f004 fbfb 	bl	10004de8 <stdio_init_all>
-100005f2:	f7ff fee3 	bl	100003bc <init_i2c>
-100005f6:	2000      	movs	r0, #0
-100005f8:	f000 f8ac 	bl	10000754 <init_ledDisplay>
-100005fc:	f7ff fefa 	bl	100003f4 <init_motor>
-10000600:	4b1f      	ldr	r3, [pc, #124]	; (10000680 <main+0x94>)
-10000602:	781a      	ldrb	r2, [r3, #0]
-10000604:	b2d2      	uxtb	r2, r2
-10000606:	2174      	movs	r1, #116	; 0x74
-10000608:	481e      	ldr	r0, [pc, #120]	; (10000684 <main+0x98>)
-1000060a:	f000 f883 	bl	10000714 <clear>
-1000060e:	4b1e      	ldr	r3, [pc, #120]	; (10000688 <main+0x9c>)
-10000610:	6818      	ldr	r0, [r3, #0]
-10000612:	f7ff ff93 	bl	1000053c <displayImage>
-10000616:	481d      	ldr	r0, [pc, #116]	; (1000068c <main+0xa0>)
-10000618:	f004 fd72 	bl	10005100 <multicore_launch_core1>
-1000061c:	4b1c      	ldr	r3, [pc, #112]	; (10000690 <main+0xa4>)
-1000061e:	781b      	ldrb	r3, [r3, #0]
-10000620:	2b00      	cmp	r3, #0
-10000622:	d1fb      	bne.n	1000061c <main+0x30>
-10000624:	e026      	b.n	10000674 <main+0x88>
-10000626:	00a3      	lsls	r3, r4, #2
-10000628:	4a1a      	ldr	r2, [pc, #104]	; (10000694 <main+0xa8>)
-1000062a:	5898      	ldr	r0, [r3, r2]
-1000062c:	2101      	movs	r1, #1
-1000062e:	f7ff ffbb 	bl	100005a8 <setPixels>
-10000632:	4b19      	ldr	r3, [pc, #100]	; (10000698 <main+0xac>)
-10000634:	6818      	ldr	r0, [r3, #0]
-10000636:	4919      	ldr	r1, [pc, #100]	; (1000069c <main+0xb0>)
-10000638:	f003 fb76 	bl	10003d28 <__wrap___aeabi_uidiv>
-1000063c:	f001 fb48 	bl	10001cd0 <sleep_ms>
-10000640:	3401      	adds	r4, #1
-10000642:	2c17      	cmp	r4, #23
-10000644:	dc16      	bgt.n	10000674 <main+0x88>
-10000646:	4b16      	ldr	r3, [pc, #88]	; (100006a0 <main+0xb4>)
-10000648:	781b      	ldrb	r3, [r3, #0]
-1000064a:	2b00      	cmp	r3, #0
-1000064c:	d0eb      	beq.n	10000626 <main+0x3a>
-1000064e:	00a3      	lsls	r3, r4, #2
-10000650:	4a10      	ldr	r2, [pc, #64]	; (10000694 <main+0xa8>)
-10000652:	5898      	ldr	r0, [r3, r2]
-10000654:	f7ff ff72 	bl	1000053c <displayImage>
-10000658:	4b11      	ldr	r3, [pc, #68]	; (100006a0 <main+0xb4>)
-1000065a:	2200      	movs	r2, #0
-1000065c:	701a      	strb	r2, [r3, #0]
-1000065e:	e7e8      	b.n	10000632 <main+0x46>
-10000660:	4b07      	ldr	r3, [pc, #28]	; (10000680 <main+0x94>)
-10000662:	781a      	ldrb	r2, [r3, #0]
-10000664:	b2d2      	uxtb	r2, r2
-10000666:	2174      	movs	r1, #116	; 0x74
-10000668:	4806      	ldr	r0, [pc, #24]	; (10000684 <main+0x98>)
-1000066a:	f000 f853 	bl	10000714 <clear>
-1000066e:	4b0c      	ldr	r3, [pc, #48]	; (100006a0 <main+0xb4>)
-10000670:	2201      	movs	r2, #1
-10000672:	701a      	strb	r2, [r3, #0]
-10000674:	4b08      	ldr	r3, [pc, #32]	; (10000698 <main+0xac>)
-10000676:	681b      	ldr	r3, [r3, #0]
-10000678:	2b00      	cmp	r3, #0
-1000067a:	d0f1      	beq.n	10000660 <main+0x74>
+100005f0 <main>:
+100005f0:	b510      	push	{r4, lr}
+100005f2:	f004 fbf9 	bl	10004de8 <stdio_init_all>
+100005f6:	f7ff fee1 	bl	100003bc <init_i2c>
+100005fa:	2000      	movs	r0, #0
+100005fc:	f000 f8aa 	bl	10000754 <init_ledDisplay>
+10000600:	f7ff fef8 	bl	100003f4 <init_motor>
+10000604:	4b1e      	ldr	r3, [pc, #120]	; (10000680 <main+0x90>)
+10000606:	781a      	ldrb	r2, [r3, #0]
+10000608:	b2d2      	uxtb	r2, r2
+1000060a:	2174      	movs	r1, #116	; 0x74
+1000060c:	481d      	ldr	r0, [pc, #116]	; (10000684 <main+0x94>)
+1000060e:	f000 f881 	bl	10000714 <clear>
+10000612:	4b1d      	ldr	r3, [pc, #116]	; (10000688 <main+0x98>)
+10000614:	6818      	ldr	r0, [r3, #0]
+10000616:	f7ff ff91 	bl	1000053c <displayImage>
+1000061a:	481c      	ldr	r0, [pc, #112]	; (1000068c <main+0x9c>)
+1000061c:	f004 fd70 	bl	10005100 <multicore_launch_core1>
+10000620:	4b1b      	ldr	r3, [pc, #108]	; (10000690 <main+0xa0>)
+10000622:	781b      	ldrb	r3, [r3, #0]
+10000624:	2b00      	cmp	r3, #0
+10000626:	d1fb      	bne.n	10000620 <main+0x30>
+10000628:	e022      	b.n	10000670 <main+0x80>
+1000062a:	00a3      	lsls	r3, r4, #2
+1000062c:	4a19      	ldr	r2, [pc, #100]	; (10000694 <main+0xa4>)
+1000062e:	5898      	ldr	r0, [r3, r2]
+10000630:	f7ff ffba 	bl	100005a8 <setPixels>
+10000634:	4818      	ldr	r0, [pc, #96]	; (10000698 <main+0xa8>)
+10000636:	2100      	movs	r1, #0
+10000638:	f001 fb1e 	bl	10001c78 <sleep_us>
+1000063c:	3401      	adds	r4, #1
+1000063e:	2c17      	cmp	r4, #23
+10000640:	dc16      	bgt.n	10000670 <main+0x80>
+10000642:	4b16      	ldr	r3, [pc, #88]	; (1000069c <main+0xac>)
+10000644:	781b      	ldrb	r3, [r3, #0]
+10000646:	2b00      	cmp	r3, #0
+10000648:	d0ef      	beq.n	1000062a <main+0x3a>
+1000064a:	00a3      	lsls	r3, r4, #2
+1000064c:	4a0e      	ldr	r2, [pc, #56]	; (10000688 <main+0x98>)
+1000064e:	5898      	ldr	r0, [r3, r2]
+10000650:	f7ff ff74 	bl	1000053c <displayImage>
+10000654:	4b11      	ldr	r3, [pc, #68]	; (1000069c <main+0xac>)
+10000656:	2200      	movs	r2, #0
+10000658:	701a      	strb	r2, [r3, #0]
+1000065a:	e7eb      	b.n	10000634 <main+0x44>
+1000065c:	4b08      	ldr	r3, [pc, #32]	; (10000680 <main+0x90>)
+1000065e:	781a      	ldrb	r2, [r3, #0]
+10000660:	b2d2      	uxtb	r2, r2
+10000662:	2174      	movs	r1, #116	; 0x74
+10000664:	4807      	ldr	r0, [pc, #28]	; (10000684 <main+0x94>)
+10000666:	f000 f855 	bl	10000714 <clear>
+1000066a:	4b0c      	ldr	r3, [pc, #48]	; (1000069c <main+0xac>)
+1000066c:	2201      	movs	r2, #1
+1000066e:	701a      	strb	r2, [r3, #0]
+10000670:	4b0b      	ldr	r3, [pc, #44]	; (100006a0 <main+0xb0>)
+10000672:	681b      	ldr	r3, [r3, #0]
+10000674:	2b00      	cmp	r3, #0
+10000676:	d0f1      	beq.n	1000065c <main+0x6c>
+10000678:	4b09      	ldr	r3, [pc, #36]	; (100006a0 <main+0xb0>)
+1000067a:	681b      	ldr	r3, [r3, #0]
 1000067c:	2400      	movs	r4, #0
-1000067e:	e7e0      	b.n	10000642 <main+0x56>
-10000680:	200042a2 	.word	0x200042a2
-10000684:	20003e58 	.word	0x20003e58
-10000688:	20003cec 	.word	0x20003cec
+1000067e:	e7de      	b.n	1000063e <main+0x4e>
+10000680:	2000430e 	.word	0x2000430e
+10000684:	20003eb8 	.word	0x20003eb8
+10000688:	20003d40 	.word	0x20003d40
 1000068c:	1000050d 	.word	0x1000050d
 10000690:	20000238 	.word	0x20000238
-10000694:	20003d4c 	.word	0x20003d4c
-10000698:	20004078 	.word	0x20004078
-1000069c:	0015f900 	.word	0x0015f900
-100006a0:	200042a4 	.word	0x200042a4
+10000694:	20003da0 	.word	0x20003da0
+10000698:	000016da 	.word	0x000016da
+1000069c:	20004310 	.word	0x20004310
+100006a0:	200040e4 	.word	0x200040e4
 
 100006a4 <selectBank>:
 100006a4:	b510      	push	{r4, lr}
@@ -891,7 +892,7 @@ Disassembly of section .text:
 100007d8:	f7ff ff76 	bl	100006c8 <writeRegister8>
 100007dc:	b002      	add	sp, #8
 100007de:	bd70      	pop	{r4, r5, r6, pc}
-100007e0:	20003e58 	.word	0x20003e58
+100007e0:	20003eb8 	.word	0x20003eb8
 
 100007e4 <setLEDPWM>:
 100007e4:	b530      	push	{r4, r5, lr}
@@ -1015,7 +1016,7 @@ Disassembly of section .text:
 100008cc:	200d      	movs	r0, #13
 100008ce:	f000 f9a9 	bl	10000c24 <irq_add_shared_handler>
 100008d2:	e7ee      	b.n	100008b2 <gpio_set_irq_callback+0x1e>
-100008d4:	20003fcc 	.word	0x20003fcc
+100008d4:	2000402c 	.word	0x2000402c
 100008d8:	10000969 	.word	0x10000969
 
 100008dc <gpio_acknowledge_irq>:
@@ -1156,10 +1157,10 @@ Disassembly of section .text:
 100009ea:	46b1      	mov	r9, r6
 100009ec:	46a8      	mov	r8, r5
 100009ee:	bdf0      	pop	{r4, r5, r6, r7, pc}
-100009f0:	20003fcc 	.word	0x20003fcc
+100009f0:	2000402c 	.word	0x2000402c
 100009f4:	40014130 	.word	0x40014130
 100009f8:	40014100 	.word	0x40014100
-100009fc:	20004070 	.word	0x20004070
+100009fc:	200040dc 	.word	0x200040dc
 
 10000a00 <gpio_init>:
 10000a00:	b510      	push	{r4, lr}
@@ -1259,7 +1260,7 @@ Disassembly of section .text:
 10000abe:	701a      	strb	r2, [r3, #0]
 10000ac0:	4770      	bx	lr
 10000ac2:	46c0      	nop			; (mov r8, r8)
-10000ac4:	20003dac 	.word	0x20003dac
+10000ac4:	20003e00 	.word	0x20003e00
 
 10000ac8 <set_raw_irq_handler_and_unlock>:
 10000ac8:	4b07      	ldr	r3, [pc, #28]	; (10000ae8 <set_raw_irq_handler_and_unlock+0x20>)
@@ -1652,12 +1653,12 @@ Disassembly of section .text:
 10000e0c:	e757      	b.n	10000cbe <irq_add_shared_handler+0x9a>
 10000e0e:	46c0      	nop			; (mov r8, r8)
 10000e10:	d0000124 	.word	0xd0000124
-10000e14:	200042a3 	.word	0x200042a3
-10000e18:	20003db0 	.word	0x20003db0
+10000e14:	2000430f 	.word	0x2000430f
+10000e18:	20003e04 	.word	0x20003e04
 10000e1c:	e000ed00 	.word	0xe000ed00
 10000e20:	100001cd 	.word	0x100001cd
 10000e24:	ffffa100 	.word	0xffffa100
-10000e28:	20003de0 	.word	0x20003de0
+10000e28:	20003e34 	.word	0x20003e34
 10000e2c:	ffffbd01 	.word	0xffffbd01
 10000e30:	100055d4 	.word	0x100055d4
 10000e34:	1000578c 	.word	0x1000578c
@@ -1845,17 +1846,17 @@ Disassembly of section .text:
 10000fc8:	d0000124 	.word	0xd0000124
 10000fcc:	e000ed00 	.word	0xe000ed00
 10000fd0:	100001cd 	.word	0x100001cd
-10000fd4:	20003db0 	.word	0x20003db0
+10000fd4:	20003e04 	.word	0x20003e04
 10000fd8:	100056b0 	.word	0x100056b0
 10000fdc:	1000575c 	.word	0x1000575c
 10000fe0:	10005530 	.word	0x10005530
 10000fe4:	0000bd01 	.word	0x0000bd01
-10000fe8:	200042a3 	.word	0x200042a3
+10000fe8:	2000430f 	.word	0x2000430f
 10000fec:	10005698 	.word	0x10005698
 10000ff0:	1000577c 	.word	0x1000577c
 10000ff4:	ffffbd01 	.word	0xffffbd01
 10000ff8:	0000aaaa 	.word	0x0000aaaa
-10000ffc:	20003dea 	.word	0x20003dea
+10000ffc:	20003e3e 	.word	0x20003e3e
 10001000:	100056e4 	.word	0x100056e4
 
 10001004 <irq_add_tail_to_free_list>:
@@ -1947,7 +1948,7 @@ Disassembly of section .text:
 100010bc:	4807      	ldr	r0, [pc, #28]	; (100010dc <irq_add_tail_to_free_list+0xd8>)
 100010be:	f001 fc85 	bl	100029cc <__assert_func>
 100010c2:	46c0      	nop			; (mov r8, r8)
-100010c4:	20003db0 	.word	0x20003db0
+100010c4:	20003e04 	.word	0x20003e04
 100010c8:	d0000124 	.word	0xd0000124
 100010cc:	0000aaaa 	.word	0x0000aaaa
 100010d0:	e000ed00 	.word	0xe000ed00
@@ -1956,7 +1957,7 @@ Disassembly of section .text:
 100010dc:	10005530 	.word	0x10005530
 100010e0:	10005714 	.word	0x10005714
 100010e4:	100001cd 	.word	0x100001cd
-100010e8:	200042a3 	.word	0x200042a3
+100010e8:	2000430f 	.word	0x2000430f
 100010ec:	ffffbd01 	.word	0xffffbd01
 100010f0:	10005720 	.word	0x10005720
 
@@ -2065,7 +2066,7 @@ Disassembly of section .text:
 100011ca:	bd70      	pop	{r4, r5, r6, pc}
 100011cc:	100014dd 	.word	0x100014dd
 100011d0:	34000040 	.word	0x34000040
-100011d4:	20004060 	.word	0x20004060
+100011d4:	200040cc 	.word	0x200040cc
 
 100011d8 <sleep_until_callback>:
 100011d8:	4b0a      	ldr	r3, [pc, #40]	; (10001204 <sleep_until_callback+0x2c>)
@@ -2086,7 +2087,7 @@ Disassembly of section .text:
 100011fe:	2000      	movs	r0, #0
 10001200:	2100      	movs	r1, #0
 10001202:	4770      	bx	lr
-10001204:	20004284 	.word	0x20004284
+10001204:	200042f0 	.word	0x200042f0
 
 10001208 <timer_pool_entry_comparator>:
 10001208:	b510      	push	{r4, lr}
@@ -2764,7 +2765,7 @@ Disassembly of section .text:
 100017c2:	46a9      	mov	r9, r5
 100017c4:	46a0      	mov	r8, r4
 100017c6:	bdf0      	pop	{r4, r5, r6, r7, pc}
-100017c8:	20004060 	.word	0x20004060
+100017c8:	200040cc 	.word	0x200040cc
 100017cc:	10005468 	.word	0x10005468
 100017d0:	10005b5c 	.word	0x10005b5c
 100017d4:	10005484 	.word	0x10005484
@@ -2808,8 +2809,8 @@ Disassembly of section .text:
 10001844:	f7ff fca8 	bl	10001198 <alarm_pool_post_alloc_init>
 10001848:	e7eb      	b.n	10001822 <alarm_pool_init_default+0xa>
 1000184a:	46c0      	nop			; (mov r8, r8)
-1000184c:	20003df8 	.word	0x20003df8
-10001850:	20004284 	.word	0x20004284
+1000184c:	20003e4c 	.word	0x20003e4c
+10001850:	200042f0 	.word	0x200042f0
 10001854:	10001209 	.word	0x10001209
 
 10001858 <alarm_pool_get_default>:
@@ -2826,7 +2827,7 @@ Disassembly of section .text:
 1000186c:	4804      	ldr	r0, [pc, #16]	; (10001880 <alarm_pool_get_default+0x28>)
 1000186e:	f001 f8ad 	bl	100029cc <__assert_func>
 10001872:	46c0      	nop			; (mov r8, r8)
-10001874:	20003df8 	.word	0x20003df8
+10001874:	20003e4c 	.word	0x20003e4c
 10001878:	10005a8c 	.word	0x10005a8c
 1000187c:	10005b9c 	.word	0x10005b9c
 10001880:	100058a0 	.word	0x100058a0
@@ -3279,7 +3280,7 @@ Disassembly of section .text:
 10001c64:	10005b5c 	.word	0x10005b5c
 10001c68:	10005484 	.word	0x10005484
 10001c6c:	100011d9 	.word	0x100011d9
-10001c70:	20004284 	.word	0x20004284
+10001c70:	200042f0 	.word	0x200042f0
 10001c74:	40054000 	.word	0x40054000
 
 10001c78 <sleep_us>:
@@ -3470,9 +3471,9 @@ Disassembly of section .text:
 10001e08:	d0000128 	.word	0xd0000128
 10001e0c:	40054000 	.word	0x40054000
 10001e10:	4005703c 	.word	0x4005703c
-10001e14:	200042a6 	.word	0x200042a6
-10001e18:	20004288 	.word	0x20004288
-10001e1c:	20003fbc 	.word	0x20003fbc
+10001e14:	20004312 	.word	0x20004312
+10001e18:	200042f4 	.word	0x200042f4
+10001e1c:	2000401c 	.word	0x2000401c
 
 10001e20 <hardware_alarm_claim>:
 10001e20:	b510      	push	{r4, lr}
@@ -3483,7 +3484,7 @@ Disassembly of section .text:
 10001e2c:	bd10      	pop	{r4, pc}
 10001e2e:	46c0      	nop			; (mov r8, r8)
 10001e30:	10005c20 	.word	0x10005c20
-10001e34:	200042a0 	.word	0x200042a0
+10001e34:	2000430c 	.word	0x2000430c
 
 10001e38 <time_us_64>:
 10001e38:	4b04      	ldr	r3, [pc, #16]	; (10001e4c <time_us_64+0x14>)
@@ -3608,8 +3609,8 @@ Disassembly of section .text:
 10001f3c:	d0000128 	.word	0xd0000128
 10001f40:	10001d91 	.word	0x10001d91
 10001f44:	40056038 	.word	0x40056038
-10001f48:	20003fbc 	.word	0x20003fbc
-10001f4c:	200042a6 	.word	0x200042a6
+10001f48:	2000401c 	.word	0x2000401c
+10001f4c:	20004312 	.word	0x20004312
 
 10001f50 <hardware_alarm_set_target>:
 10001f50:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -3706,9 +3707,9 @@ Disassembly of section .text:
 10002014:	bdf0      	pop	{r4, r5, r6, r7, pc}
 10002016:	46c0      	nop			; (mov r8, r8)
 10002018:	d0000128 	.word	0xd0000128
-1000201c:	200042a6 	.word	0x200042a6
+1000201c:	20004312 	.word	0x20004312
 10002020:	40054000 	.word	0x40054000
-10002024:	20004288 	.word	0x20004288
+10002024:	200042f4 	.word	0x200042f4
 10002028:	10005c44 	.word	0x10005c44
 1000202c:	10005cc8 	.word	0x10005cc8
 10002030:	10005c68 	.word	0x10005c68
@@ -3739,7 +3740,7 @@ Disassembly of section .text:
 1000206a:	46c0      	nop			; (mov r8, r8)
 1000206c:	d0000128 	.word	0xd0000128
 10002070:	40054000 	.word	0x40054000
-10002074:	200042a6 	.word	0x200042a6
+10002074:	20004312 	.word	0x20004312
 
 10002078 <ph_add_child_node>:
 10002078:	b510      	push	{r4, lr}
@@ -4371,7 +4372,7 @@ Disassembly of section .text:
 100025c8:	e7f3      	b.n	100025b2 <uart_set_translate_crlf+0x6>
 100025ca:	46c0      	nop			; (mov r8, r8)
 100025cc:	bffc8000 	.word	0xbffc8000
-100025d0:	20004298 	.word	0x20004298
+100025d0:	20004304 	.word	0x20004304
 
 100025d4 <uart_init>:
 100025d4:	b570      	push	{r4, r5, r6, lr}
@@ -4550,7 +4551,7 @@ Disassembly of section .text:
 10002744:	e7cb      	b.n	100026de <clock_configure+0x8a>
 10002746:	46c0      	nop			; (mov r8, r8)
 10002748:	40008000 	.word	0x40008000
-1000274c:	20003fdc 	.word	0x20003fdc
+1000274c:	2000403c 	.word	0x2000403c
 10002750:	10005e10 	.word	0x10005e10
 10002754:	10005e84 	.word	0x10005e84
 10002758:	10005e24 	.word	0x10005e24
@@ -4649,7 +4650,7 @@ Disassembly of section .text:
 10002824:	f7ff ff16 	bl	10002654 <clock_configure>
 10002828:	e7ad      	b.n	10002786 <clocks_init+0x2a>
 1000282a:	46c0      	nop			; (mov r8, r8)
-1000282c:	20003fdc 	.word	0x20003fdc
+1000282c:	2000403c 	.word	0x2000403c
 10002830:	02dc6c00 	.word	0x02dc6c00
 10002834:	0000b71b 	.word	0x0000b71b
 10002838:	40008000 	.word	0x40008000
@@ -4667,7 +4668,7 @@ Disassembly of section .text:
 1000285e:	4b01      	ldr	r3, [pc, #4]	; (10002864 <clock_get_hz+0x8>)
 10002860:	58c0      	ldr	r0, [r0, r3]
 10002862:	4770      	bx	lr
-10002864:	20003fdc 	.word	0x20003fdc
+10002864:	2000403c 	.word	0x2000403c
 
 10002868 <pll_init>:
 10002868:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -4945,19 +4946,19 @@ Disassembly of section .text:
 10002ac0:	4000f000 	.word	0x4000f000
 10002ac4:	003c7ffe 	.word	0x003c7ffe
 10002ac8:	4000c000 	.word	0x4000c000
-10002acc:	20003e70 	.word	0x20003e70
-10002ad0:	20003e80 	.word	0x20003e80
+10002acc:	20003ed0 	.word	0x20003ed0
+10002ad0:	20003ee0 	.word	0x20003ee0
 10002ad4:	01ffffff 	.word	0x01ffffff
 10002ad8:	4001f000 	.word	0x4001f000
-10002adc:	20003e60 	.word	0x20003e60
+10002adc:	20003ec0 	.word	0x20003ec0
 10002ae0:	10006020 	.word	0x10006020
 10002ae4:	100060b4 	.word	0x100060b4
 10002ae8:	10006040 	.word	0x10006040
-10002aec:	20003e70 	.word	0x20003e70
+10002aec:	20003ed0 	.word	0x20003ed0
 10002af0:	e000ed00 	.word	0xe000ed00
 10002af4:	20000000 	.word	0x20000000
-10002af8:	20003e80 	.word	0x20003e80
-10002afc:	20003e84 	.word	0x20003e84
+10002af8:	20003ee0 	.word	0x20003ee0
+10002afc:	20003ee4 	.word	0x20003ee4
 
 10002b00 <panic>:
 10002b00:	b40f      	push	{r0, r1, r2, r3}
@@ -7083,7 +7084,7 @@ Disassembly of section .text:
 10003c72:	2104      	movs	r1, #4
 10003c74:	4b01      	ldr	r3, [pc, #4]	; (10003c7c <__aeabi_bits_init+0xc>)
 10003c76:	4718      	bx	r3
-10003c78:	20003e20 	.word	0x20003e20
+10003c78:	20003e80 	.word	0x20003e80
 10003c7c:	10003ca1 	.word	0x10003ca1
 
 10003c80 <rom_func_lookup>:
@@ -7845,7 +7846,7 @@ Disassembly of section .text:
 10004208:	bd08      	pop	{r3, pc}
 1000420a:	df08      	.short	0xdf08
 1000420c:	100045d9 	.word	0x100045d9
-10004210:	20004080 	.word	0x20004080
+10004210:	200040ec 	.word	0x200040ec
 10004214:	d0000000 	.word	0xd0000000
 
 10004218 <__wrap___aeabi_cdrcmple>:
@@ -7982,7 +7983,7 @@ Disassembly of section .text:
 10004302:	4319      	orrs	r1, r3
 10004304:	4311      	orrs	r1, r2
 10004306:	bd10      	pop	{r4, pc}
-10004308:	20004180 	.word	0x20004180
+10004308:	200041ec 	.word	0x200041ec
 1000430c:	0000041f 	.word	0x0000041f
 
 10004310 <__wrap___aeabi_d2iz>:
@@ -8032,7 +8033,7 @@ Disassembly of section .text:
 10004362:	bd08      	pop	{r3, pc}
 10004364:	48e5df24 	.word	0x48e5df24
 10004368:	00001000 	.word	0x00001000
-1000436c:	20004080 	.word	0x20004080
+1000436c:	200040ec 	.word	0x200040ec
 
 10004370 <__aeabi_double_init>:
 10004370:	b570      	push	{r4, r5, r6, lr}
@@ -8102,9 +8103,9 @@ Disassembly of section .text:
 100043fa:	480e      	ldr	r0, [pc, #56]	; (10004434 <__aeabi_double_init+0xc4>)
 100043fc:	f7fe fae6 	bl	100029cc <__assert_func>
 10004400:	10004439 	.word	0x10004439
-10004404:	20004080 	.word	0x20004080
+10004404:	200040ec 	.word	0x200040ec
 10004408:	0000334c 	.word	0x0000334c
-1000440c:	20004180 	.word	0x20004180
+1000440c:	200041ec 	.word	0x200041ec
 10004410:	00004453 	.word	0x00004453
 10004414:	00004653 	.word	0x00004653
 10004418:	00003854 	.word	0x00003854
@@ -8141,7 +8142,7 @@ Disassembly of section .text:
 10004462:	9003      	str	r0, [sp, #12]
 10004464:	bd07      	pop	{r0, r1, r2, pc}
 10004466:	0000      	.short	0x0000
-10004468:	20004080 	.word	0x20004080
+10004468:	200040ec 	.word	0x200040ec
 
 1000446c <drsub_shim>:
 1000446c:	b40f      	push	{r0, r1, r2, r3}
@@ -9039,9 +9040,9 @@ Disassembly of section .text:
 10004a7e:	f7fd ffa5 	bl	100029cc <__assert_func>
 10004a82:	46c0      	nop			; (mov r8, r8)
 10004a84:	00004653 	.word	0x00004653
-10004a88:	20004184 	.word	0x20004184
+10004a88:	200041f0 	.word	0x200041f0
 10004a8c:	0000334c 	.word	0x0000334c
-10004a90:	20004180 	.word	0x20004180
+10004a90:	200041ec 	.word	0x200041ec
 10004a94:	000029ee 	.word	0x000029ee
 10004a98:	00000fc4 	.word	0x00000fc4
 10004a9c:	00000dc2 	.word	0x00000dc2
@@ -9083,14 +9084,14 @@ Disassembly of section .text:
 10004afa:	9003      	str	r0, [sp, #12]
 10004afc:	bd07      	pop	{r0, r1, r2, pc}
 10004afe:	0000      	.short	0x0000
-10004b00:	20004184 	.word	0x20004184
+10004b00:	200041f0 	.word	0x200041f0
 
 10004b04 <__aeabi_mem_init>:
 10004b04:	4801      	ldr	r0, [pc, #4]	; (10004b0c <__aeabi_mem_init+0x8>)
 10004b06:	2104      	movs	r1, #4
 10004b08:	4b01      	ldr	r3, [pc, #4]	; (10004b10 <__aeabi_mem_init+0xc>)
 10004b0a:	4718      	bx	r3
-10004b0c:	20003e30 	.word	0x20003e30
+10004b0c:	20003e90 	.word	0x20003e90
 10004b10:	10003ca1 	.word	0x10003ca1
 
 10004b14 <__wrap_memset>:
@@ -9098,14 +9099,14 @@ Disassembly of section .text:
 10004b16:	681b      	ldr	r3, [r3, #0]
 10004b18:	4718      	bx	r3
 10004b1a:	0000      	.short	0x0000
-10004b1c:	20003e30 	.word	0x20003e30
+10004b1c:	20003e90 	.word	0x20003e90
 
 10004b20 <__wrap___aeabi_memcpy>:
 10004b20:	4b01      	ldr	r3, [pc, #4]	; (10004b28 <__wrap___aeabi_memcpy+0x8>)
 10004b22:	685b      	ldr	r3, [r3, #4]
 10004b24:	4718      	bx	r3
 10004b26:	0000      	.short	0x0000
-10004b28:	20003e30 	.word	0x20003e30
+10004b28:	20003e90 	.word	0x20003e90
 
 10004b2c <stdio_out_chars_no_crlf>:
 10004b2c:	b510      	push	{r4, lr}
@@ -9212,8 +9213,8 @@ Disassembly of section .text:
 10004bf2:	602b      	str	r3, [r5, #0]
 10004bf4:	bd70      	pop	{r4, r5, r6, pc}
 10004bf6:	46c0      	nop			; (mov r8, r8)
-10004bf8:	20004044 	.word	0x20004044
-10004bfc:	20004048 	.word	0x20004048
+10004bf8:	200040a4 	.word	0x200040a4
+10004bfc:	200040a8 	.word	0x200040a8
 
 10004c00 <stdio_buffered_printer>:
 10004c00:	b570      	push	{r4, r5, r6, lr}
@@ -9264,7 +9265,7 @@ Disassembly of section .text:
 10004c5e:	4805      	ldr	r0, [pc, #20]	; (10004c74 <stdout_serialize_begin+0x54>)
 10004c60:	f7fd feb4 	bl	100029cc <__assert_func>
 10004c64:	000f4240 	.word	0x000f4240
-10004c68:	20003e68 	.word	0x20003e68
+10004c68:	20003ec8 	.word	0x20003ec8
 10004c6c:	10005468 	.word	0x10005468
 10004c70:	100064e8 	.word	0x100064e8
 10004c74:	10005484 	.word	0x10005484
@@ -9276,7 +9277,7 @@ Disassembly of section .text:
 10004c80:	f000 fbd2 	bl	10005428 <__mutex_exit_veneer>
 10004c84:	bd10      	pop	{r4, pc}
 10004c86:	46c0      	nop			; (mov r8, r8)
-10004c88:	20003e68 	.word	0x20003e68
+10004c88:	20003ec8 	.word	0x20003ec8
 
 10004c8c <stdio_put_string>:
 10004c8c:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -9345,9 +9346,9 @@ Disassembly of section .text:
 10004d0e:	f7ff ffb5 	bl	10004c7c <stdout_serialize_end>
 10004d12:	e7f4      	b.n	10004cfe <stdio_put_string+0x72>
 10004d14:	10004b2d 	.word	0x10004b2d
-10004d18:	20004044 	.word	0x20004044
+10004d18:	200040a4 	.word	0x200040a4
 10004d1c:	10004b3d 	.word	0x10004b3d
-10004d20:	20004048 	.word	0x20004048
+10004d20:	200040a8 	.word	0x200040a8
 
 10004d24 <stdio_set_driver_enabled>:
 10004d24:	4a09      	ldr	r2, [pc, #36]	; (10004d4c <stdio_set_driver_enabled+0x28>)
@@ -9370,7 +9371,7 @@ Disassembly of section .text:
 10004d46:	d000      	beq.n	10004d4a <stdio_set_driver_enabled+0x26>
 10004d48:	6010      	str	r0, [r2, #0]
 10004d4a:	4770      	bx	lr
-10004d4c:	20004044 	.word	0x20004044
+10004d4c:	200040a4 	.word	0x200040a4
 
 10004d50 <stdio_flush>:
 10004d50:	b510      	push	{r4, lr}
@@ -9387,7 +9388,7 @@ Disassembly of section .text:
 10004d66:	e7f8      	b.n	10004d5a <stdio_flush+0xa>
 10004d68:	bd10      	pop	{r4, pc}
 10004d6a:	46c0      	nop			; (mov r8, r8)
-10004d6c:	20004044 	.word	0x20004044
+10004d6c:	200040a4 	.word	0x200040a4
 
 10004d70 <__wrap_puts>:
 10004d70:	b570      	push	{r4, r5, r6, lr}
@@ -9505,9 +9506,9 @@ Disassembly of section .text:
 10004e56:	e7f5      	b.n	10004e44 <stdio_uart_out_chars+0x50>
 10004e58:	b003      	add	sp, #12
 10004e5a:	bdf0      	pop	{r4, r5, r6, r7, pc}
-10004e5c:	2000429c 	.word	0x2000429c
+10004e5c:	20004308 	.word	0x20004308
 10004e60:	bffc8000 	.word	0xbffc8000
-10004e64:	20004298 	.word	0x20004298
+10004e64:	20004304 	.word	0x20004304
 
 10004e68 <stdio_uart_in_chars>:
 10004e68:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -9570,8 +9571,8 @@ Disassembly of section .text:
 10004eda:	3d03      	subs	r5, #3
 10004edc:	e7fa      	b.n	10004ed4 <stdio_uart_in_chars+0x6c>
 10004ede:	46c0      	nop			; (mov r8, r8)
-10004ee0:	2000429c 	.word	0x2000429c
-10004ee4:	20003fd4 	.word	0x20003fd4
+10004ee0:	20004308 	.word	0x20004308
+10004ee4:	20004034 	.word	0x20004034
 
 10004ee8 <on_uart_rx>:
 10004ee8:	b510      	push	{r4, lr}
@@ -9588,9 +9589,9 @@ Disassembly of section .text:
 10004efe:	4798      	blx	r3
 10004f00:	bd10      	pop	{r4, pc}
 10004f02:	46c0      	nop			; (mov r8, r8)
-10004f04:	20003fd4 	.word	0x20003fd4
-10004f08:	2000429c 	.word	0x2000429c
-10004f0c:	20003fd8 	.word	0x20003fd8
+10004f04:	20004034 	.word	0x20004034
+10004f08:	20004308 	.word	0x20004308
+10004f0c:	20004038 	.word	0x20004038
 
 10004f10 <stdio_uart_set_chars_available_callback>:
 10004f10:	b570      	push	{r4, r5, r6, lr}
@@ -9649,10 +9650,10 @@ Disassembly of section .text:
 10004f80:	0028      	movs	r0, r5
 10004f82:	f7fb ff69 	bl	10000e58 <irq_remove_handler>
 10004f86:	e7d6      	b.n	10004f36 <stdio_uart_set_chars_available_callback+0x26>
-10004f88:	2000429c 	.word	0x2000429c
+10004f88:	20004308 	.word	0x20004308
 10004f8c:	bffc8000 	.word	0xbffc8000
-10004f90:	20003fd4 	.word	0x20003fd4
-10004f94:	20003fd8 	.word	0x20003fd8
+10004f90:	20004034 	.word	0x20004034
+10004f94:	20004038 	.word	0x20004038
 10004f98:	10004ee9 	.word	0x10004ee9
 
 10004f9c <stdio_uart_init_full>:
@@ -9682,8 +9683,8 @@ Disassembly of section .text:
 10004fd0:	f7fb fc2e 	bl	10000830 <gpio_set_function>
 10004fd4:	e7eb      	b.n	10004fae <stdio_uart_init_full+0x12>
 10004fd6:	46c0      	nop			; (mov r8, r8)
-10004fd8:	2000429c 	.word	0x2000429c
-10004fdc:	20003e40 	.word	0x20003e40
+10004fd8:	20004308 	.word	0x20004308
+10004fdc:	20003ea0 	.word	0x20003ea0
 
 10004fe0 <stdio_uart_init>:
 10004fe0:	b510      	push	{r4, lr}
@@ -10148,7 +10149,7 @@ Disassembly of section .text:
 10005396:	2208      	movs	r2, #8
 10005398:	e7e1      	b.n	1000535e <i2c_init+0xa>
 1000539a:	46c0      	nop			; (mov r8, r8)
-1000539c:	20003e58 	.word	0x20003e58
+1000539c:	20003eb8 	.word	0x20003eb8
 100053a0:	4000e000 	.word	0x4000e000
 100053a4:	4000f000 	.word	0x4000f000
 100053a8:	4000c000 	.word	0x4000c000
@@ -10639,201 +10640,204 @@ Disassembly of section .data:
 	...
 
 200038fc <imageoptimized_0002>:
-200038fc:	00000004 00000005 00000001              ............
+200038fc:	00000001 00000004 00000005 00000001     ................
 
-20003908 <imageoptimized_0003>:
-20003908:	00000005 00000005 00000001 0000000b     ................
-20003918:	00000004 00000001                       ........
+2000390c <imageoptimized_0003>:
+2000390c:	00000002 00000005 00000005 00000001     ................
+2000391c:	0000000b 00000004 00000001              ............
 
-20003920 <imageoptimized_0004>:
-20003920:	00000005 00000006 00000001 00000006     ................
-20003930:	00000007 00000001 00000009 00000001     ................
-20003940:	00000001 0000000a 00000002 00000001     ................
-20003950:	0000000a 00000003 00000001 0000000b     ................
-20003960:	00000003 00000001                       ........
+20003928 <imageoptimized_0004>:
+20003928:	00000006 00000005 00000006 00000001     ................
+20003938:	00000006 00000007 00000001 00000009     ................
+20003948:	00000001 00000001 0000000a 00000002     ................
+20003958:	00000001 0000000a 00000003 00000001     ................
+20003968:	0000000b 00000003 00000001              ............
 
-20003968 <imageoptimized_0005>:
-20003968:	00000004 00000005 00000000 00000005     ................
-20003978:	00000005 00000000 00000005 00000006     ................
-20003988:	00000000 00000006 00000007 00000000     ................
-20003998:	00000009 00000001 00000000 0000000a     ................
-200039a8:	00000002 00000000 0000000a 00000003     ................
-200039b8:	00000000                                ....
+20003974 <imageoptimized_0005>:
+20003974:	00000007 00000004 00000005 00000000     ................
+20003984:	00000005 00000005 00000000 00000005     ................
+20003994:	00000006 00000000 00000006 00000007     ................
+200039a4:	00000000 00000009 00000001 00000000     ................
+200039b4:	0000000a 00000002 00000000 0000000a     ................
+200039c4:	00000003 00000000                       ........
 
-200039bc <imageoptimized_0006>:
-200039bc:	0000000b 00000003 00000000              ............
+200039cc <imageoptimized_0006>:
+200039cc:	00000001 0000000b 00000003 00000000     ................
 
-200039c8 <imageoptimized_0007>:
-200039c8:	0000000a 00000005 00000001 0000000b     ................
-200039d8:	00000005 00000001                       ........
+200039dc <imageoptimized_0007>:
+200039dc:	00000002 0000000a 00000005 00000001     ................
+200039ec:	0000000b 00000005 00000001              ............
 
-200039e0 <imageoptimized_0008>:
-200039e0:	00000004 00000003 00000001 00000005     ................
-200039f0:	00000002 00000001 00000005 00000003     ................
-20003a00:	00000001 0000000a 00000005 00000000     ................
-20003a10:	0000000b 00000005 00000000              ............
+200039f8 <imageoptimized_0008>:
+200039f8:	00000005 00000004 00000003 00000001     ................
+20003a08:	00000005 00000002 00000001 00000005     ................
+20003a18:	00000003 00000001 0000000a 00000005     ................
+20003a28:	00000000 0000000b 00000005 00000000     ................
 
-20003a1c <imageoptimized_0009>:
-20003a1c:	00000004 00000003 00000000 00000005     ................
-20003a2c:	00000002 00000000 00000005 00000003     ................
-20003a3c:	00000000 0000000b 00000004 00000000     ................
+20003a38 <imageoptimized_0009>:
+20003a38:	00000004 00000004 00000003 00000000     ................
+20003a48:	00000005 00000002 00000000 00000005     ................
+20003a58:	00000003 00000000 0000000b 00000004     ................
+20003a68:	00000000                                ....
 
-20003a4c <imageoptimized_0010>:
-20003a4c:	00000004 00000005 00000001 00000005     ................
-20003a5c:	00000005 00000001 00000005 00000006     ................
-20003a6c:	00000001 00000006 00000007 00000001     ................
-20003a7c:	0000000b 00000003 00000001 0000000b     ................
-20003a8c:	00000004 00000001                       ........
+20003a6c <imageoptimized_0010>:
+20003a6c:	00000006 00000004 00000005 00000001     ................
+20003a7c:	00000005 00000005 00000001 00000005     ................
+20003a8c:	00000006 00000001 00000006 00000007     ................
+20003a9c:	00000001 0000000b 00000003 00000001     ................
+20003aac:	0000000b 00000004 00000001              ............
 
-20003a94 <imageoptimized_0011>:
-20003a94:	00000004 00000004 00000000 00000004     ................
-20003aa4:	00000005 00000000 00000005 00000005     ................
-20003ab4:	00000000 00000005 00000006 00000000     ................
-20003ac4:	00000006 00000007 00000000              ............
+20003ab8 <imageoptimized_0011>:
+20003ab8:	00000005 00000004 00000004 00000000     ................
+20003ac8:	00000004 00000005 00000000 00000005     ................
+20003ad8:	00000005 00000000 00000005 00000006     ................
+20003ae8:	00000000 00000006 00000007 00000000     ................
 
-20003ad0 <imageoptimized_0012>:
-20003ad0:	0000000b 00000003 00000000              ............
+20003af8 <imageoptimized_0012>:
+20003af8:	00000001 0000000b 00000003 00000000     ................
 
-20003adc <imageoptimized_0013>:
-20003adc:	00000004 00000003 00000001 00000004     ................
-20003aec:	00000004 00000001 00000005 00000002     ................
-20003afc:	00000001 00000005 00000003 00000001     ................
-20003b0c:	00000006 00000001 00000001 0000000b     ................
-20003b1c:	00000005 00000001                       ........
+20003b08 <imageoptimized_0013>:
+20003b08:	00000006 00000004 00000003 00000001     ................
+20003b18:	00000004 00000004 00000001 00000005     ................
+20003b28:	00000002 00000001 00000005 00000003     ................
+20003b38:	00000001 00000006 00000001 00000001     ................
+20003b48:	0000000b 00000005 00000001              ............
 
-20003b24 <imageoptimized_0014>:
-20003b24:	00000004 00000003 00000000 00000005     ................
-20003b34:	00000002 00000000 00000005 00000003     ................
-20003b44:	00000000 00000006 00000001 00000000     ................
-20003b54:	0000000b 00000004 00000000 0000000b     ................
-20003b64:	00000005 00000000                       ........
+20003b54 <imageoptimized_0014>:
+20003b54:	00000006 00000004 00000003 00000000     ................
+20003b64:	00000005 00000002 00000000 00000005     ................
+20003b74:	00000003 00000000 00000006 00000001     ................
+20003b84:	00000000 0000000b 00000004 00000000     ................
+20003b94:	0000000b 00000005 00000000              ............
 
-20003b6c <imageoptimized_0015>:
-20003b6c:	00000004 00000005 00000001 00000005     ................
-20003b7c:	00000005 00000001 00000005 00000006     ................
-20003b8c:	00000001                                ....
+20003ba0 <imageoptimized_0015>:
+20003ba0:	00000003 00000004 00000005 00000001     ................
+20003bb0:	00000005 00000005 00000001 00000005     ................
+20003bc0:	00000006 00000001                       ........
 
-20003b90 <imageoptimized_0016>:
-20003b90:	00000004 00000005 00000000 00000005     ................
-20003ba0:	00000005 00000000 00000005 00000006     ................
-20003bb0:	00000000 0000000a 00000002 00000001     ................
-20003bc0:	0000000a 00000003 00000001 0000000b     ................
-20003bd0:	00000003 00000001 0000000b 00000004     ................
-20003be0:	00000001                                ....
+20003bc8 <imageoptimized_0016>:
+20003bc8:	00000007 00000004 00000005 00000000     ................
+20003bd8:	00000005 00000005 00000000 00000005     ................
+20003be8:	00000006 00000000 0000000a 00000002     ................
+20003bf8:	00000001 0000000a 00000003 00000001     ................
+20003c08:	0000000b 00000003 00000001 0000000b     ................
+20003c18:	00000004 00000001                       ........
 
-20003be4 <imageoptimized_0017>:
-20003be4:	00000004 00000004 00000000 0000000a     ................
-20003bf4:	00000002 00000000 0000000a 00000003     ................
-20003c04:	00000000 0000000b 00000003 00000000     ................
+20003c20 <imageoptimized_0017>:
+20003c20:	00000004 00000004 00000004 00000000     ................
+20003c30:	0000000a 00000002 00000000 0000000a     ................
+20003c40:	00000003 00000000 0000000b 00000003     ................
+20003c50:	00000000                                ....
 
-20003c14 <imageoptimized_0018>:
-20003c14:	00000004 00000004 00000001 0000000a     ................
-20003c24:	00000005 00000001 0000000b 00000005     ................
-20003c34:	00000001                                ....
+20003c54 <imageoptimized_0018>:
+20003c54:	00000003 00000004 00000004 00000001     ................
+20003c64:	0000000a 00000005 00000001 0000000b     ................
+20003c74:	00000005 00000001                       ........
 
-20003c38 <imageoptimized_0019>:
-20003c38:	00000004 00000003 00000001 00000005     ................
-20003c48:	00000002 00000001 00000005 00000003     ................
-20003c58:	00000001 00000006 00000001 00000001     ................
-20003c68:	00000009 00000007 00000001 0000000a     ................
-20003c78:	00000006 00000001                       ........
+20003c7c <imageoptimized_0019>:
+20003c7c:	00000006 00000004 00000003 00000001     ................
+20003c8c:	00000005 00000002 00000001 00000005     ................
+20003c9c:	00000003 00000001 00000006 00000001     ................
+20003cac:	00000001 00000009 00000007 00000001     ................
+20003cbc:	0000000a 00000006 00000001              ............
 
-20003c80 <imageoptimized_0020>:
-20003c80:	00000005 00000002 00000000 00000006     ................
-20003c90:	00000001 00000000 00000009 00000007     ................
-20003ca0:	00000000 0000000a 00000005 00000000     ................
-20003cb0:	0000000a 00000006 00000000 0000000b     ................
-20003cc0:	00000004 00000000 0000000b 00000005     ................
-20003cd0:	00000000                                ....
+20003cc8 <imageoptimized_0020>:
+20003cc8:	00000007 00000005 00000002 00000000     ................
+20003cd8:	00000006 00000001 00000000 00000009     ................
+20003ce8:	00000007 00000000 0000000a 00000005     ................
+20003cf8:	00000000 0000000a 00000006 00000000     ................
+20003d08:	0000000b 00000004 00000000 0000000b     ................
+20003d18:	00000005 00000000                       ........
 
-20003cd4 <imageoptimized_0021>:
-20003cd4:	00000005 00000003 00000000              ............
+20003d20 <imageoptimized_0021>:
+20003d20:	00000001 00000005 00000003 00000000     ................
 
-20003ce0 <imageoptimized_0022>:
-20003ce0:	00000004 00000003 00000000              ............
+20003d30 <imageoptimized_0022>:
+20003d30:	00000001 00000004 00000003 00000000     ................
 
-20003cec <images>:
-20003cec:	2000023c 20000484 200006cc 20000914     <.. ... ... ... 
-20003cfc:	20000b5c 20000da4 20000fec 20001234     \.. ... ... 4.. 
-20003d0c:	2000147c 200016c4 2000190c 20001b54     |.. ... ... T.. 
-20003d1c:	20001d9c 20001fe4 2000222c 20002474     ... ... ,". t$. 
-20003d2c:	200026bc 20002904 20002b4c 20002d94     .&. .). L+. .-. 
-20003d3c:	20002fdc 20003224 2000346c 200036b4     ./. $2. l4. .6. 
+20003d40 <images>:
+20003d40:	2000023c 20000484 200006cc 20000914     <.. ... ... ... 
+20003d50:	20000b5c 20000da4 20000fec 20001234     \.. ... ... 4.. 
+20003d60:	2000147c 200016c4 2000190c 20001b54     |.. ... ... T.. 
+20003d70:	20001d9c 20001fe4 2000222c 20002474     ... ... ,". t$. 
+20003d80:	200026bc 20002904 20002b4c 20002d94     .&. .). L+. .-. 
+20003d90:	20002fdc 20003224 2000346c 200036b4     ./. $2. l4. .6. 
 
-20003d4c <imagesoptimized>:
-20003d4c:	2000404c 200038fc 20003908 20003920     L@. .8. .9.  9. 
-20003d5c:	20003968 200039bc 200039c8 200039e0     h9. .9. .9. .9. 
-20003d6c:	20003a1c 20003a4c 20003a94 20003ad0     .:. L:. .:. .:. 
-20003d7c:	20003adc 20003b24 20003b6c 20003b90     .:. $;. l;. .;. 
-20003d8c:	20003be4 20003c14 20003c38 20003c80     .;. .<. 8<. .<. 
-20003d9c:	20003cd4 20003ce0 2000404c 2000404c     .<. .<. L@. L@. 
+20003da0 <imagesoptimized>:
+20003da0:	200040ac 200038fc 2000390c 20003928     .@. .8. .9. (9. 
+20003db0:	20003974 200039cc 200039dc 200039f8     t9. .9. .9. .9. 
+20003dc0:	20003a38 20003a6c 20003ab8 20003af8     8:. l:. .:. .:. 
+20003dd0:	20003b08 20003b54 20003ba0 20003bc8     .;. T;. .;. .;. 
+20003de0:	20003c20 20003c54 20003c7c 20003cc8      <. T<. |<. .<. 
+20003df0:	20003d20 20003d30 200040b0 200040b4      =. 0=. .@. .@. 
 
-20003dac <striped_spin_lock_num>:
-20003dac:	00000010                                ....
+20003e00 <striped_spin_lock_num>:
+20003e00:	00000010                                ....
 
-20003db0 <irq_handler_chain_slots>:
-20003db0:	00000000 	.word	0x00000000
-20003db4:	00010000 	.word	0x00010000
+20003e04 <irq_handler_chain_slots>:
+20003e04:	00000000 	.word	0x00000000
+20003e08:	00010000 	.word	0x00010000
 	...
-20003dc0:	00020000 	.word	0x00020000
+20003e14:	00020000 	.word	0x00020000
 	...
-20003dcc:	00030000 	.word	0x00030000
+20003e20:	00030000 	.word	0x00030000
 	...
-20003dd8:	00ff0000 	.word	0x00ff0000
-20003ddc:	00000000 	.word	0x00000000
+20003e2c:	00ff0000 	.word	0x00ff0000
+20003e30:	00000000 	.word	0x00000000
 
-20003de0 <irq_handler_chain_first_slot>:
-20003de0:	b501      	push	{r0, lr}
-20003de2:	6848      	ldr	r0, [r1, #4]
-20003de4:	3101      	adds	r1, #1
-20003de6:	468e      	mov	lr, r1
-20003de8:	4700      	bx	r0
+20003e34 <irq_handler_chain_first_slot>:
+20003e34:	b501      	push	{r0, lr}
+20003e36:	6848      	ldr	r0, [r1, #4]
+20003e38:	3101      	adds	r1, #1
+20003e3a:	468e      	mov	lr, r1
+20003e3c:	4700      	bx	r0
 
-20003dea <irq_handler_chain_remove_tail>:
-20003dea:	4670      	mov	r0, lr
-20003dec:	3809      	subs	r0, #9
-20003dee:	4901      	ldr	r1, [pc, #4]	; (20003df4 <irq_handler_chain_remove_tail+0xa>)
-20003df0:	4788      	blx	r1
-20003df2:	bd01      	pop	{r0, pc}
-20003df4:	10001005 	.word	0x10001005
+20003e3e <irq_handler_chain_remove_tail>:
+20003e3e:	4670      	mov	r0, lr
+20003e40:	3809      	subs	r0, #9
+20003e42:	4901      	ldr	r1, [pc, #4]	; (20003e48 <irq_handler_chain_remove_tail+0xa>)
+20003e44:	4788      	blx	r1
+20003e46:	bd01      	pop	{r0, pc}
+20003e48:	10001005 	.word	0x10001005
 
-20003df8 <default_alarm_pool>:
-20003df8:	20003e10 00000000 20003e88 20004004     .>. .....>. .@. 
-	...
-
-20003e10 <default_alarm_pool_heap>:
-20003e10:	20004014 00000000 00000000 00000010     .@. ............
-
-20003e20 <aeabi_bits_funcs>:
-20003e20:	00003350 	.word	0x00003350
-20003e24:	0000334c 	.word	0x0000334c
-20003e28:	00003354 	.word	0x00003354
-20003e2c:	00003352 	.word	0x00003352
-
-20003e30 <aeabi_bits_funcs_end>:
-20003e30:	0000534d 	.word	0x0000534d
-20003e34:	0000434d 	.word	0x0000434d
-20003e38:	00003453 	.word	0x00003453
-20003e3c:	00003443 	.word	0x00003443
-
-20003e40 <stdio_uart>:
-20003e40:	10004df5 00000000 10004e69 10004f11     .M......iN...O..
-20003e50:	00000000 00000100                       ........
-
-20003e58 <i2c0_inst>:
-20003e58:	40044000 00000000                       .@.@....
-
-20003e60 <malloc_mutex>:
+20003e4c <default_alarm_pool>:
+20003e4c:	20003e64 00000000 20003ee8 20004064     d>. .....>. d@. 
 	...
 
-20003e68 <print_mutex>:
+20003e64 <default_alarm_pool_heap>:
+20003e64:	20004074 00000000 00000000 00000010     t@. ............
 	...
 
-20003e70 <__mutex_array_end>:
-20003e70:	10004b05 	.word	0x10004b05
-20003e74:	10003c71 	.word	0x10003c71
-20003e78:	10004371 	.word	0x10004371
-20003e7c:	100049d5 	.word	0x100049d5
+20003e80 <aeabi_bits_funcs>:
+20003e80:	00003350 	.word	0x00003350
+20003e84:	0000334c 	.word	0x0000334c
+20003e88:	00003354 	.word	0x00003354
+20003e8c:	00003352 	.word	0x00003352
 
-20003e80 <__frame_dummy_init_array_entry>:
-20003e80:	100002e5                                ....
+20003e90 <aeabi_bits_funcs_end>:
+20003e90:	0000534d 	.word	0x0000534d
+20003e94:	0000434d 	.word	0x0000434d
+20003e98:	00003453 	.word	0x00003453
+20003e9c:	00003443 	.word	0x00003443
+
+20003ea0 <stdio_uart>:
+20003ea0:	10004df5 00000000 10004e69 10004f11     .M......iN...O..
+20003eb0:	00000000 00000100                       ........
+
+20003eb8 <i2c0_inst>:
+20003eb8:	40044000 00000000                       .@.@....
+
+20003ec0 <malloc_mutex>:
+	...
+
+20003ec8 <print_mutex>:
+	...
+
+20003ed0 <__mutex_array_end>:
+20003ed0:	10004b05 	.word	0x10004b05
+20003ed4:	10003c71 	.word	0x10003c71
+20003ed8:	10004371 	.word	0x10004371
+20003edc:	100049d5 	.word	0x100049d5
+
+20003ee0 <__frame_dummy_init_array_entry>:
+20003ee0:	100002e5                                ....
