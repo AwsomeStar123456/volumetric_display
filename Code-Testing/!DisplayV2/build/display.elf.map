@@ -1259,9 +1259,9 @@ Discarded input sections
                 0x00000000       0x3e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .data.i2c1_inst
                 0x00000000        0x8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .text          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccMq5Aez.o
- .data          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccMq5Aez.o
- .bss           0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccMq5Aez.o
+ .text          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccG0vGAS.o
+ .data          0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccG0vGAS.o
+ .bss           0x00000000        0x0 C:\Users\Semra\AppData\Local\Temp\ccG0vGAS.o
  .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-calloc.o)
@@ -1477,11 +1477,11 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 C:\Users\Semra\AppData\Local\Temp\ccMq5Aez.o
+ .boot2         0x10000000      0x100 C:\Users\Semra\AppData\Local\Temp\ccG0vGAS.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x5448
+.text           0x10000100     0x5470
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1563,481 +1563,481 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x10000444       0x2c CMakeFiles/display.dir/timingverification.c.obj
                 0x10000444                core1_entry
  .text.displayImage
-                0x10000470       0x6c CMakeFiles/display.dir/timingverification.c.obj
+                0x10000470       0x60 CMakeFiles/display.dir/timingverification.c.obj
                 0x10000470                displayImage
- .text.main     0x100004dc       0xc8 CMakeFiles/display.dir/timingverification.c.obj
-                0x100004dc                main
+ .text.main     0x100004d0       0xfc CMakeFiles/display.dir/timingverification.c.obj
+                0x100004d0                main
  .text.selectBank
-                0x100005a4       0x24 CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x100005a4                selectBank
+                0x100005cc       0x24 CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x100005cc                selectBank
  .text.writeRegister8
-                0x100005c8       0x34 CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x100005c8                writeRegister8
+                0x100005f0       0x34 CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x100005f0                writeRegister8
  .text.displayFrame
-                0x100005fc       0x18 CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x100005fc                displayFrame
- .text.clear    0x10000614       0x3e CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x10000614                clear
- *fill*         0x10000652        0x2 
+                0x10000624       0x18 CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x10000624                displayFrame
+ .text.clear    0x1000063c       0x3e CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x1000063c                clear
+ *fill*         0x1000067a        0x2 
  .text.init_ledDisplay
-                0x10000654       0x90 CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x10000654                init_ledDisplay
+                0x1000067c       0x90 CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x1000067c                init_ledDisplay
  .text.setLEDPWM
-                0x100006e4       0x20 CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x100006e4                setLEDPWM
+                0x1000070c       0x20 CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x1000070c                setLEDPWM
  .text.setPixel
-                0x10000704       0x2c CMakeFiles/display.dir/IS31FL3731.c.obj
-                0x10000704                setPixel
- .text.person   0x10000730      0x5d8 CMakeFiles/display.dir/DisplayAddons.c.obj
-                0x10000730                person
+                0x1000072c       0x2c CMakeFiles/display.dir/IS31FL3731.c.obj
+                0x1000072c                setPixel
+ .text.person   0x10000758      0x5d8 CMakeFiles/display.dir/DisplayAddons.c.obj
+                0x10000758                person
  .text.display_number
-                0x10000d08       0x5c CMakeFiles/display.dir/DisplayAddons.c.obj
-                0x10000d08                display_number
+                0x10000d30       0x5c CMakeFiles/display.dir/DisplayAddons.c.obj
+                0x10000d30                display_number
  .text.display_numbers
-                0x10000d64       0x24 CMakeFiles/display.dir/DisplayAddons.c.obj
-                0x10000d64                display_numbers
+                0x10000d8c       0x24 CMakeFiles/display.dir/DisplayAddons.c.obj
+                0x10000d8c                display_numbers
  .text.gpio_set_function
-                0x10000d88       0x30 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000d88                gpio_set_function
+                0x10000db0       0x30 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000db0                gpio_set_function
  .text.gpio_set_pulls
-                0x10000db8       0x34 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000db8                gpio_set_pulls
+                0x10000de0       0x34 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000de0                gpio_set_pulls
  .text.gpio_init
-                0x10000dec       0x16 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000dec                gpio_init
- *fill*         0x10000e02        0x2 
+                0x10000e14       0x16 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000e14                gpio_init
+ *fill*         0x10000e2a        0x2 
  .text.running_on_fpga
-                0x10000e04       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10000e04                running_on_fpga
+                0x10000e2c       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10000e2c                running_on_fpga
  .text.hw_claim_lock
-                0x10000e18       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e18                hw_claim_lock
+                0x10000e40       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000e40                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000e30       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e30                hw_claim_unlock
+                0x10000e58       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000e58                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10000e44       0x32 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000e44                hw_claim_or_assert
- *fill*         0x10000e76        0x2 
+                0x10000e6c       0x32 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000e6c                hw_claim_or_assert
+ *fill*         0x10000e9e        0x2 
  .text.spin_locks_reset
-                0x10000e78       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000e78                spin_locks_reset
+                0x10000ea0       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000ea0                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10000e98       0x1c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000e98                next_striped_spin_lock_num
+                0x10000ec0       0x1c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000ec0                next_striped_spin_lock_num
  .text.set_raw_irq_handler_and_unlock
-                0x10000eb4       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000edc       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x10000edc       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000f04       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x10000f24       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000f4c       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x10000f64       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000f64                irq_is_enabled
+                0x10000f8c       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000f8c                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x10000f7c       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000f7c                irq_set_mask_enabled
+                0x10000fa4       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000fa4                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x10000f9c        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000f9c                irq_set_enabled
- *fill*         0x10000faa        0x2 
+                0x10000fc4        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000fc4                irq_set_enabled
+ *fill*         0x10000fd2        0x2 
  .text.irq_get_vtable_handler
-                0x10000fac       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000fac                irq_get_vtable_handler
+                0x10000fd4       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000fd4                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10000fbc       0x54 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000fbc                irq_set_exclusive_handler
+                0x10000fe4       0x54 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000fe4                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x10001010      0x1ac CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001010                irq_remove_handler
+                0x10001038      0x1ac CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001038                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x100011bc       0xf0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100011bc                irq_add_tail_to_free_list
+                0x100011e4       0xf0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100011e4                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x100012ac       0x1c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100012ac                irq_init_priorities
+                0x100012d4       0x1c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100012d4                irq_init_priorities
  .text.lock_init
-                0x100012c8       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x100012c8                lock_init
+                0x100012f0       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x100012f0                lock_init
  .text.mutex_init
-                0x100012d8       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x100012d8                mutex_init
+                0x10001300       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001300                mutex_init
  .text.recursive_mutex_init
-                0x100012f2       0x1e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x100012f2                recursive_mutex_init
+                0x1000131a       0x1e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x1000131a                recursive_mutex_init
  .text.alarm_pool_post_alloc_init
-                0x10001310       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001338       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10001350       0x30 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001378       0x30 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x10001380       0x7c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001380                timer_pool_entry_comparator
+                0x100013a8       0x7c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x100013a8                timer_pool_entry_comparator
  .text.ph_add_child_node
-                0x100013fc       0xa4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001424       0xa4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x100014a0       0x3e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100014de        0x2 
+                0x100014c8       0x3e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10001506        0x2 
  .text.add_alarm_under_lock
-                0x100014e0      0x174 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001508      0x174 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10001654      0x33c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000167c      0x33c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10001990       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001990                alarm_pool_init_default
+                0x100019b8       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x100019b8                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x100019d0       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x100019d0                alarm_pool_get_default
+                0x100019f8       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x100019f8                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x100019fc      0x168 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x100019fc                alarm_pool_add_alarm_at
+                0x10001a24      0x168 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001a24                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x10001b64       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001b64                alarm_pool_cancel_alarm
+                0x10001b8c       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001b8c                alarm_pool_cancel_alarm
  .text.sleep_until
-                0x10001c5c       0xfc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001c5c                sleep_until
+                0x10001c84       0xfc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001c84                sleep_until
  .text.sleep_us
-                0x10001d58       0x58 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001d58                sleep_us
+                0x10001d80       0x58 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001d80                sleep_us
  .text.sleep_ms
-                0x10001db0       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001db0                sleep_ms
+                0x10001dd8       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001dd8                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10001dc4       0xac CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001dc4                best_effort_wfe_or_timeout
+                0x10001dec       0xac CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001dec                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x10001e70       0x90 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001e98       0x90 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001f00       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f00                hardware_alarm_claim
+                0x10001f28       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001f28                hardware_alarm_claim
  .text.time_us_64
-                0x10001f18       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f18                time_us_64
+                0x10001f40       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001f40                time_us_64
  .text.busy_wait_until
-                0x10001f30       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f30                busy_wait_until
+                0x10001f58       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001f58                busy_wait_until
  .text.busy_wait_us
-                0x10001f58       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001f58                busy_wait_us
+                0x10001f80       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001f80                busy_wait_us
  .text.hardware_alarm_set_callback
-                0x10001fa0       0x90 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001fa0                hardware_alarm_set_callback
+                0x10001fc8       0x90 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001fc8                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10002030       0xe8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002030                hardware_alarm_set_target
+                0x10002058       0xe8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002058                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10002118       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10002118                hardware_alarm_cancel
+                0x10002140       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002140                hardware_alarm_cancel
  .text.ph_add_child_node
-                0x10002158       0xa4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002180       0xa4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x100021fc       0x3e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x1000223a        0x2 
+                0x10002224       0x3e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10002262        0x2 
  .text.ph_clear
-                0x1000223c       0x70 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000223c                ph_clear
+                0x10002264       0x70 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002264                ph_clear
  .text.ph_post_alloc_init
-                0x100022ac        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100022ac                ph_post_alloc_init
- *fill*         0x100022ba        0x2 
+                0x100022d4        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100022d4                ph_post_alloc_init
+ *fill*         0x100022e2        0x2 
  .text.ph_merge_two_pass
-                0x100022bc       0xa8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100022bc                ph_merge_two_pass
+                0x100022e4       0xa8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100022e4                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10002364      0x128 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000238c      0x128 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x1000248c       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000248c                ph_remove_head
+                0x100024b4       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100024b4                ph_remove_head
  .text.ph_remove_and_free_node
-                0x100024a0       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100024a0                ph_remove_and_free_node
+                0x100024c8       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100024c8                ph_remove_and_free_node
  .text.uart_disable_before_lcr_write
-                0x10002598       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x100025c0       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
  .text.uart_write_lcr_bits_masked
-                0x100025e0       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- *fill*         0x10002602        0x2 
+                0x10002608       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ *fill*         0x1000262a        0x2 
  .text.uart_set_baudrate
-                0x10002604       0x5c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10002604                uart_set_baudrate
+                0x1000262c       0x5c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x1000262c                uart_set_baudrate
  .text.uart_set_format
-                0x10002660       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10002660                uart_set_format
+                0x10002688       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10002688                uart_set_format
  .text.uart_set_translate_crlf
-                0x1000268c       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x1000268c                uart_set_translate_crlf
+                0x100026b4       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x100026b4                uart_set_translate_crlf
  .text.uart_init
-                0x100026b4       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x100026b4                uart_init
+                0x100026dc       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x100026dc                uart_init
  .text.clock_configure
-                0x10002734      0x108 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002734                clock_configure
+                0x1000275c      0x108 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000275c                clock_configure
  .text.clocks_init
-                0x1000283c      0x100 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x1000283c                clocks_init
+                0x10002864      0x100 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002864                clocks_init
  .text.clock_get_hz
-                0x1000293c        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x1000293c                clock_get_hz
+                0x10002964        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002964                clock_get_hz
  .text.pll_init
-                0x10002948      0x120 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x10002948                pll_init
+                0x10002970      0x120 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10002970                pll_init
  .text.watchdog_start_tick
-                0x10002a68       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002a68                watchdog_start_tick
+                0x10002a90       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002a90                watchdog_start_tick
  .text.xosc_init
-                0x10002a78       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10002a78                xosc_init
- .text._exit    0x10002aa0        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002aa0                _exit
- .text.exit     0x10002aa4        0x6 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002aa4                exit
- *fill*         0x10002aaa        0x2 
+                0x10002aa0       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10002aa0                xosc_init
+ .text._exit    0x10002ac8        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002ac8                _exit
+ .text.exit     0x10002acc        0x6 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002acc                exit
+ *fill*         0x10002ad2        0x2 
  .text.__assert_func
-                0x10002aac       0x3c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002aac                __assert_func
+                0x10002ad4       0x3c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002ad4                __assert_func
  .text.runtime_init
-                0x10002ae8       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002ae8                runtime_init
- .text.panic    0x10002be0       0x30 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002be0                panic
+                0x10002b10       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002b10                runtime_init
+ .text.panic    0x10002c08       0x30 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002c08                panic
  .text._out_null
-                0x10002c10        0x2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c38        0x2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x10002c12        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x10002c20       0x24 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c3a        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x10002c48       0x24 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x10002c44       0xae CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c6c       0xae CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x10002cf2      0x112 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002d1a      0x112 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x10002e04       0xbc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002e2c       0xbc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x10002ec0       0xe2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10002fa2        0x2 
- .text._etoa    0x10002fa4      0x414 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x100033b8      0x354 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002ee8       0xe2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10002fca        0x2 
+ .text._etoa    0x10002fcc      0x414 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x100033e0      0x354 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x1000370c      0x624 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003734      0x624 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x10003d30       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10003d30                vfctprintf
- .text          0x10003d50       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10003d58       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003d58                vfctprintf
+ .text          0x10003d78       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10003d60       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003d60                rom_func_lookup
+                0x10003d88       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003d88                rom_func_lookup
  .text.rom_data_lookup
-                0x10003d70       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003d70                rom_data_lookup
+                0x10003d98       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003d98                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10003d80       0x36 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003d80                rom_funcs_lookup
- *fill*         0x10003db6        0x2 
+                0x10003da8       0x36 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003da8                rom_funcs_lookup
+ *fill*         0x10003dde        0x2 
  .text.__wrap___aeabi_idiv
-                0x10003db8       0x50 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10003db8                __wrap___aeabi_idivmod
-                0x10003db8                divmod_s32s32
-                0x10003db8                div_s32s32
-                0x10003db8                __wrap___aeabi_idiv
-                0x10003dc0                divmod_s32s32_unsafe
-                0x10003dec                divmod_s32s32_savestate
+                0x10003de0       0x50 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003de0                __wrap___aeabi_idivmod
+                0x10003de0                divmod_s32s32
+                0x10003de0                div_s32s32
+                0x10003de0                __wrap___aeabi_idiv
+                0x10003de8                divmod_s32s32_unsafe
+                0x10003e14                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x10003e08       0x4c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10003e08                __wrap___aeabi_uidiv
-                0x10003e08                __wrap___aeabi_uidivmod
-                0x10003e08                div_u32u32
-                0x10003e08                divmod_u32u32
-                0x10003e10                divmod_u32u32_unsafe
-                0x10003e38                divmod_u32u32_savestate
+                0x10003e30       0x4c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003e30                __wrap___aeabi_uidiv
+                0x10003e30                __wrap___aeabi_uidivmod
+                0x10003e30                div_u32u32
+                0x10003e30                divmod_u32u32
+                0x10003e38                divmod_u32u32_unsafe
+                0x10003e60                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10003e54      0x424 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10003e54                div_s64s64
-                0x10003e54                divmod_s64s64
-                0x10003e54                __wrap___aeabi_ldivmod
-                0x10003e84                divmod_u64u64
-                0x10003e84                div_u64u64
-                0x10003e84                __wrap___aeabi_uldivmod
-                0x10003e94                divmod_u64u64_savestate
-                0x10003eb4                divmod_s64s64_unsafe
-                0x10003f3c                divmod_u64u64_unsafe
+                0x10003e7c      0x424 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003e7c                div_s64s64
+                0x10003e7c                divmod_s64s64
+                0x10003e7c                __wrap___aeabi_ldivmod
+                0x10003eac                divmod_u64u64
+                0x10003eac                div_u64u64
+                0x10003eac                __wrap___aeabi_uldivmod
+                0x10003ebc                divmod_u64u64_savestate
+                0x10003edc                divmod_s64s64_unsafe
+                0x10003f64                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x10004278       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004278                __wrap___aeabi_drsub
-                0x1000427e                __wrap___aeabi_dsub
-                0x10004290                __wrap___aeabi_dadd
-                0x100042a2                __wrap___aeabi_ddiv
-                0x100042de                __wrap___aeabi_dmul
+                0x100042a0       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100042a0                __wrap___aeabi_drsub
+                0x100042a6                __wrap___aeabi_dsub
+                0x100042b8                __wrap___aeabi_dadd
+                0x100042ca                __wrap___aeabi_ddiv
+                0x10004306                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x100042f8       0x6c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100042f8                __wrap___aeabi_cdrcmple
-                0x10004308                __wrap___aeabi_cdcmpeq
-                0x10004308                __wrap___aeabi_cdcmple
+                0x10004320       0x6c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004320                __wrap___aeabi_cdrcmple
+                0x10004330                __wrap___aeabi_cdcmpeq
+                0x10004330                __wrap___aeabi_cdcmple
  .text.__wrap___aeabi_dcmplt
-                0x10004364        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004364                __wrap___aeabi_dcmplt
+                0x1000438c        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000438c                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x10004370       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004370                __wrap___aeabi_dcmple
+                0x10004398       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004398                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x10004380       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004380                __wrap___aeabi_dcmpge
+                0x100043a8       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100043a8                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x10004390        0xa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004390                __wrap___aeabi_dcmpgt
+                0x100043b8        0xa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100043b8                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x1000439a       0x1c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000439a                __wrap___aeabi_dcmpun
- *fill*         0x100043b6        0x2 
+                0x100043c2       0x1c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100043c2                __wrap___aeabi_dcmpun
+ *fill*         0x100043de        0x2 
  .text.__wrap___aeabi_i2d
-                0x100043b8       0x38 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100043b8                __wrap___aeabi_ui2d
-                0x100043c0                __wrap___aeabi_i2d
+                0x100043e0       0x38 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100043e0                __wrap___aeabi_ui2d
+                0x100043e8                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x100043f0       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100043f0                double2int_z
-                0x100043f0                __wrap___aeabi_d2iz
+                0x10004418       0x48 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004418                double2int_z
+                0x10004418                __wrap___aeabi_d2iz
  .text.__wrap___aeabi_d2uiz
-                0x10004438       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10004438                __wrap___aeabi_d2uiz
-                0x10004438                double2uint
+                0x10004460       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10004460                __wrap___aeabi_d2uiz
+                0x10004460                double2uint
  .text.__aeabi_double_init
-                0x10004450       0xc8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10004450                __aeabi_double_init
+                0x10004478       0xc8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10004478                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10004518       0x34 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004518                double_table_shim_on_use_helper
+                0x10004540       0x34 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004540                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x1000454c       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000454c                drsub_shim
-                0x10004552                dsub_shim
+                0x10004574       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004574                drsub_shim
+                0x1000457a                dsub_shim
  .text.dadd_shim
-                0x1000455c      0x15c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000455c                dadd_shim
+                0x10004584      0x15c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004584                dadd_shim
  .text.dmul_shim
-                0x100046b8      0x15c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100046b8                dmul_shim
+                0x100046e0      0x15c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100046e0                dmul_shim
  .text.ddiv_shim
-                0x10004814      0x1b0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004814                ddiv_shim
+                0x1000483c      0x1b0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000483c                ddiv_shim
  .text.double2uint_shim
-                0x100049c4        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100049c4                double2uint_shim
-                0x100049c6                double2ufix_shim
- *fill*         0x100049d2        0x2 
+                0x100049ec        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100049ec                double2uint_shim
+                0x100049ee                double2ufix_shim
+ *fill*         0x100049fa        0x2 
  .text.double2uint64_shim
-                0x100049d4       0x70 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100049d4                double2uint64_shim
-                0x100049d6                double2ufix64_shim
-                0x100049f6                d2fix_a
+                0x100049fc       0x70 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100049fc                double2uint64_shim
+                0x100049fe                double2ufix64_shim
+                0x10004a1e                d2fix_a
  .text.dunpacks
-                0x10004a44       0x3c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004a44                dunpacks
+                0x10004a6c       0x3c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004a6c                dunpacks
  .text.__aeabi_lmul
-                0x10004a80       0x32 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10004a80                __wrap___aeabi_lmul
- *fill*         0x10004ab2        0x2 
+                0x10004aa8       0x32 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10004aa8                __wrap___aeabi_lmul
+ *fill*         0x10004ada        0x2 
  .text.__aeabi_float_init
-                0x10004ab4       0xfc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10004ab4                __aeabi_float_init
+                0x10004adc       0xfc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10004adc                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10004bb0       0x34 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10004bb0                float_table_shim_on_use_helper
- .text          0x10004be4       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004be4                __aeabi_mem_init
- .text.memset   0x10004bf4        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004bf4                __wrap_memset
- .text.memcpy   0x10004c00        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004c00                __wrap_memcpy
-                0x10004c00                __wrap___aeabi_memcpy
+                0x10004bd8       0x34 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10004bd8                float_table_shim_on_use_helper
+ .text          0x10004c0c       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004c0c                __aeabi_mem_init
+ .text.memset   0x10004c1c        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004c1c                __wrap_memset
+ .text.memcpy   0x10004c28        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004c28                __wrap_memcpy
+                0x10004c28                __wrap___aeabi_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10004c0c        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10004c1a        0x2 
+                0x10004c34        0xe CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10004c42        0x2 
  .text.stdio_out_chars_crlf
-                0x10004c1c       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004c44       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x10004c9c       0x44 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004cc4       0x44 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x10004ce0       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004d08       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x10004d00       0x5c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004d00                stdout_serialize_begin
+                0x10004d28       0x5c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004d28                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x10004d5c       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004d5c                stdout_serialize_end
+                0x10004d84       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004d84                stdout_serialize_end
  .text.stdio_put_string
-                0x10004d6c       0x98 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004d94       0x98 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x10004e04       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004e04                stdio_set_driver_enabled
+                0x10004e2c       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004e2c                stdio_set_driver_enabled
  .text.stdio_flush
-                0x10004e30       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004e30                stdio_flush
+                0x10004e58       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004e58                stdio_flush
  .text.__wrap_puts
-                0x10004e50       0x1e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004e50                __wrap_puts
- *fill*         0x10004e6e        0x2 
+                0x10004e78       0x1e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004e78                __wrap_puts
+ *fill*         0x10004e96        0x2 
  .text.__wrap_vprintf
-                0x10004e70       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004e70                __wrap_vprintf
+                0x10004e98       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004e98                __wrap_vprintf
  .text.__wrap_printf
-                0x10004eb0       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004eb0                __wrap_printf
+                0x10004ed8       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004ed8                __wrap_printf
  .text.stdio_init_all
-                0x10004ec8        0xa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004ec8                stdio_init_all
- *fill*         0x10004ed2        0x2 
+                0x10004ef0        0xa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004ef0                stdio_init_all
+ *fill*         0x10004efa        0x2 
  .text.stdio_uart_out_chars
-                0x10004ed4       0x74 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004efc       0x74 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x10004f48       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004f48                stdio_uart_in_chars
+                0x10004f70       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004f70                stdio_uart_in_chars
  .text.on_uart_rx
-                0x10004fc8       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004ff0       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_set_chars_available_callback
-                0x10004ff0       0x8c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005018       0x8c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_init_full
-                0x1000507c       0x44 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x1000507c                stdio_uart_init_full
+                0x100050a4       0x44 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100050a4                stdio_uart_init_full
  .text.stdio_uart_init
-                0x100050c0       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x100050c0                stdio_uart_init
+                0x100050e8       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100050e8                stdio_uart_init
  .text.core1_trampoline
-                0x100050e8        0x2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10005110        0x2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .text.core1_wrapper
-                0x100050ea        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x100050ea                core1_wrapper
+                0x10005112        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10005112                core1_wrapper
  .text.multicore_fifo_push_blocking
-                0x100050f6       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x100050f6                multicore_fifo_push_blocking
+                0x1000511e       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x1000511e                multicore_fifo_push_blocking
  .text.multicore_fifo_pop_blocking
-                0x1000510a       0x16 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x1000510a                multicore_fifo_pop_blocking
+                0x10005132       0x16 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10005132                multicore_fifo_pop_blocking
  .text.multicore_launch_core1_raw
-                0x10005120       0x6e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10005120                multicore_launch_core1_raw
- *fill*         0x1000518e        0x2 
+                0x10005148       0x6e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10005148                multicore_launch_core1_raw
+ *fill*         0x100051b6        0x2 
  .text.multicore_launch_core1_with_stack
-                0x10005190       0x50 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x10005190                multicore_launch_core1_with_stack
+                0x100051b8       0x50 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x100051b8                multicore_launch_core1_with_stack
  .text.multicore_launch_core1
-                0x100051e0       0x24 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
-                0x100051e0                multicore_launch_core1
+                0x10005208       0x24 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+                0x10005208                multicore_launch_core1
  .text.i2c_write_blocking_internal
-                0x10005204      0x140 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x1000522c      0x140 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .text.i2c_set_baudrate
-                0x10005344       0xf0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x10005344                i2c_set_baudrate
+                0x1000536c       0xf0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x1000536c                i2c_set_baudrate
  .text.i2c_init
-                0x10005434       0x58 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x10005434                i2c_init
+                0x1000545c       0x58 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x1000545c                i2c_init
  .text.i2c_write_blocking
-                0x1000548c       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x1000548c                i2c_write_blocking
- .text.strlen   0x100054a4       0x5c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)
-                0x100054a4                strlen
+                0x100054b4       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x100054b4                i2c_write_blocking
+ .text.strlen   0x100054cc       0x5c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)
+                0x100054cc                strlen
  *(.fini)
- .fini          0x10005500        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x10005500                _fini
- *fill*         0x10005504        0x4 
- .fini.__stub   0x10005508       0x40 linker stubs
+ .fini          0x10005528        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x10005528                _fini
+ *fill*         0x1000552c        0x4 
+ .fini.__stub   0x10005530       0x40 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2049,281 +2049,281 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10005548        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x10005548                . = ALIGN (0x4)
+ .eh_frame      0x10005570        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10005570                . = ALIGN (0x4)
 
-.glue_7         0x10005548        0x0
- .glue_7        0x10005548        0x0 linker stubs
+.glue_7         0x10005570        0x0
+ .glue_7        0x10005570        0x0 linker stubs
 
-.glue_7t        0x10005548        0x0
- .glue_7t       0x10005548        0x0 linker stubs
+.glue_7t        0x10005570        0x0
+ .glue_7t       0x10005570        0x0 linker stubs
 
-.vfp11_veneer   0x10005548        0x0
- .vfp11_veneer  0x10005548        0x0 linker stubs
+.vfp11_veneer   0x10005570        0x0
+ .vfp11_veneer  0x10005570        0x0 linker stubs
 
-.v4_bx          0x10005548        0x0
- .v4_bx         0x10005548        0x0 linker stubs
+.v4_bx          0x10005570        0x0
+ .v4_bx         0x10005570        0x0 linker stubs
 
-.iplt           0x10005548        0x0
- .iplt          0x10005548        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10005570        0x0
+ .iplt          0x10005570        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10005548     0x11f0
+.rodata         0x10005570     0x11f0
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.get_absolute_time.str1.4
-                0x10005548       0x7d CMakeFiles/display.dir/timingverification.c.obj
- *fill*         0x100055c5        0x3 
+                0x10005570       0x7d CMakeFiles/display.dir/timingverification.c.obj
+ *fill*         0x100055ed        0x3 
  .rodata.__func__.0
-                0x100055c8       0x15 CMakeFiles/display.dir/timingverification.c.obj
- *fill*         0x100055dd        0x3 
+                0x100055f0       0x15 CMakeFiles/display.dir/timingverification.c.obj
+ *fill*         0x10005605        0x3 
  .rodata.make_branch.str1.4
-                0x100055e0       0x89 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10005669        0x3 
+                0x10005608       0x89 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10005691        0x3 
  .rodata.insert_branch_and_link.str1.4
-                0x1000566c       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005694       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_set_exclusive_handler.str1.4
-                0x1000567c       0x36 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100056b2        0x2 
+                0x100056a4       0x36 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056da        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x100056b4       0xd9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000578d        0x3 
+                0x100056dc       0xd9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100057b5        0x3 
  .rodata.irq_remove_handler.str1.4
-                0x10005790       0x3a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100057ca        0x2 
+                0x100057b8       0x3a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100057f2        0x2 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x100057cc       0x3a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10005806        0x2 
+                0x100057f4       0x3a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000582e        0x2 
  .rodata.__func__.0
-                0x10005808       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10005822        0x2 
+                0x10005830       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000584a        0x2 
  .rodata.__func__.1
-                0x10005824       0x17 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000583b        0x1 
+                0x1000584c       0x17 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10005863        0x1 
  .rodata.__func__.2
-                0x1000583c       0x13 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000584f        0x1 
+                0x10005864       0x13 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10005877        0x1 
  .rodata.__func__.3
-                0x10005850        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005878        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4
-                0x1000585c        0xf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000586b        0x1 
+                0x10005884        0xf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10005893        0x1 
  .rodata.__func__.6
-                0x1000586c       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10005886        0x2 
+                0x10005894       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100058ae        0x2 
  .rodata.str1.4
-                0x10005888       0xa5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x100058b0       0xa5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x125 (size before relaxing)
- *fill*         0x1000592d        0x3 
+ *fill*         0x10005955        0x3 
  .rodata.__func__.1
-                0x10005930        0xb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x1000593b        0x1 
+                0x10005958        0xb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10005963        0x1 
  .rodata.__func__.3
-                0x1000593c       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10005964       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
  .rodata.repeating_timer_callback.str1.4
-                0x10005954       0x67 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100059bb        0x1 
+                0x1000597c       0x67 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100059e3        0x1 
  .rodata.timer_pool_entry_comparator.str1.4
-                0x100059bc       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100059de        0x2 
+                0x100059e4       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005a06        0x2 
  .rodata.ph_add_child_node.str1.4
-                0x100059e0       0xb2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005a92        0x2 
+                0x10005a08       0xb2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005aba        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x10005a94       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10005abc       0x28 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
                                  0x2b (size before relaxing)
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x10005abc       0x98 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10005ae4       0x98 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
                                 0x118 (size before relaxing)
  .rodata.alarm_pool_get_default.str1.4
-                0x10005b54       0x21 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005b75        0x3 
+                0x10005b7c       0x21 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005b9d        0x3 
  .rodata.alarm_pool_cancel_alarm.str1.4
-                0x10005b78       0x27 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005b9f        0x1 
+                0x10005ba0       0x27 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005bc7        0x1 
  .rodata.sleep_until.str1.4
-                0x10005ba0       0x4d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005bed        0x3 
+                0x10005bc8       0x4d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005c15        0x3 
  .rodata.__func__.1
-                0x10005bf0       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10005c18       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.10
-                0x10005c08       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c1d        0x3 
+                0x10005c30       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005c45        0x3 
  .rodata.__func__.11
-                0x10005c20       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c3a        0x2 
+                0x10005c48       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005c62        0x2 
  .rodata.__func__.12
-                0x10005c3c        0xa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c46        0x2 
+                0x10005c64        0xa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005c6e        0x2 
  .rodata.__func__.3
-                0x10005c48       0x17 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c5f        0x1 
+                0x10005c70       0x17 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005c87        0x1 
  .rodata.__func__.4
-                0x10005c60       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c72        0x2 
+                0x10005c88       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005c9a        0x2 
  .rodata.__func__.5
-                0x10005c74        0xd CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c81        0x3 
+                0x10005c9c        0xd CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005ca9        0x3 
  .rodata.__func__.6
-                0x10005c84       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005c96        0x2 
+                0x10005cac       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005cbe        0x2 
  .rodata.__func__.7
-                0x10005c98        0xf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005ca7        0x1 
+                0x10005cc0        0xf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005ccf        0x1 
  .rodata.__func__.8
-                0x10005ca8        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+                0x10005cd0        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.9
-                0x10005cb4       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005cc9        0x3 
+                0x10005cdc       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005cf1        0x3 
  .rodata.hardware_alarm_claim.str1.4
-                0x10005ccc       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10005cf4       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.busy_wait_us.str1.4
-                0x10005cee       0x7d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10005cee        0x2 
+                0x10005d16       0x7d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10005d16        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x10005cf0       0x81 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10005d71        0x3 
+                0x10005d18       0x81 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10005d99        0x3 
  .rodata.__func__.0
-                0x10005d74       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10005d8e        0x2 
+                0x10005d9c       0x1a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10005db6        0x2 
  .rodata.__func__.1
-                0x10005d90       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10005db8       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10005da5       0xb2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10005da5        0x3 
+                0x10005dcd       0xb2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10005dcd        0x3 
  .rodata.ph_remove_any_head.str1.4
-                0x10005da8       0xa8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10005dd0       0xa8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
                                  0xbc (size before relaxing)
  .rodata.ph_remove_and_free_node.str1.4
-                0x10005e50       0x1e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10005e78       0x1e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
                                  0x26 (size before relaxing)
- *fill*         0x10005e6e        0x2 
+ *fill*         0x10005e96        0x2 
  .rodata.__func__.0
-                0x10005e70       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10005e98       0x18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.1
-                0x10005e88       0x13 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10005e9b        0x1 
+                0x10005eb0       0x13 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10005ec3        0x1 
  .rodata.__func__.2
-                0x10005e9c       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10005eae        0x2 
+                0x10005ec4       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10005ed6        0x2 
  .rodata.__func__.3
-                0x10005eb0        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10005ed8        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.clock_configure.str1.4
-                0x10005ebc       0x73 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x10005f2f        0x1 
+                0x10005ee4       0x73 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x10005f57        0x1 
  .rodata.__func__.1
-                0x10005f30       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10005f58       0x10 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x10005f40      0x140 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10005f68      0x140 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  .rodata.__func__.0
-                0x10006080        0x9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x10006089        0x3 
+                0x100060a8        0x9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x100060b1        0x3 
  .rodata.__assert_func.str1.4
-                0x1000608c       0x3f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100060b4       0x3f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x43 (size before relaxing)
- *fill*         0x100060cb        0x1 
+ *fill*         0x100060f3        0x1 
  .rodata.runtime_init.str1.4
-                0x100060cc       0x7d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10006149        0x3 
+                0x100060f4       0x7d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10006171        0x3 
  .rodata.panic.str1.4
-                0x1000614c       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x1000615e        0x2 
+                0x10006174       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10006186        0x2 
  .rodata.__func__.2
-                0x10006160        0xd CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x1000616d        0x3 
+                0x10006188        0xd CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10006195        0x3 
  .rodata._ftoa.str1.4
-                0x10006170       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10006185        0x3 
+                0x10006198       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100061ad        0x3 
  .rodata._vsnprintf
-                0x10006188      0x1e0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100061b0      0x1e0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x10006368       0x50 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10006390       0x50 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x100063b8       0xb8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x100063e0       0xb8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__func__.0
-                0x10006470       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10006498       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x10006484       0x96 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x100064ac       0x96 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                  0x9a (size before relaxing)
- *fill*         0x1000651a        0x2 
+ *fill*         0x10006542        0x2 
  .rodata.__func__.0
-                0x1000651c       0x13 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x1000652f        0x1 
+                0x10006544       0x13 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x10006557        0x1 
  .rodata.str1.4
-                0x10006530       0x3c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006558       0x3c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x1000656c        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006594        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x10006578        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100065a0        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10006584        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x100065ac        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.stdout_serialize_begin.str1.4
-                0x10006590       0x7d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100065b8       0x7d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .rodata.__func__.3
-                0x10006590       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100065a5        0x3 
+                0x100065b8       0x15 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x100065cd        0x3 
  .rodata.crlf_str.2
-                0x100065a8        0x2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x100065aa        0x2 
+                0x100065d0        0x2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x100065d2        0x2 
  .rodata.str1.4
-                0x100065ac       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100065d4       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_33.4
-                0x100065d8        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10006600        0xc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.5
-                0x100065e4        0x8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x1000660c        0x8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.multicore_lockout_start_block_until.str1.4
-                0x100065ec       0x79 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x10006665        0x3 
+                0x10006614       0x79 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x1000668d        0x3 
  .rodata.multicore_launch_core1_with_stack.str1.4
-                0x10006668       0x19 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x10006681        0x3 
+                0x10006690       0x19 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x100066a9        0x3 
  .rodata.__func__.2
-                0x10006684       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- *fill*         0x100066a6        0x2 
+                0x100066ac       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ *fill*         0x100066ce        0x2 
  .rodata.i2c_set_baudrate.str1.4
-                0x100066a8       0x79 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- *fill*         0x10006721        0x3 
+                0x100066d0       0x79 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ *fill*         0x10006749        0x3 
  .rodata.__func__.0
-                0x10006724       0x11 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-                0x10006738                . = ALIGN (0x4)
- *fill*         0x10006735        0x3 
+                0x1000674c       0x11 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x10006760                . = ALIGN (0x4)
+ *fill*         0x1000675d        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10006738                . = ALIGN (0x4)
+                0x10006760                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10006738                __exidx_start = .
+                0x10006760                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10006738                __exidx_end = .
-                0x10006738                . = ALIGN (0x4)
-                0x10006738                __binary_info_start = .
+                0x10006760                __exidx_end = .
+                0x10006760                . = ALIGN (0x4)
+                0x10006760                __binary_info_start = .
 
-.binary_info    0x10006738       0x24
+.binary_info    0x10006760       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10006738        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006760        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x1000673c        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006764        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10006740        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006768        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10006744        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000676c        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10006748        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006770        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x1000674c        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006774        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x10006750        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10006778        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr33
-                0x10006754        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x1000677c        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr34
-                0x10006758        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x1000675c                __binary_info_end = .
+                0x10006780        0x4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10006784                __binary_info_end = .
 
-.rel.dyn        0x1000675c        0x0
- .rel.iplt      0x1000675c        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x1000675c                . = ALIGN (0x4)
+.rel.dyn        0x10006784        0x0
+ .rel.iplt      0x10006784        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x10006784                . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2332,7 +2332,7 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
                 0x20000000       0xc0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0xfe4 load address 0x1000675c
+.data           0x200000c0      0xfe4 load address 0x10006784
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2439,29 +2439,29 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
  *(.jcr)
                 0x200010a4                . = ALIGN (0x4)
                 0x200010a4                __data_end__ = .
-                0x1000675c                __etext = LOADADDR (.data)
+                0x10006784                __etext = LOADADDR (.data)
 
-.igot.plt       0x200010a4        0x0 load address 0x10007740
+.igot.plt       0x200010a4        0x0 load address 0x10007768
  .igot.plt      0x200010a4        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x200010a4        0x0 load address 0x10007740
+                0x200010a4        0x0 load address 0x10007768
                 0x200010a4                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10007740
+.scratch_x      0x20040000        0x0 load address 0x10007768
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10007740                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10007768                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10007740
+.scratch_y      0x20041000        0x0 load address 0x10007768
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10007740                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10007768                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x200010a8      0x3dc
                 0x200010a8                . = ALIGN (0x4)
@@ -2530,8 +2530,8 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10007740        0x0
-                0x10007740                PROVIDE (__flash_binary_end = .)
+.flash_end      0x10007768        0x0
+                0x10007768                PROVIDE (__flash_binary_end = .)
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2591,7 +2591,7 @@ LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-s
 LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 LOAD CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
-LOAD C:\Users\Semra\AppData\Local\Temp\ccMq5Aez.o
+LOAD C:\Users\Semra\AppData\Local\Temp\ccG0vGAS.o
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libstdc++.a
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a
 START GROUP
@@ -2694,7 +2694,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000066e       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .ARM.attributes
-                0x0000069a       0x22 C:\Users\Semra\AppData\Local\Temp\ccMq5Aez.o
+                0x0000069a       0x22 C:\Users\Semra\AppData\Local\Temp\ccG0vGAS.o
  .ARM.attributes
                 0x000006bc       0x1e c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -2732,115 +2732,115 @@ LOAD linker stubs
  .comment       0x00000049       0x4a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .comment       0x00000049       0x4a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_info     0x00000000    0x1c694
- .debug_info    0x00000000     0x1bd4 CMakeFiles/display.dir/timingverification.c.obj
- .debug_info    0x00001bd4      0xaa7 CMakeFiles/display.dir/IS31FL3731.c.obj
- .debug_info    0x0000267b     0x12eb CMakeFiles/display.dir/DisplayAddons.c.obj
- .debug_info    0x00003966     0x187e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x000051e4      0x1e3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x000053c7      0x6be CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00005a85      0x58e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x00006013     0x1c9e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x00007cb1      0x1a4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x00007e55     0x20d5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x00009f2a     0x4068 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x0000df92     0x13f0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000f382     0x123b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x000105bd      0xdd2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x0001138f      0xfcf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0001235e      0x51b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x00012879      0x4ee CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x00012d67      0x1d8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x00012f3f     0x1053 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x00013f92     0x1a5f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x000159f1       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x00015a13      0x27c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00015c8f       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x00015cb1       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x00015cd3      0x2d1 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x00015fa4       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00015fc6       0x26 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x00015fec       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x0001600e      0x2eb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x000162f9       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x0001631b      0x4a6 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_info    0x000167c1       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x000167e3       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x00016805      0x2fb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00016b00     0x1827 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x00018327     0x104f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_info    0x00019376     0x1d18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_info    0x0001b08e     0x1606 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_info     0x00000000    0x1c6af
+ .debug_info    0x00000000     0x1bef CMakeFiles/display.dir/timingverification.c.obj
+ .debug_info    0x00001bef      0xaa7 CMakeFiles/display.dir/IS31FL3731.c.obj
+ .debug_info    0x00002696     0x12eb CMakeFiles/display.dir/DisplayAddons.c.obj
+ .debug_info    0x00003981     0x187e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x000051ff      0x1e3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x000053e2      0x6be CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x00005aa0      0x58e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x0000602e     0x1c9e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x00007ccc      0x1a4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x00007e70     0x20d5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x00009f45     0x4068 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000dfad     0x13f0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000f39d     0x123b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x000105d8      0xdd2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x000113aa      0xfcf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x00012379      0x51b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x00012894      0x4ee CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x00012d82      0x1d8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x00012f5a     0x1053 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x00013fad     0x1a5f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x00015a0c       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00015a2e      0x27c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00015caa       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x00015ccc       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x00015cee      0x2d1 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x00015fbf       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x00015fe1       0x26 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00016007       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x00016029      0x2eb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x00016314       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x00016336      0x4a6 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_info    0x000167dc       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x000167fe       0x22 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x00016820      0x2fb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x00016b1b     0x1827 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x00018342     0x104f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_info    0x00019391     0x1d18 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_info    0x0001b0a9     0x1606 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_abbrev   0x00000000     0x5311
- .debug_abbrev  0x00000000      0x3d5 CMakeFiles/display.dir/timingverification.c.obj
- .debug_abbrev  0x000003d5      0x204 CMakeFiles/display.dir/IS31FL3731.c.obj
- .debug_abbrev  0x000005d9      0x1ad CMakeFiles/display.dir/DisplayAddons.c.obj
- .debug_abbrev  0x00000786      0x379 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x00000aff       0xeb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x00000bea      0x2e9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x00000ed3      0x21b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x000010ee      0x4e7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x000015d5      0x116 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x000016eb      0x397 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x00001a82      0x571 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_abbrev  0x00001ff3      0x3b8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x000023ab      0x297 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x00002642      0x31c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_abbrev  0x0000295e      0x3c7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x00002d25      0x1ea CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x00002f0f      0x1a8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x000030b7      0x109 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x000031c0      0x4cb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x0000368b      0x384 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x00003a0f       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x00003a21      0x13b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x00003b5c       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x00003b6e       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x00003b80      0x179 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x00003cf9       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x00003d0b       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_abbrev  0x00003d1f       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x00003d31      0x18c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x00003ebd       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x00003ecf      0x1cf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_abbrev  0x0000409e       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x000040b0       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x000040c2       0xad CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x0000416f      0x4a5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x00004614      0x3e8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_abbrev  0x000049fc      0x49f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_abbrev  0x00004e9b      0x476 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_abbrev   0x00000000     0x5302
+ .debug_abbrev  0x00000000      0x3c6 CMakeFiles/display.dir/timingverification.c.obj
+ .debug_abbrev  0x000003c6      0x204 CMakeFiles/display.dir/IS31FL3731.c.obj
+ .debug_abbrev  0x000005ca      0x1ad CMakeFiles/display.dir/DisplayAddons.c.obj
+ .debug_abbrev  0x00000777      0x379 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x00000af0       0xeb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x00000bdb      0x2e9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x00000ec4      0x21b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x000010df      0x4e7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x000015c6      0x116 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x000016dc      0x397 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x00001a73      0x571 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x00001fe4      0x3b8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x0000239c      0x297 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x00002633      0x31c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_abbrev  0x0000294f      0x3c7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x00002d16      0x1ea CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x00002f00      0x1a8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x000030a8      0x109 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x000031b1      0x4cb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x0000367c      0x384 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x00003a00       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x00003a12      0x13b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x00003b4d       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x00003b5f       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x00003b71      0x179 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x00003cea       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x00003cfc       0x14 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_abbrev  0x00003d10       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x00003d22      0x18c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x00003eae       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x00003ec0      0x1cf CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_abbrev  0x0000408f       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x000040a1       0x12 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x000040b3       0xad CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x00004160      0x4a5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x00004605      0x3e8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_abbrev  0x000049ed      0x49f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_abbrev  0x00004e8c      0x476 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_loc      0x00000000    0x1246c
- .debug_loc     0x00000000      0xbc8 CMakeFiles/display.dir/timingverification.c.obj
- .debug_loc     0x00000bc8      0x6a2 CMakeFiles/display.dir/IS31FL3731.c.obj
- .debug_loc     0x0000126a      0x114 CMakeFiles/display.dir/DisplayAddons.c.obj
- .debug_loc     0x0000137e     0x1237 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_loc     0x000025b5       0xe9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_loc     0x0000269e      0x45f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_loc     0x00002afd      0x233 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_loc     0x00002d30     0x13f5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_loc     0x00004125       0x60 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_loc     0x00004185     0x152e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_loc     0x000056b3     0x31e5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_loc     0x00008898      0xacb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_loc     0x00009363     0x1446 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_loc     0x0000a7a9      0x83b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_loc     0x0000afe4      0x832 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_loc     0x0000b816      0x310 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_loc     0x0000bb26      0x2ec CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_loc     0x0000be12       0x71 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_loc     0x0000be83      0x674 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_loc     0x0000c4f7     0x2095 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_loc     0x0000e58c      0x1a1 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_loc     0x0000e72d       0x59 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_loc     0x0000e786       0x73 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_loc     0x0000e7f9      0x2dc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_loc     0x0000ead5      0xe23 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_loc     0x0000f8f8      0x888 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_loc     0x00010180      0xf93 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_loc     0x00011113     0x1359 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_loc      0x00000000    0x1247e
+ .debug_loc     0x00000000      0xbda CMakeFiles/display.dir/timingverification.c.obj
+ .debug_loc     0x00000bda      0x6a2 CMakeFiles/display.dir/IS31FL3731.c.obj
+ .debug_loc     0x0000127c      0x114 CMakeFiles/display.dir/DisplayAddons.c.obj
+ .debug_loc     0x00001390     0x1237 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_loc     0x000025c7       0xe9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_loc     0x000026b0      0x45f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_loc     0x00002b0f      0x233 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_loc     0x00002d42     0x13f5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_loc     0x00004137       0x60 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_loc     0x00004197     0x152e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_loc     0x000056c5     0x31e5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_loc     0x000088aa      0xacb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_loc     0x00009375     0x1446 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_loc     0x0000a7bb      0x83b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_loc     0x0000aff6      0x832 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_loc     0x0000b828      0x310 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_loc     0x0000bb38      0x2ec CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_loc     0x0000be24       0x71 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_loc     0x0000be95      0x674 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_loc     0x0000c509     0x2095 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_loc     0x0000e59e      0x1a1 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_loc     0x0000e73f       0x59 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_loc     0x0000e798       0x73 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_loc     0x0000e80b      0x2dc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_loc     0x0000eae7      0xe23 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_loc     0x0000f90a      0x888 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_loc     0x00010192      0xf93 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_loc     0x00011125     0x1359 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 .debug_aranges  0x00000000     0x10c0
  .debug_aranges
@@ -2958,151 +2958,151 @@ LOAD linker stubs
  .debug_ranges  0x00003600      0x328 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
  .debug_ranges  0x00003928      0x198 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_line     0x00000000    0x12865
- .debug_line    0x00000000      0xd09 CMakeFiles/display.dir/timingverification.c.obj
- .debug_line    0x00000d09      0x588 CMakeFiles/display.dir/IS31FL3731.c.obj
- .debug_line    0x00001291      0x409 CMakeFiles/display.dir/DisplayAddons.c.obj
- .debug_line    0x0000169a      0xd80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x0000241a      0x2be CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x000026d8      0x4ca CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x00002ba2      0x4c7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x00003069     0x1115 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x0000417e      0x27e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x000043fc     0x1155 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00005551     0x1c9f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x000071f0      0xcec CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x00007edc      0x8d0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x000087ac      0x9aa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x00009156      0xace CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00009c24      0x5f4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x0000a218      0x44b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x0000a663      0x2ef CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x0000a952      0xbeb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000b53d     0x1234 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x0000c771      0x163 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x0000c8d4      0x25b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000cb2f      0x2ec CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000ce1b      0x441 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x0000d25c      0x3a4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x0000d600      0x6b9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x0000dcb9       0xb3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000dd6c      0x3f7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x0000e163      0x396 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000e4f9      0x1e3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x0000e6dc      0x414 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_line    0x0000eaf0       0xdd CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x0000ebcd       0xeb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x0000ecb8      0x201 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x0000eeb9      0xf9d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000fe56      0xbd3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_line    0x00010a29     0x10df CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_line    0x00011b08      0xd5d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.debug_line     0x00000000    0x12860
+ .debug_line    0x00000000      0xd04 CMakeFiles/display.dir/timingverification.c.obj
+ .debug_line    0x00000d04      0x588 CMakeFiles/display.dir/IS31FL3731.c.obj
+ .debug_line    0x0000128c      0x409 CMakeFiles/display.dir/DisplayAddons.c.obj
+ .debug_line    0x00001695      0xd80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x00002415      0x2be CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x000026d3      0x4ca CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x00002b9d      0x4c7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00003064     0x1115 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x00004179      0x27e CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x000043f7     0x1155 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x0000554c     0x1c9f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x000071eb      0xcec CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x00007ed7      0x8d0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x000087a7      0x9aa CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x00009151      0xace CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x00009c1f      0x5f4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x0000a213      0x44b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x0000a65e      0x2ef CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x0000a94d      0xbeb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x0000b538     0x1234 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x0000c76c      0x163 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x0000c8cf      0x25b CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000cb2a      0x2ec CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000ce16      0x441 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x0000d257      0x3a4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x0000d5fb      0x6b9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x0000dcb4       0xb3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x0000dd67      0x3f7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x0000e15e      0x396 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000e4f4      0x1e3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x0000e6d7      0x414 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_line    0x0000eaeb       0xdd CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x0000ebc8       0xeb CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x0000ecb3      0x201 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x0000eeb4      0xf9d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000fe51      0xbd3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_line    0x00010a24     0x10df CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_line    0x00011b03      0xd5d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
-.debug_str      0x00000000     0x4a0e
- .debug_str     0x00000000      0xabe CMakeFiles/display.dir/timingverification.c.obj
-                                0xbad (size before relaxing)
- .debug_str     0x00000abe      0x1d3 CMakeFiles/display.dir/IS31FL3731.c.obj
+.debug_str      0x00000000     0x4a00
+ .debug_str     0x00000000      0xabd CMakeFiles/display.dir/timingverification.c.obj
+                                0xbac (size before relaxing)
+ .debug_str     0x00000abd      0x1d3 CMakeFiles/display.dir/IS31FL3731.c.obj
                                 0x5e2 (size before relaxing)
- .debug_str     0x00000c91       0x8c CMakeFiles/display.dir/DisplayAddons.c.obj
+ .debug_str     0x00000c90       0x8c CMakeFiles/display.dir/DisplayAddons.c.obj
                                 0x501 (size before relaxing)
- .debug_str     0x00000d1d      0x4e4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_str     0x00000d1c      0x4e4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                                 0xa5c (size before relaxing)
- .debug_str     0x00001201       0x9d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x00001200       0x9d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
                                 0x283 (size before relaxing)
- .debug_str     0x0000129e      0x1d3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x0000129d      0x1d3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
                                 0x3c7 (size before relaxing)
- .debug_str     0x00001471      0x108 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00001470      0x108 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
                                 0x3ae (size before relaxing)
- .debug_str     0x00001579      0x401 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x00001578      0x401 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                 0x82c (size before relaxing)
- .debug_str     0x0000197a       0x78 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x00001979       0x78 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
                                 0x264 (size before relaxing)
- .debug_str     0x000019f2      0x1fc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x000019f1      0x1fc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x656 (size before relaxing)
- .debug_str     0x00001bee      0x703 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_str     0x00001bed      0x703 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
                                 0xcb8 (size before relaxing)
- .debug_str     0x000022f1      0x167 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x000022f0      0x15a CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
                                 0x780 (size before relaxing)
- .debug_str     0x00002458      0x102 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_str     0x0000244a      0x102 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
                                 0x44d (size before relaxing)
- .debug_str     0x0000255a      0x2f9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_str     0x0000254c      0x2f9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
                                 0x673 (size before relaxing)
- .debug_str     0x00002853      0x2be CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x00002845      0x2be CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
                                 0x71d (size before relaxing)
- .debug_str     0x00002b11       0xa3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x00002b03       0xa3 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
                                 0x33f (size before relaxing)
- .debug_str     0x00002bb4      0x134 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x00002ba6      0x134 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
                                 0x385 (size before relaxing)
- .debug_str     0x00002ce8       0x87 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x00002cda       0x87 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
                                 0x282 (size before relaxing)
- .debug_str     0x00002d6f      0x2e7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x00002d61      0x2e7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                 0x845 (size before relaxing)
- .debug_str     0x00003056      0x270 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x00003048      0x270 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
                                 0x4e3 (size before relaxing)
- .debug_str     0x000032c6       0x71 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x000032b8       0x71 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
                                  0xd4 (size before relaxing)
- .debug_str     0x00003337       0xe0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x00003329       0xe0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
                                 0x2bd (size before relaxing)
- .debug_str     0x00003417       0x5d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x00003409       0x5d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
                                  0xce (size before relaxing)
- .debug_str     0x00003474       0x61 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x00003466       0x61 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
                                  0xd2 (size before relaxing)
- .debug_str     0x000034d5       0xb9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x000034c7       0xb9 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
                                 0x2fc (size before relaxing)
- .debug_str     0x0000358e       0x67 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x00003580       0x67 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
                                  0xd8 (size before relaxing)
- .debug_str     0x000035f5       0x6c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x000035e7       0x6c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
                                  0xdd (size before relaxing)
- .debug_str     0x00003661       0x5f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x00003653       0x5f CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
                                  0xd0 (size before relaxing)
- .debug_str     0x000036c0       0x9d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x000036b2       0x9d CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                 0x318 (size before relaxing)
- .debug_str     0x0000375d       0x65 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x0000374f       0x65 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
                                  0xd6 (size before relaxing)
- .debug_str     0x000037c2       0xe7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_str     0x000037b4       0xe7 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
                                 0x32d (size before relaxing)
- .debug_str     0x000038a9       0x63 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x0000389b       0x63 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
                                  0xd4 (size before relaxing)
- .debug_str     0x0000390c       0x60 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x000038fe       0x60 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
                                  0xd1 (size before relaxing)
- .debug_str     0x0000396c      0x260 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x0000395e      0x260 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
                                 0x445 (size before relaxing)
- .debug_str     0x00003bcc      0x3f5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x00003bbe      0x3f5 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
                                 0xa1c (size before relaxing)
- .debug_str     0x00003fc1      0x353 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_str     0x00003fb3      0x353 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
                                 0x93e (size before relaxing)
- .debug_str     0x00004314      0x448 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_str     0x00004306      0x448 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
                                 0xb46 (size before relaxing)
- .debug_str     0x0000475c      0x2b2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_str     0x0000474e      0x2b2 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
                                 0x97e (size before relaxing)
 
-.debug_frame    0x00000000     0x1f9c
- .debug_frame   0x00000000      0x124 CMakeFiles/display.dir/timingverification.c.obj
- .debug_frame   0x00000124      0x108 CMakeFiles/display.dir/IS31FL3731.c.obj
- .debug_frame   0x0000022c       0x6c CMakeFiles/display.dir/DisplayAddons.c.obj
- .debug_frame   0x00000298      0x278 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_frame   0x00000510       0x38 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_frame   0x00000548       0x9c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_frame   0x000005e4       0xc4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_frame   0x000006a8      0x20c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_frame   0x000008b4       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_frame   0x000008d4      0x1b0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_frame   0x00000a84      0x2dc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
- .debug_frame   0x00000d60      0x15c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_frame   0x00000ebc      0x164 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_frame   0x00001020       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_frame   0x00001118      0x130 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_frame   0x00001248       0x44 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_frame   0x0000128c       0xa8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_frame   0x00001334       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_frame   0x00001374      0x150 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_frame   0x000014c4      0x1f8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_frame   0x000016bc       0x64 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_frame   0x00001720       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_frame   0x0000174c       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_frame   0x00001778       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
- .debug_frame   0x000017f8      0x2d8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_frame   0x00001ad0       0xe8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_frame   0x00001bb8      0x214 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
- .debug_frame   0x00001dcc      0x1a8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
- .debug_frame   0x00001f74       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)
+.debug_frame    0x00000000     0x1fa8
+ .debug_frame   0x00000000      0x130 CMakeFiles/display.dir/timingverification.c.obj
+ .debug_frame   0x00000130      0x108 CMakeFiles/display.dir/IS31FL3731.c.obj
+ .debug_frame   0x00000238       0x6c CMakeFiles/display.dir/DisplayAddons.c.obj
+ .debug_frame   0x000002a4      0x278 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_frame   0x0000051c       0x38 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_frame   0x00000554       0x9c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_frame   0x000005f0       0xc4 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_frame   0x000006b4      0x20c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_frame   0x000008c0       0x20 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_frame   0x000008e0      0x1b0 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_frame   0x00000a90      0x2dc CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_frame   0x00000d6c      0x15c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_frame   0x00000ec8      0x164 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_frame   0x0000102c       0xf8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_frame   0x00001124      0x130 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_frame   0x00001254       0x44 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_frame   0x00001298       0xa8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_frame   0x00001340       0x40 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_frame   0x00001380      0x150 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_frame   0x000014d0      0x1f8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_frame   0x000016c8       0x64 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_frame   0x0000172c       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_frame   0x00001758       0x2c CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_frame   0x00001784       0x80 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+ .debug_frame   0x00001804      0x2d8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_frame   0x00001adc       0xe8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_frame   0x00001bc4      0x214 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+ .debug_frame   0x00001dd8      0x1a8 CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .debug_frame   0x00001f80       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg.a(lib_a-strlen-stub.o)

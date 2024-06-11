@@ -169,18 +169,22 @@ int main()
     while(core1_uninitialized) {}
 
     while (1) {
-        
+        displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
+        busy_wait_us(1000);
         absolute_time_t start_time = get_absolute_time();
-        displayImage(images[0]);
+        displayImage(images[1]);
         absolute_time_t end_time = get_absolute_time();
+        busy_wait_us(1000);
         int64_t time_taken_us = absolute_time_diff_us(start_time, end_time);
-        int64_t time_taken_ms = time_taken_us / 1000;
 
-        if(time_taken_ms < 21) {
-            displayImage(images[2]);
-        } else {
-            displayImage(images[3]);
-        }
+
+        int numbers[4];
+        numbers[0] = time_taken_us / 1000 % 10; // Get the thousands place
+        numbers[1] = time_taken_us / 100 % 10;  // Get the hundreds place
+        numbers[2] = time_taken_us / 10 % 10;   // Get the tens place
+        numbers[3] = time_taken_us % 10;        // Get the ones place
+        displayImage(images[0]);
+        display_numbers(numbers);
 
         while(1){}
     }
@@ -199,8 +203,6 @@ void displayImage(int *imageData) {
             setPixel(i2c0, ISSI_ADDR_DEFAULT, i, j, pixels[i * width + (width - j - 1)] * 20, frame);
         }
     }
-
-    displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
 }
 
 void setPixels(int* pixelData) {
