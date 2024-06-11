@@ -15,7 +15,7 @@ project(display C CXX ASM)
 pico_sdk_init()
 
 add_executable(display
-	display.c
+	timingverification.c
 	IS31FL3731.c
 	DisplayAddons.c
 	)

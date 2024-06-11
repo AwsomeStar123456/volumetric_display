@@ -195,7 +195,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayV2/build"
+			"value" : "e:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -279,10 +279,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-g++.exe"
 		},
 		{
@@ -407,10 +407,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe"
 		},
 		{
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/CMake/bin/cmake-gui.exe"
+			"value" : "C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/cmake/bin/cmake-gui.exe"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayV2/build/CMakeFiles/pkgRedirects"
+			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -739,7 +739,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayV2"
+			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1491,7 +1491,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : " C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs"
+			"value" : " C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2_common/cmsis C:/Program Files/Raspberry Pi/Pico SDK v1.5.1/pico-sdk/src/rp2040/hardware_regs"
 		},
 		{
 			"name" : "PICO_DOXYGEN_PATHS",
@@ -1767,7 +1767,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayV2/build"
+			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display/build"
 		},
 		{
 			"name" : "display_IS_TOP_LEVEL",
@@ -1791,7 +1791,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayV2"
+			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display"
 		},
 		{
 			"name" : "pico-sdk-tools_DIR",
@@ -1815,7 +1815,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayV2/build/pico-sdk"
+			"value" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!Display/build/pico-sdk"
 		},
 		{
 			"name" : "pico_sdk_IS_TOP_LEVEL",
