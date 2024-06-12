@@ -170,19 +170,29 @@ int main()
 
     while (1) {
         displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
-        busy_wait_us(1000);
+        uint32_t clock_freq = clock_get_hz(clk_sys);
+
         absolute_time_t start_time = get_absolute_time();
-        displayImage(images[1]);
+
+        for(int i = 0; i < 1; i++) {
+            //absolute_time_t start_time = get_absolute_time();
+            displayImage(images[i]);
+            //while (to_us_since_boot(get_absolute_time()) - to_us_since_boot(start_time) < SLICE_TIME){}
+        }
+
+        //displayImage(images[0]);
+
+        //busy_wait_us(1000);
         absolute_time_t end_time = get_absolute_time();
-        busy_wait_us(1000);
         int64_t time_taken_us = absolute_time_diff_us(start_time, end_time);
+        int64_t time_taken_ms = time_taken_us / 1000;
 
 
         int numbers[4];
-        numbers[0] = time_taken_us / 1000 % 10; // Get the thousands place
-        numbers[1] = time_taken_us / 100 % 10;  // Get the hundreds place
-        numbers[2] = time_taken_us / 10 % 10;   // Get the tens place
-        numbers[3] = time_taken_us % 10;        // Get the ones place
+        numbers[0] = time_taken_ms / 1000 % 10; // Get the thousands place
+        numbers[1] = time_taken_ms / 100 % 10;  // Get the hundreds place
+        numbers[2] = time_taken_ms / 10 % 10;   // Get the tens place
+        numbers[3] = time_taken_ms % 10;        // Get the ones place
         displayImage(images[0]);
         display_numbers(numbers);
 
@@ -199,8 +209,8 @@ void displayImage(int *imageData) {
 
     // Code to display the image
     for (int i = 0; i < height; i++) {
-        for (int j = width - 1; j >= 0; j--) {
-            setPixel(i2c0, ISSI_ADDR_DEFAULT, i, j, pixels[i * width + (width - j - 1)] * 20, frame);
+        for (int j = 0; j < width; j++) {
+            setPixel(i2c0, ISSI_ADDR_DEFAULT, height - i - 1, j, pixels[i * width + j] * 20, frame);
         }
     }
 }

@@ -16,14 +16,18 @@
 #define MTR_LEFT 0
 #define MTR_RIGHT 1
 
-#define RPM_AVERAGE_COUNT 5
+//This is the time in microseconds that each invidual slice in a 3D frame is displayed for.
+//25000 microseconds = 25 milliseconds = 600 ms per full 3D frame = 1.66 frames per second.
+//We have 24 slices per 3D frame.
+#define SLICE_TIME 25000
+#define TARGET_RPM 1200
+#define TIME_UNTIL_SHUTDOWN 1000000 //Time in us = 3 Seconds
 
-volatile uint32_t last_times[RPM_AVERAGE_COUNT] = {0};
-volatile uint32_t rpm = 0;
-volatile uint32_t rpm_index = 0;
+bool atTargetRPM = false;
 
-bool enabled = false;
-bool lastCleared = false;
+absolute_time_t lastTimeRPM;
+int currentRPM = 75;
+
 
 
 void init_i2c();
@@ -102,6 +106,19 @@ void init_ir_sense()
     gpio_set_irq_enabled_with_callback(26, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
 }
 
+void calc_rpm(uint gpio, uint32_t events)
+{
+    absolute_time_t currentTime = get_absolute_time();
+
+    uint64_t timeDiffus = to_us_since_boot(currentTime) - to_us_since_boot(lastTimeRPM);
+    uint64_t timeDiffms = timeDiffus / 1000;
+    float timeDiffs = timeDiffms / 1000.0f;
+    float timeDiffRPM = 60.0f / timeDiffs;
+
+    currentRPM = timeDiffRPM;
+    lastTimeRPM = currentTime;
+}
+
 /*
     This method takes in a direction and speed in percent and sets the PWM of the GPIO pins.
 */
@@ -138,17 +155,38 @@ void stop_motor()
 */
 void core1_entry() {
     //Initalize the IR sensor and the timer for RPM detection.
+    lastTimeRPM = get_absolute_time();
     init_ir_sense();
 
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
+    bool motorEnabled = false;
     while (1) {
-
-        if(enabled) {
-            set_motor_pwm(MTR_LEFT, 100);
+        if(motorEnabled) {
+            //Check Current RPM and change PWM based on the current RPM
+            if(currentRPM < TARGET_RPM) {
+                set_motor_pwm(MTR_RIGHT, 90);
+            } else {
+                set_motor_pwm(MTR_RIGHT, 60);
+            }
+            //If RPM is valid we need to enable atTargetRPM boolean
+            if(currentRPM > TARGET_RPM - 15 && currentRPM < TARGET_RPM + 15) {
+                atTargetRPM = true;
+            } else {
+                atTargetRPM = false;
+            }
         } else {
             stop_motor();
         }
+
+        //If 3 seconds past the last RPM reading, we need to disable atTargetRPM boolean
+        if(to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTimeRPM) > 3000000) {
+            motorEnabled = false;
+            atTargetRPM = false;
+        } else {
+            motorEnabled = true;
+        }
+
     }
 }
 
@@ -163,15 +201,38 @@ int main()
     init_ledDisplay(0);
     init_motor();
     clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+    displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
     //person();
-    displayImage(images[0]);
+    //displayImage(images[0]);
     //Launch Core 1
     multicore_launch_core1(core1_entry);
     while(core1_uninitialized) {}
 
     while (1) {
     
-    
+        // if(atTargetRPM) {
+        //     absolute_time_t start_time = get_absolute_time();
+        //     for(int i = 0; i < 24; i++) {
+        //         displayImage(images[i]);
+        //         while (to_us_since_boot(get_absolute_time()) - to_us_since_boot(start_time) < SLICE_TIME * i){}
+        //     }
+        // }
+
+        // clear(i2c1, ISSI_ADDR_DEFAULT, frame);
+        // displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
+
+        int numbers[4] = {0, 0, 0, 0};
+        // // Convert RPM to array of digits
+        int temp_rpm = currentRPM;
+        for (int i = 3; i >= 0 && temp_rpm > 0; i--) {
+            numbers[i] = temp_rpm % 10;
+            temp_rpm /= 10;
+        }
+
+         display_numbers(numbers);
+
+         sleep_ms(1000);
+         clear(i2c0, ISSI_ADDR_DEFAULT, frame);
     }
 
     return 0;
@@ -184,12 +245,10 @@ void displayImage(int *imageData) {
 
     // Code to display the image
     for (int i = 0; i < height; i++) {
-        for (int j = width - 1; j >= 0; j--) {
-            setPixel(i2c0, ISSI_ADDR_DEFAULT, i, j, pixels[i * width + (width - j - 1)] * 20, frame);
+        for (int j = 0; j < width; j++) {
+            setPixel(i2c0, ISSI_ADDR_DEFAULT, height - i - 1, j, pixels[i * width + j] * 20, frame);
         }
     }
-
-    displayFrame(i2c0, ISSI_ADDR_DEFAULT, frame);
 }
 
 void setPixels(int* pixelData) {
