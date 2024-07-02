@@ -57,3 +57,5 @@
 2534	2984	7357905596554387	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj	1a3090f8551b0401
 2460	3000	7357905596713963	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj	4b6d6a6601bd3b62
 2739	3027	7357905596993211	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj	b0e66f3a29a506c2
+49	1016	7416393773840125	CMakeFiles/display.dir/display.c.obj	cbcc805cf6359b2b
+1017	2302	7416393784560164	display.elf	6a819e6dea2da99b
