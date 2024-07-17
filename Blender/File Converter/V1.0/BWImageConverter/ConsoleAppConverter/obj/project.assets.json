@@ -152,11 +152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\ConsoleAppConverter.csproj",
+      "projectUniqueName": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\ConsoleAppConverter.csproj",
       "projectName": "ConsoleAppConverter",
-      "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\ConsoleAppConverter.csproj",
+      "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\ConsoleAppConverter.csproj",
       "packagesPath": "C:\\Users\\Semra\\.nuget\\packages\\",
-      "outputPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\obj\\",
+      "outputPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\ConsoleAppConverter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,8 +178,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj": {
-              "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj"
+            "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj": {
+              "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj"
             }
           }
         }

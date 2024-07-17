@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj": {}
+    "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj": {}
   },
   "projects": {
-    "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj": {
+    "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj",
+        "projectUniqueName": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj",
         "projectName": "Converter",
-        "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj",
+        "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\Converter.csproj",
         "packagesPath": "C:\\Users\\Semra\\.nuget\\packages\\",
-        "outputPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\FileConverter\\V1.0\\BWImageConverter\\Converter\\obj\\",
+        "outputPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V1.0\\BWImageConverter\\Converter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

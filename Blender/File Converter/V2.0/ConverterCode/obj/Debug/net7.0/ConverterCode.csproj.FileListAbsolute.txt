@@ -1,0 +1,12 @@
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\bin\Debug\net7.0\ConverterCode.deps.json
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\bin\Debug\net7.0\ConverterCode.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\bin\Debug\net7.0\ConverterCode.pdb
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.csproj.AssemblyReference.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.GeneratedMSBuildEditorConfig.editorconfig
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.AssemblyInfoInputs.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.AssemblyInfo.cs
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.csproj.CoreCompileInputs.cache
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\refint\ConverterCode.dll
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.pdb
+E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ref\ConverterCode.dll
