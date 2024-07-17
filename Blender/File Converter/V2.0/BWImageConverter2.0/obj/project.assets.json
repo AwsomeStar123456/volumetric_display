@@ -153,11 +153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\BWImageConverter2.0\\BWImageConverter2.0.csproj",
+      "projectUniqueName": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\BWImageConverter2.0\\BWImageConverter2.0.csproj",
       "projectName": "BWImageConverter2.0",
-      "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\BWImageConverter2.0\\BWImageConverter2.0.csproj",
+      "projectPath": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\BWImageConverter2.0\\BWImageConverter2.0.csproj",
       "packagesPath": "C:\\Users\\Semra\\.nuget\\packages\\",
-      "outputPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\BWImageConverter2.0\\obj\\",
+      "outputPath": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\BWImageConverter2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -179,8 +179,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj": {
-              "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj"
+            "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj": {
+              "projectPath": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj"
             }
           }
         }
@@ -216,7 +216,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

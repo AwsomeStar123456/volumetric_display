@@ -9,3 +9,4 @@ Console.WriteLine("Hello, World!");
 
 MyImageConverter converter = new MyImageConverter();
 converter.DirectoryImagesToTextFile("../../../../../../!Volumetric Blender Data/Cube/Render Data", "../../../../../../!Volumetric Blender Data/Cube/Text Data/Output.txt");
+converter.GenerateHeaderFile("../../../../../../!Volumetric Blender Data/Cube/Text Data/Output.txt", "../../../../../../!Volumetric Blender Data/Cube/Header Data");

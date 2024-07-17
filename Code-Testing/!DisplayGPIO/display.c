@@ -16,7 +16,7 @@
 #define TIME_UNTIL_SHUTDOWN 3000000 //Time in us = 3 Seconds
 
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
-#define NUM_3D_FRAMES 2 //Number of 3D frames we have in the animation.
+#define NUM_3D_FRAMES 1 //Number of 3D frames we have in the animation.
 #define FRAMES_BEFORE_NEXT 1 //Number of times we repeat a frame before moving to the next 3D frame.
 
 volatile bool core1_uninitialized = true;
@@ -248,7 +248,7 @@ int main() {
                                 gpio_set_dir(currentGND, GPIO_IN);
 
                                 //Get Pixel On Off Status
-                                pixelVal = (image_alternating[j][i][y] >> x) & 1;
+                                pixelVal = (image_data[j][i][y] >> x) & 1;
 
                                 //Check GPIO pins for current pixel
                                 currentVCC = gpiomap_flipped[y][x][0];

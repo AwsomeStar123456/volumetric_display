@@ -10,3 +10,15 @@ E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\Fil
 E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\refint\ConverterCode.dll
 E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.pdb
 E:\!!IRL\School\!!University\UofU\ECE3992\Project\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ref\ConverterCode.dll
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\bin\Debug\net7.0\ConverterCode.deps.json
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\bin\Debug\net7.0\ConverterCode.dll
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\bin\Debug\net7.0\ConverterCode.pdb
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.csproj.AssemblyReference.cache
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.AssemblyInfoInputs.cache
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.AssemblyInfo.cs
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.csproj.CoreCompileInputs.cache
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.dll
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\refint\ConverterCode.dll
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ConverterCode.pdb
+C:\Users\Semra\Documents\ECE3992\volumetric_display\Blender\File Converter\V2.0\ConverterCode\obj\Debug\net7.0\ref\ConverterCode.dll
