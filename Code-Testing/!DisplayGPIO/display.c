@@ -108,6 +108,7 @@ void init_motor()
     uint slice_num = pwm_gpio_to_slice_num(29);
     pwm_set_enabled(slice_num, true);
 
+
     //Ensure that the PWM is set to off.
     pwm_set_gpio_level(29, 0x0);
 }
@@ -150,7 +151,8 @@ void set_motor_pwm(uint8_t speed)
     pwm_set_gpio_level(29, reg_speed);
 }
 
-/*
+/*zz
+
     This methods stops the motor.
 */
 void stop_motor()
@@ -178,12 +180,12 @@ void core1_entry() {
         if(motorEnabled) {
             //Check Current RPM and change PWM based on the current RPM
             if(currentRPM < TARGET_RPM) {
-                set_motor_pwm(90);
-            } else {
                 set_motor_pwm(60);
+            } else {
+                set_motor_pwm(40);
             }
             //If RPM is valid we need to enable atTargetRPM boolean
-            if(currentRPM > TARGET_RPM - 15 && currentRPM < TARGET_RPM + 15) {
+            if(currentRPM > TARGET_RPM - 50 && currentRPM < TARGET_RPM + 50) {
                 atTargetRPM = true;
             } else {
                 atTargetRPM = false;
@@ -225,7 +227,7 @@ int main() {
     while (1) {
 
         // TODO - Replace true with atTargetRPM
-        if(true) {
+        if(atTargetRPM) {
 
             //Loop throught all of the 3D frames to create an animation.
             for(int j = 0; j < NUM_3D_FRAMES; j++) {
