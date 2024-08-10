@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO
+# Install script for directory: E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/cmake_install.cmake")
+  include("E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

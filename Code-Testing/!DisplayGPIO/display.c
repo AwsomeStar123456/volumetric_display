@@ -11,6 +11,7 @@
 #include "hardware/pwm.h"
 #include "imagedata.h"
 #include "GpioMapping.h"
+#include "ws2812.pio.h"
 
 #define TARGET_RPM 1200 //Target RPM for the motor
 #define TIME_UNTIL_SHUTDOWN 3000000 //Time in us = 3 Seconds
@@ -18,6 +19,10 @@
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
 #define NUM_3D_FRAMES 1 //Number of 3D frames we have in the animation.
 #define FRAMES_BEFORE_NEXT 1 //Number of times we repeat a frame before moving to the next 3D frame.
+
+#define WS2812_PIN 16
+#define NUM_PIXELS 1
+#define IS_RGBW true
 
 volatile bool core1_uninitialized = true;
 bool atTargetRPM = false;
@@ -31,6 +36,8 @@ void init_motor();
 void stop_motor();
 void set_motor_pwm(uint8_t speed);
 void calc_rpm(uint gpio, uint32_t events);
+
+void set_onboard_led_color(PIO pio, int sm, uint32_t color);
 
 
 void init_led()
@@ -93,6 +100,13 @@ void init_led()
     gpio_set_dir(26, GPIO_IN);
     gpio_set_dir(27, GPIO_IN);
     
+}
+
+/*
+    This method sets the color of the onboard LED.
+*/
+void set_onboard_led_color(PIO pio, int sm, uint32_t color) {
+    pio_sm_put_blocking(pio, sm, color << 8u);
 }
 
 /*
@@ -171,13 +185,25 @@ void core1_entry() {
     init_motor();
     init_ir_sense();
 
+    // Initialize the PIO and state machine. This is the PIO for the WS2812 LED.
+    PIO pio = pio0;
+    int sm = 0;
+    uint offset = pio_add_program(pio, &ws2812_program);
+    ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
+
+    //Set the pixel color values for easy access.
+    uint32_t ws2812Red   = 0x00FF0000; // RGB format: 0x00RRGGBB
+    uint32_t ws2812Green = 0x0000FF00; // RGB format: 0x00RRGGBB
+    uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
+
+    set_onboard_led_color(pio, sm, ws2812Blue);
+
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
     bool motorEnabled = false;
 
     while (1) {
-
-        if(motorEnabled) {
+        if(motorEnabled) {   
             //Check Current RPM and change PWM based on the current RPM
             if(currentRPM < TARGET_RPM) {
                 set_motor_pwm(60);
