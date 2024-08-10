@@ -1,0 +1,18 @@
+UNITS=MM
+ID=278
+#
+#Num Features
+#
+F 1
+
+#
+#Layer features
+#
+S P 0
+OB 0 0 I
+OS 0 7.0866
+OS 24.5872 7.0866
+OS 24.5872 0
+OS 0 0
+OE
+SE

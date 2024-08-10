@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2024-07-24T04:13:53Z",
+        "GenerationSoftware": {
+            "Application": "Fusion Electronics",
+            "Vendor": "Autodesk",
+            "Version": "9.7.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.671119,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "PCB v4"
+        },
+        "Owner": "Semrah Odobasic <u1293090@utah.edu>",
+        "Size": {
+            "X": 24.5872,
+            "Y": 7.0866
+        }
+    }
+}
