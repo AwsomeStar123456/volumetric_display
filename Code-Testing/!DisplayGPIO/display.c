@@ -196,13 +196,17 @@ void core1_entry() {
     uint32_t ws2812Green = 0x0000FF00; // RGB format: 0x00RRGGBB
     uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
 
-    set_onboard_led_color(pio, sm, ws2812Blue);
+    set_onboard_led_color(pio, sm, 0x00FFFFFF);
 
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
     bool motorEnabled = false;
 
+    absolute_time_t whileLoopBuffer = get_absolute_time();
+
     while (1) {
+        whileLoopBuffer = get_absolute_time();
+
         if(motorEnabled) {   
             //Check Current RPM and change PWM based on the current RPM
             if(currentRPM < TARGET_RPM) {
@@ -210,23 +214,36 @@ void core1_entry() {
             } else {
                 set_motor_pwm(40);
             }
+            
             //If RPM is valid we need to enable atTargetRPM boolean
             if(currentRPM > TARGET_RPM - 50 && currentRPM < TARGET_RPM + 50) {
                 atTargetRPM = true;
             } else {
                 atTargetRPM = false;
             }
+
+            if (currentRPM < TARGET_RPM - 50) {
+                set_onboard_led_color(pio, sm, ws2812Red);
+            } else if (currentRPM > TARGET_RPM + 50) {
+                set_onboard_led_color(pio, sm, ws2812Blue);
+            } else {
+                set_onboard_led_color(pio, sm, ws2812Green);
+            }
         } else {
+            set_onboard_led_color(pio, sm, 0x00FF00A0);
+
             stop_motor();
         }
 
         //If 3 seconds past the last RPM reading, we need to disable atTargetRPM boolean
-        if(to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTimeRPM) > TIME_UNTIL_SHUTDOWN) {
+        if((to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTimeRPM) > TIME_UNTIL_SHUTDOWN) || to_ms_since_boot(get_absolute_time()) < 3000) {
             motorEnabled = false;
             atTargetRPM = false;
         } else {
             motorEnabled = true;
         }
+
+        while(to_ms_since_boot(get_absolute_time()) - to_ms_since_boot(whileLoopBuffer) < 100) {}
 
     }
 }
