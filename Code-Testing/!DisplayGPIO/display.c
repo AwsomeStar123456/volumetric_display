@@ -26,7 +26,7 @@
 
 volatile bool core1_uninitialized = true;
 bool atTargetRPM = false;
-int currentRPM = 75;
+int currentRPM = 0;
 absolute_time_t lastTimeRPM;
 
 void clearLEDs();
@@ -150,15 +150,20 @@ void calc_rpm(uint gpio, uint32_t events)
     float timeDiffs = timeDiffms / 1000.0f;
     float timeDiffRPM = 60.0f / timeDiffs;
 
-    currentRPM = timeDiffRPM;
+    currentRPM = (int)timeDiffRPM;
     lastTimeRPM = currentTime;
 }
 
 /*
-    This method takes in a direction and speed in percent and sets the PWM of the GPIO pins.
+    This method takes in a speed in percent and sets the PWM of the GPIO pin accordingly. This method expects
+    the speed to be between 0 and 100. If it isn't within those bound this method will clamp the pwm.
 */
 void set_motor_pwm(uint8_t speed)
 {
+    //Clamp the speed to be between 0 and 100.
+    if(speed > 100) speed = 100;
+    if(speed < 0) speed = 0;
+
     //Convert speed in percentage to 16-bit value that the motor register uses.
     uint16_t reg_speed = (speed * 65535) / 100;
 
@@ -196,7 +201,7 @@ void core1_entry() {
     uint32_t ws2812Green = 0x0000FF00; // RGB format: 0x00RRGGBB
     uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
 
-    set_onboard_led_color(pio, sm, 0x00FFFFFF);
+    set_onboard_led_color(pio, sm, 0x008F8F8F);
 
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
@@ -204,17 +209,26 @@ void core1_entry() {
 
     absolute_time_t whileLoopBuffer = get_absolute_time();
 
+    //Variables for PWM using PID
+    double pwm = 50;
+
+    double Kp = 0.00000084;
+
+    double error = 0;
+
     while (1) {
-        whileLoopBuffer = get_absolute_time();
+        //whileLoopBuffer = get_absolute_time();
 
         if(motorEnabled) {   
-            //Check Current RPM and change PWM based on the current RPM
-            if(currentRPM < TARGET_RPM) {
-                set_motor_pwm(60);
-            } else {
-                set_motor_pwm(40);
-            }
-            
+            error = TARGET_RPM - currentRPM;
+
+            pwm += Kp * error;
+
+            if(pwm > 100) pwm = 100;
+            if(pwm < 0) pwm = 0;
+
+            set_motor_pwm((uint8_t)pwm);
+
             //If RPM is valid we need to enable atTargetRPM boolean
             if(currentRPM > TARGET_RPM - 50 && currentRPM < TARGET_RPM + 50) {
                 atTargetRPM = true;
@@ -222,15 +236,15 @@ void core1_entry() {
                 atTargetRPM = false;
             }
 
-            if (currentRPM < TARGET_RPM - 50) {
-                set_onboard_led_color(pio, sm, ws2812Red);
-            } else if (currentRPM > TARGET_RPM + 50) {
-                set_onboard_led_color(pio, sm, ws2812Blue);
-            } else {
-                set_onboard_led_color(pio, sm, ws2812Green);
-            }
+            // if (currentRPM < TARGET_RPM - 50) {
+            //     set_onboard_led_color(pio, sm, ws2812Red);
+            // } else if (currentRPM > TARGET_RPM + 50) {
+            //     set_onboard_led_color(pio, sm, ws2812Blue);
+            // } else {
+            //     set_onboard_led_color(pio, sm, ws2812Green);
+            // }
         } else {
-            set_onboard_led_color(pio, sm, 0x00FF00A0);
+            //set_onboard_led_color(pio, sm, 0x00FF00A0);
 
             stop_motor();
         }
@@ -239,11 +253,12 @@ void core1_entry() {
         if((to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTimeRPM) > TIME_UNTIL_SHUTDOWN) || to_ms_since_boot(get_absolute_time()) < 3000) {
             motorEnabled = false;
             atTargetRPM = false;
+            pwm = 50;
         } else {
             motorEnabled = true;
         }
 
-        while(to_ms_since_boot(get_absolute_time()) - to_ms_since_boot(whileLoopBuffer) < 100) {}
+        //while(to_ms_since_boot(get_absolute_time()) - to_ms_since_boot(whileLoopBuffer) < 100) {}
 
     }
 }
