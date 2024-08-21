@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/tools/cmake_install.cmake")
-  include("E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/src/cmake_install.cmake")
-  include("E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/docs/cmake_install.cmake")
+  include("C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/tools/cmake_install.cmake")
+  include("C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/src/cmake_install.cmake")
+  include("C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/docs/cmake_install.cmake")
 
 endif()
 

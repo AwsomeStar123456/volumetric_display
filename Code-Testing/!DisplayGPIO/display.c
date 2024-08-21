@@ -13,7 +13,7 @@
 #include "GpioMapping.h"
 #include "ws2812.pio.h"
 
-#define TARGET_RPM 1200 //Target RPM for the motor
+#define TARGET_RPM 1736 //Target RPM for the motor
 #define TIME_UNTIL_SHUTDOWN 3000000 //Time in us = 3 Seconds
 
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
@@ -200,8 +200,9 @@ void core1_entry() {
     uint32_t ws2812Red   = 0x00FF0000; // RGB format: 0x00RRGGBB
     uint32_t ws2812Green = 0x0000FF00; // RGB format: 0x00RRGGBB
     uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
+    uint32_t ws2812Black = 0x00000000; // RGB format: 0x00RRGGBB
 
-    set_onboard_led_color(pio, sm, 0x008F8F8F);
+    set_onboard_led_color(pio, sm, ws2812Black);
 
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
@@ -212,12 +213,12 @@ void core1_entry() {
     //Variables for PWM using PID
     double pwm = 50;
 
-    double Kp = 0.00000084;
+    double Kp = 0.01;
 
     double error = 0;
 
     while (1) {
-        //whileLoopBuffer = get_absolute_time();
+        whileLoopBuffer = get_absolute_time();
 
         if(motorEnabled) {   
             error = TARGET_RPM - currentRPM;
@@ -236,15 +237,15 @@ void core1_entry() {
                 atTargetRPM = false;
             }
 
-            // if (currentRPM < TARGET_RPM - 50) {
-            //     set_onboard_led_color(pio, sm, ws2812Red);
-            // } else if (currentRPM > TARGET_RPM + 50) {
-            //     set_onboard_led_color(pio, sm, ws2812Blue);
-            // } else {
-            //     set_onboard_led_color(pio, sm, ws2812Green);
-            // }
+            if (currentRPM < TARGET_RPM - 50) {
+                 set_onboard_led_color(pio, sm, ws2812Red);
+            } else if (currentRPM > TARGET_RPM + 50) {
+                 set_onboard_led_color(pio, sm, ws2812Blue);
+            } else {
+                set_onboard_led_color(pio, sm, ws2812Green);
+            }
         } else {
-            //set_onboard_led_color(pio, sm, 0x00FF00A0);
+            set_onboard_led_color(pio, sm, 0x00FF00A0);
 
             stop_motor();
         }
@@ -258,7 +259,7 @@ void core1_entry() {
             motorEnabled = true;
         }
 
-        //while(to_ms_since_boot(get_absolute_time()) - to_ms_since_boot(whileLoopBuffer) < 100) {}
+        while(to_ms_since_boot(get_absolute_time()) - to_ms_since_boot(whileLoopBuffer) < 100) {}
 
     }
 }
@@ -285,7 +286,8 @@ int main() {
     while (1) {
 
         // TODO - Replace true with atTargetRPM
-        if(atTargetRPM) {
+        //atTargetRPM
+        if(true) {
 
             //Loop throught all of the 3D frames to create an animation.
             for(int j = 0; j < NUM_3D_FRAMES; j++) {

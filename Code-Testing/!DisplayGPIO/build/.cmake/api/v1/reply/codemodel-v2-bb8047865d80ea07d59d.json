@@ -1140,7 +1140,7 @@
 				{
 					"directoryIndex" : 43,
 					"id" : "bs2_default::@bc554eaed616d198a22d",
-					"jsonFile" : "target-bs2_default-Debug-85e13467273d236ec92e.json",
+					"jsonFile" : "target-bs2_default-Debug-36d5371591aa4dc39606.json",
 					"name" : "bs2_default",
 					"projectIndex" : 1
 				},
@@ -1168,7 +1168,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "display::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-display-Debug-172e35de539a088d6af3.json",
+					"jsonFile" : "target-display-Debug-68b8b241ca2d595e0931.json",
 					"name" : "display",
 					"projectIndex" : 0
 				},
@@ -1199,8 +1199,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/build",
-		"source" : "E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO"
+		"build" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build",
+		"source" : "C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO"
 	},
 	"version" : 
 	{
