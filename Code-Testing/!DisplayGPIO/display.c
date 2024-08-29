@@ -202,6 +202,8 @@ void core1_entry() {
     uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
     uint32_t ws2812Black = 0x00000000; // RGB format: 0x00RRGGBB
 
+    uint32_t ws2812Color = 0x00000000; // RGB format: 0x00RRGGBB
+
     set_onboard_led_color(pio, sm, ws2812Black);
 
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
@@ -237,13 +239,23 @@ void core1_entry() {
                 atTargetRPM = false;
             }
 
-            if (currentRPM < TARGET_RPM - 50) {
-                 set_onboard_led_color(pio, sm, ws2812Red);
-            } else if (currentRPM > TARGET_RPM + 50) {
-                 set_onboard_led_color(pio, sm, ws2812Blue);
-            } else {
-                set_onboard_led_color(pio, sm, ws2812Green);
-            }
+            // if (currentRPM < TARGET_RPM - 50) {
+            //      set_onboard_led_color(pio, sm, ws2812Red);
+            // } else if (currentRPM > TARGET_RPM + 50) {
+            //      set_onboard_led_color(pio, sm, ws2812Blue);
+            // } else {
+            //     set_onboard_led_color(pio, sm, ws2812Green);
+            // }
+
+            // RGB format: 0x00RRGGBB
+            if(pwm >= 0 && pwm < 20)    ws2812Color = 0x00FF0000; //Red
+            if(pwm >= 20 && pwm < 40)   ws2812Color = 0x00FFFF00; //Yellow
+            if(pwm >= 40 && pwm < 60)   ws2812Color = 0x0000FF00; //Green
+            if(pwm >= 60 && pwm < 80)   ws2812Color = 0x0000FFFF; //Cyan
+            if(pwm >= 80 && pwm <= 100) ws2812Color = 0x000000FF; //Blue
+
+            set_onboard_led_color(pio, sm, ws2812Color);
+
         } else {
             set_onboard_led_color(pio, sm, 0x00FF00A0);
 
