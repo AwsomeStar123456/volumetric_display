@@ -146,11 +146,17 @@ void calc_rpm(uint gpio, uint32_t events)
     absolute_time_t currentTime = get_absolute_time();
 
     uint64_t timeDiffus = to_us_since_boot(currentTime) - to_us_since_boot(lastTimeRPM);
-    uint64_t timeDiffms = timeDiffus / 1000;
-    float timeDiffs = timeDiffms / 1000.0f;
-    float timeDiffRPM = 60.0f / timeDiffs;
 
-    currentRPM = (int)timeDiffRPM;
+    // Avoid division by zero
+    if (timeDiffus > 0) {
+        float timeDiffs = timeDiffus / 1000000.0f; // Convert microseconds to seconds
+        float timeDiffRPM = 60.0f / timeDiffs;
+
+        currentRPM = (int)timeDiffRPM;
+    } else {
+        currentRPM = 0; // Handle the case where timeDiffus is zero
+    }
+
     lastTimeRPM = currentTime;
 }
 
@@ -248,11 +254,11 @@ void core1_entry() {
             // }
 
             // RGB format: 0x00RRGGBB
-            if(pwm >= 0 && pwm < 20)    ws2812Color = 0x00FF0000; //Red
-            if(pwm >= 20 && pwm < 40)   ws2812Color = 0x00FFFF00; //Yellow
-            if(pwm >= 40 && pwm < 60)   ws2812Color = 0x0000FF00; //Green
-            if(pwm >= 60 && pwm < 80)   ws2812Color = 0x0000FFFF; //Cyan
-            if(pwm >= 80 && pwm <= 100) ws2812Color = 0x000000FF; //Blue
+            if(pwm >= 0 && pwm < 80)    ws2812Color = 0x00FF0000; //Red
+            if(pwm >= 80 && pwm < 85)   ws2812Color = 0x00FFFF00; //Yellow
+            if(pwm >= 85 && pwm < 90)   ws2812Color = 0x0000FF00; //Green
+            if(pwm >= 90 && pwm < 95)   ws2812Color = 0x0000FFFF; //Cyan
+            if(pwm >= 95 && pwm <= 100) ws2812Color = 0x000000FF; //Blue
 
             set_onboard_led_color(pio, sm, ws2812Color);
 

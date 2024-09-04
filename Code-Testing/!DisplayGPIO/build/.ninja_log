@@ -13,7 +13,7 @@
 1171	1258	7459595976387103	C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin	ef83c32f5601ba72
 1641	2907	7459595992495112	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj	5d594390c7cbb5f9
 1653	3299	7459595995974058	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj	9da22889a65d341c
-506	927	7459636119250358	display.elf	c27bcd2b19ae33c1
+461	939	7471668222235025	display.elf	c27bcd2b19ae33c1
 1611	2982	7459595992776803	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_platform/platform.c.obj	c1474efb7b2bcaee
 1624	3032	7459595993429927	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj	5201fa7beae3bf2
 1598	3177	7459595994891643	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj	d4f73d6747824140
@@ -30,7 +30,7 @@
 5755	7102	7459596034228324	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj	92cfe96c96a260a2
 2909	4464	7459596007590103	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_sync/mutex.c.obj	34a77c552479521
 3283	4525	7459596008289677	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj	845306c8b80355b0
-65	505	7459636116706931	CMakeFiles/display.dir/display.c.obj	2b8ca1eb825a1abf
+49	460	7471668219500084	CMakeFiles/display.dir/display.c.obj	2b8ca1eb825a1abf
 3736	5238	7459596015536929	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj	c4884875aa5fb811
 3430	5365	7459596016598542	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/common/pico_util/pheap.c.obj	a3b8ff2214162393
 4742	5755	7459596019838268	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj	bb5bc73a110cfe1f
@@ -58,5 +58,3 @@
 7564	10008	7459596063849979	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj	a0ae8448d0b9a8c9
 8039	9585	7459596059540994	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj	a3060cbeb264274d
 8699	9618	7459596059948297	CMakeFiles/display.dir/C_/Program_Files/Raspberry_Pi/Pico_SDK_v1.5.1/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj	f94e4727687a379b
-98	3911	7466615597457689	CMakeFiles/display.dir/display.c.obj	2b8ca1eb825a1abf
-3915	6279	7466615616080449	display.elf	c27bcd2b19ae33c1
