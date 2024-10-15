@@ -176,7 +176,7 @@ void set_motor_pwm(uint8_t speed)
     pwm_set_gpio_level(29, reg_speed);
 }
 
-/*zz
+/*
 
     This methods stops the motor.
 */

@@ -1,4 +1,4 @@
-# Install script for directory: E:/!!IRL/School/!!University/UofU/ECE3992/Project/volumetric_display/Code-Testing/!DisplayGPIO/src
+# Install script for directory: C:/Users/Semra/Documents/ECE3992/volumetric_display/Code-Testing/!DisplayGPIO/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

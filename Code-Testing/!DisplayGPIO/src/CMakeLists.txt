@@ -1,9 +1,14 @@
-# Main Binary File
+#--------------------------------------------------#
+# This is the display executatble.
+#--------------------------------------------------#
+
+# Create the executable file.
 add_executable(display
 	display.c
 	../WS2812/ws2812.c
 	)
 
+#Set the name and version of the project.
 pico_set_program_name(display "display")
 pico_set_program_version(display "0.1")
 
@@ -19,4 +24,5 @@ hardware_pwm
 #Add the extra outputs to the project. This creates a .uf2 file that can be flashed to the pico.
 pico_add_extra_outputs(display)
 
+#Generate the pio header file for the onboard LED.
 pico_generate_pio_header(display ${CMAKE_CURRENT_LIST_DIR}/../WS2812/ws2812.pio)

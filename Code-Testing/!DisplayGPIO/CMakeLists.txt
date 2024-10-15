@@ -22,3 +22,4 @@ include_directories(ImageData)
 include_directories(WS2812)
 
 add_subdirectory(src)
+add_subdirectory(test)
