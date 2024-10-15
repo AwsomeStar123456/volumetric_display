@@ -21,19 +21,4 @@ include_directories(DisplayI2C)
 include_directories(ImageData)
 include_directories(WS2812)
 
-add_executable(display
-	display.c
-	WS2812/ws2812.c
-	)
-	
-#Link all of the required libraries to the project.
-target_link_libraries(display pico_stdlib)
-target_link_libraries(display pico_multicore)
-target_link_libraries(display hardware_pio)
-target_link_libraries(display hardware_i2c)
-target_link_libraries(display hardware_pwm)
-
-#Add the extra outputs to the project. This creates a .uf2 file that can be flashed to the pico.
-pico_add_extra_outputs(display)
-
-pico_generate_pio_header(display ${CMAKE_CURRENT_LIST_DIR}/WS2812/ws2812.pio)
+add_subdirectory(src)
