@@ -14,6 +14,7 @@
 #include "GpioMapping.h"
 #include "ws2812.pio.h"
 #include "Initialization.h"
+#include "Motor.h"
 
 #define TARGET_RPM 1736 //Target RPM for the motor
 #define TIME_UNTIL_SHUTDOWN 3000000 //Time in us = 3 Seconds

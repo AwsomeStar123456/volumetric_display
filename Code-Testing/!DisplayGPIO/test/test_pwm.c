@@ -9,9 +9,12 @@
 #include "hardware/i2c.h"
 #include "hardware/clocks.h"
 #include "hardware/pwm.h"
+
 #include "imagedata.h"
 #include "GpioMapping.h"
 #include "ws2812.pio.h"
+#include "Initialization.h"
+#include "Motor.h"
 
 #define TARGET_RPM 1736 //Target RPM for the motor
 #define TIME_UNTIL_SHUTDOWN 3000000 //Time in us = 3 Seconds
@@ -25,119 +28,19 @@
 #define IS_RGBW true
 
 volatile bool core1_uninitialized = true;
+bool atTargetRPM = false;
 int currentRPM = 0;
 absolute_time_t lastTimeRPM;
 
 void clearLEDs();
-
-void init_ir_sense();
-void init_motor();
-void stop_motor();
-void set_motor_pwm(uint8_t speed);
 void calc_rpm(uint gpio, uint32_t events);
-
 void set_onboard_led_color(PIO pio, int sm, uint32_t color);
-
-
-void init_led()
-{
-    gpio_set_function(0, GPIO_FUNC_SIO);
-    gpio_set_function(1, GPIO_FUNC_SIO);
-    gpio_set_function(2, GPIO_FUNC_SIO);
-    gpio_set_function(3, GPIO_FUNC_SIO);
-    gpio_set_function(4, GPIO_FUNC_SIO);
-    gpio_set_function(5, GPIO_FUNC_SIO);
-    gpio_set_function(6, GPIO_FUNC_SIO);
-    gpio_set_function(7, GPIO_FUNC_SIO);
-    gpio_set_function(8, GPIO_FUNC_SIO);
-    gpio_set_function(9, GPIO_FUNC_SIO);
-    gpio_set_function(10, GPIO_FUNC_SIO);
-    gpio_set_function(11, GPIO_FUNC_SIO);
-    gpio_set_function(12, GPIO_FUNC_SIO);
-    gpio_set_function(13, GPIO_FUNC_SIO);
-    gpio_set_function(14, GPIO_FUNC_SIO);
-    gpio_set_function(15, GPIO_FUNC_SIO);
-    gpio_set_function(26, GPIO_FUNC_SIO);
-    gpio_set_function(27, GPIO_FUNC_SIO);
-
-    gpio_disable_pulls(0);
-    gpio_disable_pulls(1);
-    gpio_disable_pulls(2);
-    gpio_disable_pulls(3);
-    gpio_disable_pulls(4);
-    gpio_disable_pulls(5);
-    gpio_disable_pulls(6);
-    gpio_disable_pulls(7);
-    gpio_disable_pulls(8);
-    gpio_disable_pulls(9);
-    gpio_disable_pulls(10);
-    gpio_disable_pulls(11);
-    gpio_disable_pulls(12);
-    gpio_disable_pulls(13);
-    gpio_disable_pulls(14);
-    gpio_disable_pulls(15);
-    gpio_disable_pulls(26);
-    gpio_disable_pulls(27);
-
-
-    gpio_set_dir(0, GPIO_IN);
-    gpio_set_dir(1, GPIO_IN);
-    gpio_set_dir(2, GPIO_IN);
-    gpio_set_dir(3, GPIO_IN);
-    gpio_set_dir(4, GPIO_IN);
-    gpio_set_dir(5, GPIO_IN);
-    gpio_set_dir(6, GPIO_IN);
-    gpio_set_dir(7, GPIO_IN);
-    gpio_set_dir(8, GPIO_IN);
-    gpio_set_dir(9, GPIO_IN);
-    gpio_set_dir(10, GPIO_IN);
-    gpio_set_dir(11, GPIO_IN);
-    gpio_set_dir(12, GPIO_IN);
-    gpio_set_dir(13, GPIO_IN);
-    gpio_set_dir(14, GPIO_IN);
-    gpio_set_dir(15, GPIO_IN);
-    gpio_set_dir(26, GPIO_IN);
-    gpio_set_dir(27, GPIO_IN);
-    
-}
 
 /*
     This method sets the color of the onboard LED.
 */
 void set_onboard_led_color(PIO pio, int sm, uint32_t color) {
     pio_sm_put_blocking(pio, sm, color << 8u);
-}
-
-/*
-    This method initializes the PWM for pins 12 and 13 of the pico.
-*/
-void init_motor()
-{
-    //Set the GPIO functions of pins 13 and 12 to PWM.
-    gpio_set_function(29, GPIO_FUNC_PWM);
-
-    //Get the PWM slice for pin 13. This will be the same as
-    //pin 12 so we just get the slice once. Set it to true.
-    uint slice_num = pwm_gpio_to_slice_num(29);
-    pwm_set_enabled(slice_num, true);
-
-
-    //Ensure that the PWM is set to off.
-    pwm_set_gpio_level(29, 0x0);
-}
-
-/*
-    This method initiates the IR sensor as well as the falling edge trigger for the IR sensor.
-*/
-void init_ir_sense()
-{
-    //Initiate GPIO 26 to be an input pin so that we can read the value from the IR sensor.
-    gpio_init(28);
-    gpio_set_dir(28, GPIO_IN);
-
-    //We will enable the falling edge trigger on pin 26 so that it will call our calc RPM
-    //method when the GPIO detects an edge.
-    gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
 }
 
 void calc_rpm(uint gpio, uint32_t events)
@@ -160,32 +63,6 @@ void calc_rpm(uint gpio, uint32_t events)
 }
 
 /*
-    This method takes in a speed in percent and sets the PWM of the GPIO pin accordingly. This method expects
-    the speed to be between 0 and 100. If it isn't within those bound this method will clamp the pwm.
-*/
-void set_motor_pwm(uint8_t speed)
-{
-    //Clamp the speed to be between 0 and 100.
-    if(speed > 100) speed = 100;
-    if(speed < 0) speed = 0;
-
-    //Convert speed in percentage to 16-bit value that the motor register uses.
-    uint16_t reg_speed = (speed * 65535) / 100;
-
-    pwm_set_gpio_level(29, reg_speed);
-}
-
-/*
-
-    This methods stops the motor.
-*/
-void stop_motor()
-{
-    //Set the PWM levels to zero to stop the motor.
-    pwm_set_gpio_level(29, 0);
-}
-
-/*
     This methods runs on cpu1 and is responsible for controlling the motor and doing the rpm detection.
 */
 void core1_entry() {
@@ -194,6 +71,9 @@ void core1_entry() {
 
     init_motor();
     init_ir_sense();
+
+    //Set the GPIO pin 28 to trigger an interrupt on a falling edge. IR Sensor.
+    gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
 
     // Initialize the PIO and state machine. This is the PIO for the WS2812 LED.
     PIO pio = pio0;
@@ -213,9 +93,70 @@ void core1_entry() {
 
     //Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
+    bool motorEnabled = false;
 
-    while(1) {
+    absolute_time_t whileLoopBuffer = get_absolute_time();
 
+    //Variables for PWM using PID
+    double pwm = 50;
+
+    double Kp = 0.01;
+
+    double error = 0;
+
+    while (1) {
+        whileLoopBuffer = get_absolute_time();
+
+        if(motorEnabled) {   
+            error = TARGET_RPM - currentRPM;
+
+            pwm += Kp * error;
+
+            if(pwm > 100) pwm = 100;
+            if(pwm < 0) pwm = 0;
+
+            set_motor_pwm((uint8_t)pwm);
+
+            //If RPM is valid we need to enable atTargetRPM boolean
+            if(currentRPM > TARGET_RPM - 50 && currentRPM < TARGET_RPM + 50) {
+                atTargetRPM = true;
+            } else {
+                atTargetRPM = false;
+            }
+
+            // if (currentRPM < TARGET_RPM - 50) {
+            //      set_onboard_led_color(pio, sm, ws2812Red);
+            // } else if (currentRPM > TARGET_RPM + 50) {
+            //      set_onboard_led_color(pio, sm, ws2812Blue);
+            // } else {
+            //     set_onboard_led_color(pio, sm, ws2812Green);
+            // }
+
+            // RGB format: 0x00RRGGBB
+            if(pwm >= 0 && pwm < 80)    ws2812Color = 0x00FF0000; //Red
+            if(pwm >= 80 && pwm < 85)   ws2812Color = 0x00FFFF00; //Yellow
+            if(pwm >= 85 && pwm < 90)   ws2812Color = 0x0000FF00; //Green
+            if(pwm >= 90 && pwm < 95)   ws2812Color = 0x0000FFFF; //Cyan
+            if(pwm >= 95 && pwm <= 100) ws2812Color = 0x000000FF; //Blue
+
+            set_onboard_led_color(pio, sm, ws2812Color);
+
+        } else {
+            set_onboard_led_color(pio, sm, 0x00FF00A0);
+
+            stop_motor();
+        }
+
+        //If 3 seconds past the last RPM reading, we need to disable atTargetRPM boolean
+        if((to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTimeRPM) > TIME_UNTIL_SHUTDOWN) || to_ms_since_boot(get_absolute_time()) < 3000) {
+            motorEnabled = false;
+            atTargetRPM = false;
+            pwm = 50;
+        } else {
+            motorEnabled = true;
+        }
+
+        while(to_ms_since_boot(get_absolute_time()) - to_ms_since_boot(whileLoopBuffer) < 100) {}
 
     }
 }
@@ -233,34 +174,76 @@ int main() {
     multicore_launch_core1(core1_entry);
     while(core1_uninitialized) {}
 
+    absolute_time_t start_time = get_absolute_time();
+    absolute_time_t end_time = get_absolute_time();
     int currentVCC = 0;
     int currentGND = 0;
-
-    int x = 0;
-    int y = 0;
-
-    //Check GPIO pins for current pixel
-    currentVCC = gpiomap_flipped[y][x][0];
-    currentGND = gpiomap_flipped[y][x][1];
-
-    //Set to PWM and output.
-    gpio_set_function(currentVCC, GPIO_FUNC_PWM);
-    gpio_set_dir(currentGND, GPIO_OUT);
-
-    //Get the PWM slice of the pixel.
-    uint slice_num = pwm_gpio_to_slice_num(currentVCC);
-    pwm_set_enabled(slice_num, true);
-
-
-    //Ensure that the PWM is set to off.
-    pwm_set_gpio_level(currentVCC, 0x0);
-
-    //Disable the PWM and reset the pin.
-    pwm_set_enabled(slice_num, false);
-    gpio_set_function(currentVCC, GPIO_FUNC_SIO);
-    gpio_set_dir(currentVCC, GPIO_IN);
+    bool pixelVal = 0;
 
     while (1) {
+
+        // TODO - Replace true with atTargetRPM
+        //atTargetRPM
+        if(true) {
+
+            //Loop throught all of the 3D frames to create an animation.
+            for(int j = 0; j < NUM_3D_FRAMES; j++) {
+
+                int count = 0;
+                while(count < FRAMES_BEFORE_NEXT)
+                {
+                    //Loop through all 24 2D slices of the 3D frame
+                    for(int i = 0; i < 24; i++) {
+
+                        //Loop through all pixels in the slice
+                        for(int y = 0; y < 9; y++) {
+                            for(int x = 0; x < 16; x++) {
+
+                                //Start Timing
+                                start_time = get_absolute_time();
+
+                                //Disable previous pins and move to next pixel
+                                gpio_set_dir(currentVCC, GPIO_IN);
+                                gpio_set_dir(currentGND, GPIO_IN);
+
+                                //Get Pixel On Off Status
+                                pixelVal = (image_data[j][i][y] >> x) & 1;
+
+                                //Check GPIO pins for current pixel
+                                currentVCC = gpiomap_flipped[y][x][0];
+                                currentGND = gpiomap_flipped[y][x][1];
+
+                                //If the pixel should be on set its GPIO pins respectively
+                                if(pixelVal == 1) {
+                                    gpio_set_dir(currentVCC, GPIO_OUT);
+                                    gpio_set_dir(currentGND, GPIO_OUT);
+                                    gpio_put(currentVCC, 1);
+                                    gpio_put(currentGND, 0);
+                                    
+                                }
+
+                                //end_time = get_absolute_time();
+
+                                //Wait until PIXEL_TIME (microseconds) has passed since the start time to ensure timing
+                                while (to_us_since_boot(get_absolute_time()) - to_us_since_boot(start_time) < PIXEL_TIME){}
+
+                                // if(to_us_since_boot(end_time) - to_us_since_boot(start_time) > 9) {
+                                //     gpio_set_dir(currentVCC, GPIO_OUT);
+                                //     gpio_set_dir(currentGND, GPIO_OUT);
+
+                                //     while(true) {}
+                                // }
+
+                            }
+                        }
+                    }
+                    count++;
+                }
+            }
+        } else {
+            clearLEDs();
+        }
+
 
     }
 

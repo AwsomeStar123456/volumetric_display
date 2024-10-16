@@ -6,6 +6,7 @@
 add_executable(test_pwm
 	test_pwm.c
 	${ONBOARD_LED_WS2812_PATH}
+	${SOURCE_FILES}
 	)
 
 #Set the name and version of the project.
@@ -35,6 +36,7 @@ pico_generate_pio_header(test_pwm ${ONBOARD_LED_PIO})
 add_executable(test_logging
 	test_logging.c
 	${ONBOARD_LED_WS2812_PATH}
+	${SOURCE_FILES}
 	)
 
 #Set the name and version of the project.
@@ -48,6 +50,8 @@ pico_multicore
 hardware_pio
 hardware_i2c
 hardware_pwm
+hardware_flash
+hardware_sync
 )
 
 #Add the extra outputs to the project. This creates a .uf2 file that can be flashed to the pico.

@@ -1,5 +1,5 @@
-#ifndef Initialization
-#define Initialization
+#ifndef Motor
+#define Motor
 
 #include "pico/stdlib.h"
 #include "pico/multicore.h"
