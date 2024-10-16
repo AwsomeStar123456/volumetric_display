@@ -43,6 +43,8 @@ add_executable(test_logging
 pico_set_program_name(test_logging "log test")
 pico_set_program_version(test_logging "0.1")
 
+pico_enable_stdio_usb(test_logging 1)
+
 #Link all of the required libraries to the project.
 target_link_libraries(test_logging PRIVATE
 pico_stdlib

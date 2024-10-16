@@ -22,6 +22,10 @@
 #define NUM_PIXELS 1
 #define IS_RGBW true
 
+#define FLASH_TARGET_OFFSET (150 * 4096)
+#define LOG_EVENT_SIZE sizeof(logevent_t)
+#define NUM_LOG_EVENTS 20
+
 typedef struct {
     uint SecondsSinceBoot;
 } logevent_t;
@@ -75,6 +79,18 @@ void core1_entry() {
     }
 }
 
+void write_logs_to_flash(logevent_t *log_events, int num_events) {
+    uint32_t ints = save_and_disable_interrupts();
+    flash_range_erase(FLASH_TARGET_OFFSET, LOG_EVENT_SIZE * num_events);
+    flash_range_program(FLASH_TARGET_OFFSET, (const uint8_t *)log_events, LOG_EVENT_SIZE * num_events);
+    restore_interrupts(ints);
+}
+
+void read_logs_from_flash(logevent_t *log_events, int num_events) {
+    const uint8_t *flash_target_contents = (const uint8_t *)(XIP_BASE + FLASH_TARGET_OFFSET);
+    memcpy(log_events, flash_target_contents, LOG_EVENT_SIZE * num_events);
+}
+
 /*
     This is the main method that runs on cpu0 and is responsible for controlling the display.
 */
@@ -88,8 +104,47 @@ int main() {
     multicore_launch_core1(core1_entry);
     while(core1_uninitialized) {}
 
-    while (1) {
+    logevent_t log_events[NUM_LOG_EVENTS];
+    int log_index = 0;
 
+    while (1) {
+        sleep_ms(10000);
+        printf("Starting logging test\n");
+
+        while(log_index < NUM_LOG_EVENTS) {
+            log_events[log_index].SecondsSinceBoot = to_ms_since_boot(get_absolute_time());
+            log_index++;
+            printf("Completed log event %d\n", log_index);
+            sleep_ms(250);
+        }
+
+        printf("Log Events Completed\n");
+
+        printf("Attempting to erase set of flash. Size: %d\n", FLASH_SECTOR_SIZE);
+
+        sleep_ms(1000);
+
+        uint32_t ints = save_and_disable_interrupts();
+        flash_range_erase(FLASH_TARGET_OFFSET, FLASH_SECTOR_SIZE);
+        restore_interrupts(ints);
+
+        sleep_ms(1000);
+
+        printf("Erased Flash. Size: %d\n", FLASH_SECTOR_SIZE);
+
+        // Example: Read logs from flash
+        logevent_t read_log_events[NUM_LOG_EVENTS];
+        read_logs_from_flash(read_log_events, log_index);
+
+        printf("Read from flash.\n");
+
+        sleep_ms(10000);
+
+        printf("Finished Sleep.\n");
+
+        for (int i = 0; i < log_index; i++) {
+            printf("Log %d: %u seconds since boot\n", i, read_log_events[i].SecondsSinceBoot);
+        }
     }
 
     return 0;
