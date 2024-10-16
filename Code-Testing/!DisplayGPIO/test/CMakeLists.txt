@@ -5,7 +5,7 @@
 # Create the executable file.
 add_executable(test_pwm
 	test_pwm.c
-	../WS2812/ws2812.c
+	${ONBOARD_LED_WS2812_PATH}
 	)
 
 #Set the name and version of the project.
@@ -25,7 +25,7 @@ hardware_pwm
 pico_add_extra_outputs(test_pwm)
 
 #Generate the pio header file for the onboard LED.
-pico_generate_pio_header(test_pwm ${CMAKE_CURRENT_LIST_DIR}/../WS2812/ws2812.pio)
+pico_generate_pio_header(test_pwm ${ONBOARD_LED_PIO})
 
 #--------------------------------------------------#
 # This is the test_logging executatble.
@@ -34,7 +34,7 @@ pico_generate_pio_header(test_pwm ${CMAKE_CURRENT_LIST_DIR}/../WS2812/ws2812.pio
 # Create the executable file.
 add_executable(test_logging
 	test_logging.c
-	../WS2812/ws2812.c
+	${ONBOARD_LED_WS2812_PATH}
 	)
 
 #Set the name and version of the project.
@@ -54,4 +54,4 @@ hardware_pwm
 pico_add_extra_outputs(test_logging)
 
 #Generate the pio header file for the onboard LED.
-pico_generate_pio_header(test_logging ${CMAKE_CURRENT_LIST_DIR}/../WS2812/ws2812.pio)
+pico_generate_pio_header(test_logging ${ONBOARD_LED_PIO})

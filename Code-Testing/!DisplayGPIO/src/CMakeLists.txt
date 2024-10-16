@@ -5,7 +5,8 @@
 # Create the executable file.
 add_executable(display
 	display.c
-	../WS2812/ws2812.c
+	${ONBOARD_LED_WS2812_PATH}
+	${SOURCE_FILES}
 	)
 
 #Set the name and version of the project.
@@ -25,4 +26,4 @@ hardware_pwm
 pico_add_extra_outputs(display)
 
 #Generate the pio header file for the onboard LED.
-pico_generate_pio_header(display ${CMAKE_CURRENT_LIST_DIR}/../WS2812/ws2812.pio)
+pico_generate_pio_header(display ${ONBOARD_LED_PIO})

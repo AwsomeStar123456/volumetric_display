@@ -16,10 +16,18 @@ project(display C CXX ASM)
 #Initialise the pico SDK
 pico_sdk_init()
 
-#Include all the folders with files.
-include_directories(DisplayI2C)
-include_directories(ImageData)
-include_directories(WS2812)
+#Initialize the onboard LED path.
+set(ONBOARD_LED_PATH "${CMAKE_SOURCE_DIR}/lib/OnboardLED/ws2812.c")
+set(ONBOARD_LED_PIO "${CMAKE_SOURCE_DIR}/lib/OnboardLED/ws2812.pio")
+
+# Automatically include all header files in the include directory and its subdirectories
+file(GLOB_RECURSE HEADER_FILES "include/*.h")
+foreach(HEADER_FILE ${HEADER_FILES})
+    get_filename_component(DIR ${HEADER_FILE} DIRECTORY)
+    include_directories(${DIR})
+endforeach()
+
+file(GLOB_RECURSE SOURCE_FILES "lib/*.c")
 
 add_subdirectory(src)
 add_subdirectory(test)
