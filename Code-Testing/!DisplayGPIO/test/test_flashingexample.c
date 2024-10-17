@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "pico/stdlib.h"
+#include "pico/stdio_usb.h"
 #include "hardware/flash.h"
 
 #include "ws2812.pio.h"
@@ -51,7 +52,6 @@ int main() {
 
     set_onboard_led_color(pio, sm, ws2812Black);
 
-    sleep_ms(10000);
     uint8_t random_data[FLASH_PAGE_SIZE];
     for (uint i = 0; i < FLASH_PAGE_SIZE; ++i)
         random_data[i] = rand() >> 16;
@@ -80,6 +80,11 @@ int main() {
     else
         set_onboard_led_color(pio, sm, ws2812Green);
     
+    stdio_usb_init();
 
-    sleep_ms(10000);
+    sleep_ms(15000);
+
+    for (uint i = 0; i < FLASH_PAGE_SIZE; ++i) {
+        printf("%02x ", flash_target_contents[i]);
+    }
 }
