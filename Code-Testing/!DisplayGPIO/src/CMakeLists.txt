@@ -20,10 +20,11 @@ pico_multicore
 hardware_pio
 hardware_i2c
 hardware_pwm
+hardware_dma
 )
 
 #Add the extra outputs to the project. This creates a .uf2 file that can be flashed to the pico.
 pico_add_extra_outputs(display)
 
-#Generate the pio header file for the onboard LED.
 pico_generate_pio_header(display ${ONBOARD_LED_PIO})
+pico_generate_pio_header(display ${ONBOARD_RPM_PIO})

@@ -19,6 +19,8 @@ pico_sdk_init()
 #Initialize the onboard LED path.
 set(ONBOARD_LED_PATH "${CMAKE_SOURCE_DIR}/lib/OnboardLED/ws2812.c")
 set(ONBOARD_LED_PIO "${CMAKE_SOURCE_DIR}/lib/OnboardLED/ws2812.pio")
+set(ONBOARD_RPM_PATH "${CMAKE_SOURCE_DIR}/lib/RPM/capture_edge.c")
+set(ONBOARD_RPM_PIO "${CMAKE_SOURCE_DIR}/lib/RPM/capture_edge.pio")
 
 # Automatically include all header files in the include directory and its subdirectories
 file(GLOB_RECURSE HEADER_FILES "include/*.h")
