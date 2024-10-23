@@ -117,6 +117,8 @@ target_link_libraries(displayPIO PRIVATE
     pico_stdlib
     pico_stdio_usb
     pico_multicore
+    pico_sync
+    pico_platform
     hardware_pio
     hardware_i2c
     hardware_pwm
