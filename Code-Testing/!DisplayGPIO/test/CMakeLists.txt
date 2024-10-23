@@ -28,7 +28,6 @@ pico_add_extra_outputs(test_pwm)
 
 #Generate the pio header file for the onboard LED.
 pico_generate_pio_header(test_pwm ${ONBOARD_LED_PIO})
-pico_generate_pio_header(test_pwm ${ONBOARD_RPM_PIO})
 
 #--------------------------------------------------#
 # This is the test_logging executatble.
@@ -63,7 +62,6 @@ pico_add_extra_outputs(test_logging)
 
 # Generate the pio header file for the onboard LED.
 pico_generate_pio_header(test_logging ${ONBOARD_LED_PIO})
-pico_generate_pio_header(test_logging ${ONBOARD_RPM_PIO})
 
 #--------------------------------------------------#
 # This is the test_flashingexample executatble.
@@ -98,7 +96,6 @@ pico_add_extra_outputs(test_flashingexample)
 
 #Generate the pio header file for the onboard LED.
 pico_generate_pio_header(test_flashingexample ${ONBOARD_LED_PIO})
-pico_generate_pio_header(test_flashingexample ${ONBOARD_RPM_PIO})
 
 #--------------------------------------------------#
 # This is the displayPIO executatble.
@@ -108,7 +105,6 @@ pico_generate_pio_header(test_flashingexample ${ONBOARD_RPM_PIO})
 add_executable(displayPIO
 displayPIO.c
     ${ONBOARD_LED_WS2812_PATH}
-    ${ONBOARD_RPM_PATH}
     ${SOURCE_FILES}
 )
 
@@ -129,6 +125,9 @@ target_link_libraries(displayPIO PRIVATE
     hardware_irq
     hardware_clocks
     hardware_dma
+    hardware_adc
+    hardware_gpio
+    hardware_timer
 )
 
 # Add the extra outputs to the project. This creates a .uf2 file that can be flashed to the pico.
@@ -139,4 +138,3 @@ pico_enable_stdio_uart(displayPIO 0)
 
 # Generate the pio header file for the onboard LED.
 pico_generate_pio_header(displayPIO ${ONBOARD_LED_PIO})
-pico_generate_pio_header(displayPIO ${ONBOARD_RPM_PIO})

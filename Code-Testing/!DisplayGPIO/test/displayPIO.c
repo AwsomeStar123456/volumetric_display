@@ -9,13 +9,15 @@
 #include "hardware/i2c.h"
 #include "hardware/clocks.h"
 #include "hardware/pwm.h"
+#include "hardware/adc.h"
+#include "hardware/gpio.h"
+#include "hardware/timer.h"
 
 #include "imagedata.h"
 #include "GpioMapping.h"
 #include "ws2812.pio.h"
 #include "Initialization.h"
 #include "Motor.h"
-#include "capture_edge.h"
 
 
 #define TARGET_RPM 1736 //Target RPM for the motor
@@ -25,7 +27,14 @@
 #define NUM_3D_FRAMES 1 //Number of 3D frames we have in the animation.
 #define FRAMES_BEFORE_NEXT 1 //Number of times we repeat a frame before moving to the next 3D frame.
 
-#define IR_SENSOR_PIN 28
+#define VOLTAGE_THRESHOLD 0.5 // Voltage threshold in volts
+#define ADC_PIN 28 // GPIO pin connected to the ADC
+#define ADC_CHANNEL 2 // ADC channel corresponding to GPIO28
+
+
+volatile int pulse_count = 0;
+volatile bool previous_below_threshold = false;
+
 #define WS2812_PIN 16
 #define NUM_PIXELS 1
 #define IS_RGBW true
@@ -36,18 +45,11 @@ const uint32_t ws2812Green = 0x0000FF00; // RGB format: 0x00RRGGBB
 const uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
 const uint32_t ws2812Black = 0x00000000; // RGB format: 0x00RRGGBB
 
-float clk_div = 1;
-volatile uint capture_counter, pin;
-volatile float frequency, duty, duration_cycle;
-volatile bool is_captured;
-volatile edge_type_t edge_type;
-
-uint32_t pulse_count;
-
 volatile bool core1_uninitialized = true;
 bool atTargetRPM = false;
 int currentRPM = 0;
 absolute_time_t lastTimeRPM;
+bool is_captured;
 
 void clearLEDs();
 void calc_rpm(uint gpio, uint32_t events);
@@ -60,10 +62,28 @@ void set_onboard_led_color(PIO pio, int sm, uint32_t color) {
     pio_sm_put_blocking(pio, sm, color << 8u);
 }
 
-static void capture_pin_0_handler(uint gpio, uint32_t events) {
+float read_voltage() {
+    uint16_t raw = adc_read();
+    float voltage = raw * 3.7f / (1 << 12); // Convert raw value to voltage
+    return voltage;
+}
 
-    pulse_count++;
-    is_captured = true;
+void check_voltage_and_increment_pulse_count() {
+    float voltage = read_voltage();
+    bool current_below_threshold = (voltage < VOLTAGE_THRESHOLD);
+
+    if (previous_below_threshold && !current_below_threshold) {
+        // Falling edge detected
+        pulse_count++;
+        is_captured = true;
+    }
+
+    previous_below_threshold = current_below_threshold;
+}
+
+bool timer_callback(repeating_timer_t *rt) {
+    check_voltage_and_increment_pulse_count();
+    return true; // Return true to keep the timer repeating
 }
 
 
@@ -71,11 +91,21 @@ static void capture_pin_0_handler(uint gpio, uint32_t events) {
     This methods runs on cpu1 and is responsible for controlling the motor and doing the rpm detection.
 */
 void core1_entry() {
-    sleep_ms(10000);
-    lastTimeRPM = get_absolute_time();
-    pulse_count = 0;
+    sleep_ms(10000); //Sleep to allow user to plug in USB and open serial connection.
+    printf("Booting\n");
+
+    adc_init();
+    adc_gpio_init(ADC_PIN);
+    adc_select_input(ADC_CHANNEL);
+
+    gpio_init(28);
+    gpio_set_dir(28, GPIO_IN);
+    gpio_pull_up(28);
 
     init_motor();
+
+    lastTimeRPM = get_absolute_time();
+    pulse_count = 0;
 
     // Initialize the PIO and state machine. This is the PIO for the WS2812 LED.
     PIO pio = pio0;
@@ -84,16 +114,9 @@ void core1_entry() {
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
     set_onboard_led_color(pio, sm, 0x00111111); // Set LED to white
 
-    gpio_init(28);
-    gpio_set_dir(28, GPIO_IN);
-    gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, true, &capture_pin_0_handler);
-
-    // PIO pioSecond = pio1;
-    // uint pin_base = 28;
-    // uint irq = PIO1_IRQ_1;
-
-    // capture_edge_init(pioSecond, pin_base, clk_div, irq);
-    // capture_edge_set_handler(0, capture_pin_0_handler);
+    // Set up the repeating timer
+    repeating_timer_t timer;
+    add_repeating_timer_ms(10, timer_callback, NULL, &timer);
 
     // Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
@@ -102,48 +125,38 @@ void core1_entry() {
     uint32_t ws2812Color = 0x00111111; // RGB format: 0x00RRGGBB
 
     uint16_t pwm = 0;
-    set_motor_pwm(0);
+    set_motor_pwm(100);
 
     while (true) {
-        if (true) {
-            printf("Captured %u\n", pulse_count);
-            // printf("\n\rCapture pin %u. Counter: %u State: %s Duration(us): %.0f", pin, capture_counter,
-            //        edge_type == EDGE_FALLING ? "High" : "Low ", duration_cycle * 1000000);
-            // if (edge_type == EDGE_RISING) printf(" Freq(Hz): %.1f Duty: %.1f", frequency, duty);
+
+        if (is_captured) {
             is_captured = false;
+            printf("Captured %u\n", pulse_count);
         } else {
             printf("No capture\n");
         }
 
-        if(pwm < 100) {
-            pwm += 20;
-        } else {
-            pwm = 0;
-        }
-
-        printf("Setting motor to %d\n", pwm);
-        set_motor_pwm(pwm);
-        sleep_ms(2500);
+        sleep_ms(1000);
     }
 
-    while (1) {
-        // Read the pulse count from the PIO
+    // while (1) {
+    //     // Read the pulse count from the PIO
 
-        // Calculate RPM (assuming 1 pulse per revolution)
-        //float rpm = (pulse_count * 60.0f * 1000000.0f) / (float)timeDiff; // Adjust the divisor if there are multiple pulses per revolution
+    //     // Calculate RPM (assuming 1 pulse per revolution)
+    //     //float rpm = (pulse_count * 60.0f * 1000000.0f) / (float)timeDiff; // Adjust the divisor if there are multiple pulses per revolution
 
-        // RGB format: 0x00RRGGBB
-        if (pulse_count >= 0 && pulse_count < 5) ws2812Color = 0x00FF0000; // Red
-        if (pulse_count >= 5 && pulse_count < 10) ws2812Color = 0x00FFFF00; // Yellow
-        if (pulse_count >= 10 && pulse_count < 15) ws2812Color = 0x0000FF00; // Green
-        if (pulse_count >= 15 && pulse_count < 20) ws2812Color = 0x0000FFFF; // Cyan
-        if (pulse_count >= 20 && pulse_count <= 1400) ws2812Color = 0x000000FF; // Blue
+    //     // RGB format: 0x00RRGGBB
+    //     if (pulse_count >= 0 && pulse_count < 5) ws2812Color = 0x00FF0000; // Red
+    //     if (pulse_count >= 5 && pulse_count < 10) ws2812Color = 0x00FFFF00; // Yellow
+    //     if (pulse_count >= 10 && pulse_count < 15) ws2812Color = 0x0000FF00; // Green
+    //     if (pulse_count >= 15 && pulse_count < 20) ws2812Color = 0x0000FFFF; // Cyan
+    //     if (pulse_count >= 20 && pulse_count <= 1400) ws2812Color = 0x000000FF; // Blue
 
-        set_onboard_led_color(pio, sm, ws2812Color);
+    //     set_onboard_led_color(pio, sm, ws2812Color);
 
-        // Delay for a second
-        sleep_ms(100);
-    }
+    //     // Delay for a second
+    //     sleep_ms(100);
+    // }
 }
 
 /*

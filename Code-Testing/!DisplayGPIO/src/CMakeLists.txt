@@ -27,4 +27,3 @@ hardware_dma
 pico_add_extra_outputs(display)
 
 pico_generate_pio_header(display ${ONBOARD_LED_PIO})
-pico_generate_pio_header(display ${ONBOARD_RPM_PIO})

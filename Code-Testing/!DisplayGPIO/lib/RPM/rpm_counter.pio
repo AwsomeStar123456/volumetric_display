@@ -1,6 +1,0 @@
-.program rpm_counter
-; Count falling edges on the input pin
-loop:
-    wait 0 pin 0
-    in pins, 1
-    jmp loop
