@@ -22,14 +22,14 @@
 #include "Motor.h"
 
 
-#define TARGET_RPM 1736 //Target RPM for the motor
+#define TARGET_RPM 1200 //Target RPM for the motor
 #define TIME_UNTIL_SHUTDOWN 3000000 //Time in us = 3 Seconds
 
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
 #define NUM_3D_FRAMES 1 //Number of 3D frames we have in the animation.
 #define FRAMES_BEFORE_NEXT 1 //Number of times we repeat a frame before moving to the next 3D frame.
 
-#define VOLTAGE_THRESHOLD 0.5 // Voltage threshold in volts
+#define VOLTAGE_THRESHOLD 1.2 // Voltage threshold in volts
 #define ADC_PIN 28 // GPIO pin connected to the ADC
 #define ADC_CHANNEL 2 // ADC channel corresponding to GPIO28
 
@@ -74,7 +74,7 @@ float read_voltage() {
     This methods runs on cpu1 and is responsible for controlling the motor and doing the rpm detection.
 */
 void core1_entry() {
-    sleep_ms(10000); //Sleep to allow user to plug in USB and open serial connection.
+    sleep_ms(7500); //Sleep to allow user to plug in USB and open serial connection.
     printf("Initiating Core1 Setup.\n");
 
     printf("Initiating ADC.\n");
@@ -109,29 +109,69 @@ void core1_entry() {
 
     uint16_t pwm = 100;
     set_motor_pwm(pwm);
+    sleep_ms(1000); // Allow time for the motor to start
+
+    float Kp = 0.2; // Proportional gain
 
     //Log The Current Time
     uint64_t timeBetweenUS = 0;
     lastTime = get_absolute_time();
     currentTime = get_absolute_time();
 
+    absolute_time_t verification_time = get_absolute_time(); //For verification.
+    uint64_t timeBetween = 0;
+    bool isRed = true;
+
+    // Calculate the expected time interval for one revolution based on the target RPM
+    uint64_t expectedTimeUS = 60000000 / TARGET_RPM; // 60 seconds in microseconds divided by target RPM
+
+
     while (true) {
 
         while(read_voltage() > VOLTAGE_THRESHOLD);
         currentTime = get_absolute_time();
         timeBetweenUS = to_us_since_boot(currentTime) - to_us_since_boot(lastTime);
+        lastTime = currentTime;
 
-        if (timeBetweenUS > 0) {
-            float timeDiffs = timeBetweenUS / 1000000.0f; // Convert microseconds to seconds
-            float timeDiffRPM = 60.0f / timeDiffs;
+        // Calculate the error based on the expected time interval
+        int error = expectedTimeUS - timeBetweenUS;
 
-            currentRPM = (int)timeDiffRPM;
-        } else {
-            currentRPM = 0; // Handle the case where timeDiffus is zero
+        // Proportional control
+        int pwm = (int)(Kp * error);
+
+        if (pwm > 100) {
+            pwm = 100;
+        } else if (pwm < 50) {
+            pwm = 50;
         }
 
-        printf("The current volatage is: %f\n", read_voltage());
-        printf("The Current RPM is: %d\n", currentRPM);
+        set_motor_pwm(pwm);
+
+        if(isRed) {
+            set_onboard_led_color(pio, sm, ws2812Red);
+            isRed = false;
+        } else {
+            set_onboard_led_color(pio, sm, ws2812Green);
+            isRed = true;
+        }
+
+        // if(currentRPM >= TARGET_RPM + 50) {
+        //     set_onboard_led_color(pio, sm, ws2812Blue);
+        // } else if (currentRPM <= TARGET_RPM - 50) {
+        //     set_onboard_led_color(pio, sm, ws2812Red);
+        // } else {
+        //     set_onboard_led_color(pio, sm, ws2812Green);
+        // }
+
+        // verification_time = get_absolute_time();
+        // timeBetween = to_us_since_boot(verification_time) - to_us_since_boot(currentTime);
+        //printf("Time From Start to Finish: %d\n", timeBetween);
+        // printf("Current RPM: %d\n", currentRPM);
+        // printf("Current PWM: %d\n", pwm);
+        // printf("Current Err: %d\n", error);
+        // printf("expecTime: %llu\n", expectedTimeUS);
+        // printf("Time Between US: %llu\n", timeBetweenUS);
+        sleep_ms(30);
     }
 }
 
@@ -158,7 +198,7 @@ int main() {
 
         // TODO - Replace true with atTargetRPM
         //atTargetRPM
-        if(false) {
+        if(true) {
 
             //Loop throught all of the 3D frames to create an animation.
             for(int j = 0; j < NUM_3D_FRAMES; j++) {
