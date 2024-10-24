@@ -28,6 +28,7 @@
 #define Kp 0.05f // Proportional constant
 #define Ki 0.1f // Integral constant
 #define Kd 0.01f // Derivative constant
+float lastError = 0.0f;
 volatile int pwm = 0;
 
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
@@ -36,6 +37,7 @@ volatile int pwm = 0;
 
 #define VOLTAGE_THRESHOLD 2 // Voltage threshold in volts
 #define ADC_PIN 28 // GPIO pin connected to the ADC
+#define IR_SENSOR_PIN 28 // GPIO pin connected to the IR sensor
 #define ADC_CHANNEL 2 // ADC channel corresponding to GPIO28
 #define DEBOUNCE_TIME_MS 25 // Debounce time in milliseconds
 
@@ -70,37 +72,45 @@ void set_onboard_led_color(PIO pio, int sm, uint32_t color) {
     pio_sm_put_blocking(pio, sm, color << 8u);
 }
 
+/*
+    Returns the voltage of the ADC as a float.
+*/
 float read_voltage() {
-    uint16_t raw = adc_read();
-    float voltage = raw * 3.3f / (1 << 12); // Convert raw value to voltage (3.3V reference, 12-bit ADC)
+    //Read 16 bit value from ADC. Convert the value to a voltage. (3.3 Reference, 12 bit ADC)
+    uint16_t raw = adc_read(); 
+    float voltage = raw * 3.3f / (1 << 12);
     return voltage;
 }
 
+/*
+    This method calculates the RPM based on the time between pulses from the IR sensor. It
+    implementes. PID, Debouncing, and PWM control for the motor.
+*/
 void calc_rpm(uint gpio, uint32_t events)
 {
-    // if(read_voltage() < VOLTAGE_THRESHOLD && gpio == 28) {
-    //     pulse_count++;
-    //     printf("Pulse detected. Voltage at %.2f Threshold %d\n", read_voltage(), VOLTAGE_THRESHOLD);
-    //     printf("Events: %d GPIO: %d\n", events, gpio);
-    // }
+    //Ensure the interrupt is from the correct GPIO pin.
+    if( gpio != IR_SENSOR_PIN ) return;
 
+    // Check the time since the last pulse. If it is greater than the debounce time, process the pulse.
     uint64_t timeDiffus = to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTime);
     if (timeDiffus > DEBOUNCE_TIME_MS * 1000) {
+        // Check if the voltage is below the threshold.
         if (read_voltage() < VOLTAGE_THRESHOLD) {
+            // Save the current time.
             currentTime = get_absolute_time();        
 
-            printf("Pulse Detected. Time since last pulse: %lld\n", timeDiffus);
+            // Calculate the time difference in seconds and RPM.
             float timeDiffs = timeDiffus / 1000000.0f; // Convert microseconds to seconds
-            printf("Time Between Pulses Seconds: %.2f\n", timeDiffs);
             currentRPM = 60.0f / timeDiffs;
-            printf("RPM: %d\n", (int)(currentRPM));
 
+            // Calculate the error and adjust PWM using PID control.
             float error = TARGET_RPM - currentRPM;
-
-            float output = Kp * error;
+            float derivative = (error - lastError) / timeDiffs;
+            float output = Kp * error + Kd * derivative;
 
             pwm += (int)output;
 
+            // Clamp PWM value to a range of 40 to 100. (Motor Stalls Below 40)
             if(pwm > 100) {
                 pwm = 100;
             } else if (pwm < 40) {
@@ -109,8 +119,8 @@ void calc_rpm(uint gpio, uint32_t events)
 
             set_motor_pwm(pwm);
 
-            printf("Current PWM: %d Error: %.2f\n", pwm, output);
-
+            // Update the last time and error for the next pulse.
+            lastError = error;
             lastTime = currentTime;
         }
     }
@@ -137,11 +147,9 @@ void core1_entry() {
     printf("Initiating Motor.\n");
     init_motor();
 
-    set_motor_pwm(100);
-    sleep_ms(3000); // Allow time for the motor to start
-
-    //Initiate pulse_count so we know how many ticks have happened.
-    pulse_count = 0;
+    // Allow time for the motor to start
+    //set_motor_pwm(100);
+    //sleep_ms(3000);
 
     // Initialize the PIO and state machine. This is the PIO for the WS2812 LED.
     printf("Starting LED.\n");
@@ -154,93 +162,56 @@ void core1_entry() {
     // Report to core0 that it can start processing as core 1 has initialized its peripherals.
     core1_uninitialized = false;
     bool motorEnabled = false;
-
-    uint32_t ws2812Color = 0x00111111; // RGB format: 0x00RRGGBB
-
-    uint16_t pwm = 100;
-    set_motor_pwm(pwm);
-    sleep_ms(1000); // Allow time for the motor to start
-
+    bool motorIRQ = false;
+    atTargetRPM = false;
     lastTime = get_absolute_time();
 
-    gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
+    sleep_ms(1000);
+
+    // Set up the interrupt for the IR sensor.
+    //gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
 
     while(true) {
-        //printf("Current Voltage: %.2f V\n", read_voltage()); // Print voltage with 2 decimal places
-        if(currentRPM >= TARGET_RPM + 50){
-            set_onboard_led_color(pio, sm, ws2812Blue);
-        } else if (currentRPM <= TARGET_RPM - 50) {
-            set_onboard_led_color(pio, sm, ws2812Red);
+        printf("Doing Loop\n");
+        if(to_us_since_boot(get_absolute_time()) - to_us_since_boot(lastTime) > TIME_UNTIL_SHUTDOWN || to_ms_since_boot(get_absolute_time()) < 3000) {
+            motorEnabled = false;
+
+            if(read_voltage() < VOLTAGE_THRESHOLD) {
+                motorEnabled = true;
+            }
+        } 
+
+        if(motorEnabled) {
+            if(!motorIRQ) {
+                set_motor_pwm(100);
+                sleep_ms(2000);
+                gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, true, &calc_rpm);
+                sleep_ms(2000);
+                motorIRQ = true;
+            }
+
+            if(currentRPM >= TARGET_RPM + 50){
+                set_onboard_led_color(pio, sm, ws2812Blue);
+                atTargetRPM = false;
+            } else if (currentRPM <= TARGET_RPM - 50) {
+                set_onboard_led_color(pio, sm, ws2812Red);
+                atTargetRPM = false;
+            } else {
+                set_onboard_led_color(pio, sm, ws2812Green);
+                atTargetRPM = true;
+            }
+
         } else {
-            set_onboard_led_color(pio, sm, ws2812Green);
+            if(motorIRQ) {
+                set_motor_pwm(0);
+                gpio_set_irq_enabled_with_callback(28, GPIO_IRQ_EDGE_FALL, false, NULL);
+                motorIRQ = false;
+            }
+            atTargetRPM = false;
+            set_onboard_led_color(pio, sm, ws2812Black);
         }
-
-        sleep_ms(200);
-
+        sleep_ms(500);
     }
-
-    // float Kp = 0.2; // Proportional gain
-
-    // //Log The Current Time
-    // uint64_t timeBetweenUS = 0;
-    // lastTime = get_absolute_time();
-    // currentTime = get_absolute_time();
-
-    // absolute_time_t verification_time = get_absolute_time(); //For verification.
-    // uint64_t timeBetween = 0;
-    // bool isRed = true;
-
-    // // Calculate the expected time interval for one revolution based on the target RPM
-    // uint64_t expectedTimeUS = 60000000 / TARGET_RPM; // 60 seconds in microseconds divided by target RPM
-
-
-    // while (true) {
-
-    //     while(read_voltage() > VOLTAGE_THRESHOLD);
-    //     currentTime = get_absolute_time();
-    //     timeBetweenUS = to_us_since_boot(currentTime) - to_us_since_boot(lastTime);
-    //     lastTime = currentTime;
-
-    //     // Calculate the error based on the expected time interval
-    //     int error = expectedTimeUS - timeBetweenUS;
-
-    //     // Proportional control
-    //     int pwm = (int)(Kp * error);
-
-    //     if (pwm > 100) {
-    //         pwm = 100;
-    //     } else if (pwm < 50) {
-    //         pwm = 50;
-    //     }
-
-    //     set_motor_pwm(pwm);
-
-    //     if(isRed) {
-    //         set_onboard_led_color(pio, sm, ws2812Red);
-    //         isRed = false;
-    //     } else {
-    //         set_onboard_led_color(pio, sm, ws2812Green);
-    //         isRed = true;
-    //     }
-
-    //     // if(currentRPM >= TARGET_RPM + 50) {
-    //     //     set_onboard_led_color(pio, sm, ws2812Blue);
-    //     // } else if (currentRPM <= TARGET_RPM - 50) {
-    //     //     set_onboard_led_color(pio, sm, ws2812Red);
-    //     // } else {
-    //     //     set_onboard_led_color(pio, sm, ws2812Green);
-    //     // }
-
-    //     // verification_time = get_absolute_time();
-    //     // timeBetween = to_us_since_boot(verification_time) - to_us_since_boot(currentTime);
-    //     //printf("Time From Start to Finish: %d\n", timeBetween);
-    //     // printf("Current RPM: %d\n", currentRPM);
-    //     // printf("Current PWM: %d\n", pwm);
-    //     // printf("Current Err: %d\n", error);
-    //     // printf("expecTime: %llu\n", expectedTimeUS);
-    //     // printf("Time Between US: %llu\n", timeBetweenUS);
-    //     sleep_ms(30);
-    // }
 }
 
 /*
