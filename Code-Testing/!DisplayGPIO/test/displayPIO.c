@@ -237,7 +237,7 @@ int main() {
 
         // TODO - Replace true with atTargetRPM
         //atTargetRPM
-        if(true) {
+        if(atTargetRPM) {
 
             //Loop throught all of the 3D frames to create an animation.
             for(int j = 0; j < NUM_3D_FRAMES; j++) {
@@ -260,7 +260,7 @@ int main() {
                                 gpio_set_dir(currentGND, GPIO_IN);
 
                                 //Get Pixel On Off Status
-                                pixelVal = (image_data[j][i][y] >> x) & 1;
+                                pixelVal = (image_data_voxel[j][i][y] >> x) & 1;
 
                                 //Check GPIO pins for current pixel
                                 currentVCC = gpiomap_flipped[y][x][0];

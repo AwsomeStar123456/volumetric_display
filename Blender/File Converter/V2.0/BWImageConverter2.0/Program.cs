@@ -8,5 +8,5 @@ using System.Linq;
 Console.WriteLine("Hello, World!");
 
 MyImageConverter converter = new MyImageConverter();
-converter.DirectoryImagesToTextFile("../../../../../../!Volumetric Blender Data/Straight Cube/Render Data", "../../../../../../!Volumetric Blender Data/Straight Cube/Text Data/Output.txt");
-converter.GenerateHeaderFile("../../../../../../!Volumetric Blender Data/Straight Cube/Text Data/Output.txt", "../../../../../../!Volumetric Blender Data/Straight Cube/Header Data");
+converter.DirectoryImagesToTextFile("../../../../../../!Volumetric Blender Data/VoxelCube/Render Data", "../../../../../../!Volumetric Blender Data/VoxelCube/Text Data/Output.txt");
+converter.GenerateHeaderFile("../../../../../../!Volumetric Blender Data/VoxelCube/Text Data/Output.txt", "../../../../../../!Volumetric Blender Data/VoxelCube/Header Data");
