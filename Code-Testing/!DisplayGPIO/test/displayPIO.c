@@ -32,7 +32,7 @@ float lastError = 0.0f;
 volatile int pwm = 0;
 
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
-#define NUM_3D_FRAMES 1 //Number of 3D frames we have in the animation.
+#define NUM_3D_FRAMES 168 //Number of 3D frames we have in the animation.
 #define FRAMES_BEFORE_NEXT 1 //Number of times we repeat a frame before moving to the next 3D frame.
 
 #define VOLTAGE_THRESHOLD 2 // Voltage threshold in volts
@@ -260,11 +260,11 @@ int main() {
                                 gpio_set_dir(currentGND, GPIO_IN);
 
                                 //Get Pixel On Off Status
-                                pixelVal = (image_data_voxel[j][i][y] >> x) & 1;
+                                pixelVal = (water[j][i][y] >> x) & 1;
 
                                 //Check GPIO pins for current pixel
-                                currentVCC = gpiomap_flipped[y][x][0];
-                                currentGND = gpiomap_flipped[y][x][1];
+                                currentVCC = gpiomap_flipped[y][16 - x][0];
+                                currentGND = gpiomap_flipped[y][16 - x][1];
 
                                 //If the pixel should be on set its GPIO pins respectively
                                 if(pixelVal == 1) {
