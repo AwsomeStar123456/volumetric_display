@@ -32,8 +32,8 @@ float lastError = 0.0f;
 volatile int pwm = 0;
 
 #define PIXEL_TIME 10 //Time in us that each pixel is displayed for.
-#define NUM_3D_FRAMES 168 //Number of 3D frames we have in the animation.
-#define FRAMES_BEFORE_NEXT 1 //Number of times we repeat a frame before moving to the next 3D frame.
+#define NUM_3D_FRAMES 88 //Number of 3D frames we have in the animation.
+#define FRAMES_BEFORE_NEXT 3 //Number of times we repeat a frame before moving to the next 3D frame.
 
 #define VOLTAGE_THRESHOLD 2 // Voltage threshold in volts
 #define ADC_PIN 28 // GPIO pin connected to the ADC
@@ -260,7 +260,7 @@ int main() {
                                 gpio_set_dir(currentGND, GPIO_IN);
 
                                 //Get Pixel On Off Status
-                                pixelVal = (water[j][i][y] >> x) & 1;
+                                pixelVal = (rotatingcube[j][i][y] >> x) & 1;
 
                                 //Check GPIO pins for current pixel
                                 currentVCC = gpiomap_flipped[y][16 - x][0];

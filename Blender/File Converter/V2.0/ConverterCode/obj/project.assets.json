@@ -134,11 +134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj",
+      "projectUniqueName": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj",
       "projectName": "ConverterCode",
-      "projectPath": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj",
+      "projectPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\ConverterCode.csproj",
       "packagesPath": "C:\\Users\\Semra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Semra\\Documents\\ECE3992\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\obj\\",
+      "outputPath": "E:\\!!IRL\\School\\!!University\\UofU\\ECE3992\\Project\\volumetric_display\\Blender\\File Converter\\V2.0\\ConverterCode\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -193,7 +193,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
