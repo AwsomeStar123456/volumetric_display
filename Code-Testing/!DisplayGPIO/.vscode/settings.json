@@ -24,6 +24,7 @@
   "cmake.generator": "Ninja",
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "files.associations": {
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "initialization.h": "c"
   }
 }
