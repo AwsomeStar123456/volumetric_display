@@ -207,7 +207,7 @@ int main() {
                                 gpio_set_dir(currentGND, GPIO_IN);
 
                                 //Get Pixel On Off Status
-                                pixelVal = (image_data[j][i][y] >> x) & 1;
+                                pixelVal = (water[j][i][y] >> x) & 1;
 
                                 //Check GPIO pins for current pixel
                                 currentVCC = gpiomap_flipped[y][x][0];
