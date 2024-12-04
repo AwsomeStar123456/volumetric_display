@@ -59,12 +59,12 @@ const uint32_t ws2812Blue  = 0x000000FF; // RGB format: 0x00RRGGBB
 const uint32_t ws2812Black = 0x00000000; // RGB format: 0x00RRGGBB
 
 //Animation Switching Variables
-#define NUM_ANIMATIONS 5 //Number of animations we have in the animation array.
-int animations_currentframe = 4; //Which animation to start on.
+#define NUM_ANIMATIONS 6 //Number of animations we have in the animation array.
+int animations_currentframe = 5; //Which animation to start on.
 //Animation Order: Water, Intel, Rotating Cube, Sine Wave
-const uint16_t (*animations[NUM_ANIMATIONS])[24][9] = {water, intel, sinewave, bouncyball, flappybird}; //Array of animations.
-uint16_t animations_framecount[NUM_ANIMATIONS] = {NUM_WATER_FRAMES, NUM_INTEL_FRAMES, NUM_SINEWAVE_FRAMES, NUM_BOUNCYBALL_FRAMES, NUM_FLAPPYBIRD_FRAMES}; //Number of frames in each animation.
-uint16_t animations_framebeforenext[NUM_ANIMATIONS] = {1, 3, 1, 1, 1}; //Number of frames to repeat before moving to the next frame.
+const uint16_t (*animations[NUM_ANIMATIONS])[24][9] = {water, intel, sinewave, bouncyball, flappybird, rain}; //Array of animations.
+uint16_t animations_framecount[NUM_ANIMATIONS] = {NUM_WATER_FRAMES, NUM_INTEL_FRAMES, NUM_SINEWAVE_FRAMES, NUM_BOUNCYBALL_FRAMES, NUM_FLAPPYBIRD_FRAMES, NUM_RAIN_FRAMES}; //Number of frames in each animation.
+uint16_t animations_framebeforenext[NUM_ANIMATIONS] = {1, 3, 1, 1, 1, 1}; //Number of frames to repeat before moving to the next frame.
 
 const uint16_t (*activeFrame)[24][9]; 
 
