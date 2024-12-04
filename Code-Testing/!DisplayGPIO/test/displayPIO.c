@@ -139,7 +139,6 @@ void calc_rpm(uint gpio, uint32_t events)
             lastTime = currentTime;
         }
     }
-
 }
 
 /*
@@ -255,7 +254,6 @@ int main() {
 
     while (1) {
 
-
         if(atTargetRPM) {
             //Get the current animation frame and its respective frame count and speed.
             activeFrame = animations[animations_currentframe % NUM_ANIMATIONS];
@@ -265,8 +263,8 @@ int main() {
             //Loop throught all of the 3D frames to create an animation.
             for(int j = 0; j < animations_numframes; j++) {
 
-                int count = 0;
-                while(count < current_animations_framebeforenext)
+                //Slows the animation speed down by repeating a 3D frame (if desired)
+                for(int count = 0; count < current_animations_framebeforenext; count++)
                 {
                     //Loop through all 24 2D slices of the 3D frame
                     for(int i = 0; i < 24; i++) {
@@ -295,25 +293,19 @@ int main() {
                                     gpio_set_dir(currentGND, GPIO_OUT);
                                     gpio_put(currentVCC, 1);
                                     gpio_put(currentGND, 0);
-                                    
                                 }
 
                                 //Wait until PIXEL_TIME (microseconds) has passed since the start time to ensure timing
                                 while (to_us_since_boot(get_absolute_time()) - to_us_since_boot(start_time) < PIXEL_TIME){}
-
                             }
                         }
                     }
-                    count++;
                 }
             }
         } else {
             clearLEDs();
         }
-
-
     }
-
     return 0;
 }
 
