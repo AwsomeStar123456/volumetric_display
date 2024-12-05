@@ -284,8 +284,8 @@ int main() {
                                 pixelVal = (activeFrame[j][i][y] >> x) & 1;
 
                                 //Check GPIO pins for current pixel
-                                currentVCC = gpiomap_flipped[y][16 - x][0];
-                                currentGND = gpiomap_flipped[y][16 - x][1];
+                                currentVCC = gpiomap_flipped[y][15 - x][0];
+                                currentGND = gpiomap_flipped[y][15 - x][1];
 
                                 //If the pixel should be on set its GPIO pins respectively
                                 if(pixelVal == 1) {
