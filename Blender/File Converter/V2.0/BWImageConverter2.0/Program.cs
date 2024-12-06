@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 
-string baseDirectory = "../../../../../../!Volumetric Blender Data/Fire";
+string baseDirectory = "../../../../../../!Volumetric Blender Data/Doughnut";
 Console.WriteLine("Initiating image conversion.");
 
 MyImageConverter converter = new MyImageConverter();
