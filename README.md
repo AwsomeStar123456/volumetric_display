@@ -1,5 +1,7 @@
 # Team Intel Engineers Volumetric Display
 
+![Display](Images/20240807_014826.jpg)
+
 This is our senior project for the Fall 2024 semester at the University of Utah.
 
 Volumetric three-dimensional displays are displays which give viewers a sense of depth and immersion
@@ -7,6 +9,12 @@ by displaying an image in a three-dimensional space. The motivation for such tec
 can be more immersed into the content they are viewing. Specifically they can offer more accurate representations of three-dimensional objects. The method we are using involves taking a light emitting diode (LED) matrix and spinning it. As it’s spinning the matrix will be displaying different slices of a three dimensional image. These slices then form a three dimensional volumetric image. Our project is handheld and will display volumetric images from Blender.
 
 Our proposal for this project can be found [here](https://drive.google.com/file/d/1ndLRNWP-nPX-9-LFJ2siUfhwasraIrXO/preview).
+
+Our final presentation slides can be found [here](https://docs.google.com/presentation/d/1vZk0xXERd0lbI73o8EUdau5T-LTruhlxJzRkWaqgYXQ/preview).
+Our final blender slides can be found [here](https://docs.google.com/presentation/d/1KxT9TL9DTWdXwFqC-N0FRyzLAdsu7cya_VM0FvRhF8w/edit?usp=sharing).
+
+This project is based off of a similar project created by YouTube user Mitxela which can be found [here](https://github.com/mitxela/candle).
+His YouTube channel can be found [here](https://www.youtube.com/@mitxela).
 
 ## Project Members
 
@@ -27,8 +35,15 @@ This implementation directly drives the matrix using the GPIO pins. This allows 
 | WaveShare RP2040 Tiny | Microcontroller          |
 | Adafruit Dot Matrix   | Charlieplexed LED Matrix |
 | Vishay TCRT5000       | IR Sensor                |
+| MOSFET SOT-23         | Motor Driver MOSFET      |
 | RF-410CA              | Motor                    |
+| LIR2450 Battery       | Battery                  |
+| Flyback Diode         | Flyback Motor Diode      |
 | Oshpark Custom PCB    | PCB Board                |
+| 3D Printed Chassis    | Display Chassis          |
+
+Block Diagram:
+![BlockDiagram](Images/Final_Volumetric_Display_Block_Diagram.png)
 
 ### I2C Implemetation (ONLY WORKS FOR CIRCULAR IMAGES)
 This implementation uses the I2C controller for the LED matrix. We have determined that this cannot switch frames fast enough to show non circular shapes. An example of a circular shape that works is a cylinder since the display just has to have one 2D frame that spins.
@@ -41,6 +56,10 @@ This implementation uses the I2C controller for the LED matrix. We have determin
 | Vishay TCRT5000       | IR Sensor                |
 | RF-410CA              | Motor                    |
 | ADAFRUIT DRV8833      | Motor Driver             |
+| 3D Printed Chassis    | Display Chassis          |
+
+Block Diagram:
+![OriginalBlockDiagam](Images/Original_Block_Diagram.png)
 
 
 ## Projects (Under Code-Testing)
