@@ -16,24 +16,18 @@ project(display C CXX ASM)
 #Initialise the pico SDK
 pico_sdk_init()
 
-#Include all the folders with files.
-include_directories(DisplayI2C)
-include_directories(ImageData)
-include_directories(WS2812)
+#Initialize the onboard LED path.
+set(ONBOARD_LED_PATH "${CMAKE_SOURCE_DIR}/lib/OnboardLED/ws2812.c")
+set(ONBOARD_LED_PIO "${CMAKE_SOURCE_DIR}/lib/OnboardLED/ws2812.pio")
 
-add_executable(display
-	display.c
-	WS2812/ws2812.c
-	)
-	
-#Link all of the required libraries to the project.
-target_link_libraries(display pico_stdlib)
-target_link_libraries(display pico_multicore)
-target_link_libraries(display hardware_pio)
-target_link_libraries(display hardware_i2c)
-target_link_libraries(display hardware_pwm)
+# Automatically include all header files in the include directory and its subdirectories
+file(GLOB_RECURSE HEADER_FILES "include/*.h")
+foreach(HEADER_FILE ${HEADER_FILES})
+    get_filename_component(DIR ${HEADER_FILE} DIRECTORY)
+    include_directories(${DIR})
+endforeach()
 
-#Add the extra outputs to the project. This creates a .uf2 file that can be flashed to the pico.
-pico_add_extra_outputs(display)
+file(GLOB_RECURSE SOURCE_FILES "lib/*.c")
 
-pico_generate_pio_header(display ${CMAKE_CURRENT_LIST_DIR}/WS2812/ws2812.pio)
+add_subdirectory(src)
+add_subdirectory(test)

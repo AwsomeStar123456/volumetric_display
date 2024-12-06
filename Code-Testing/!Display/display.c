@@ -264,7 +264,7 @@ int main()
 
             // for (int i = 0; i < 24; i++) {
             //     //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
-            //     displayImage(images[i]);
+                 displayImage(diamond);
             //     //(rpm / 60000) / 24
             //     sleep_ms(1000); // Delay between images, adjust as needed
             // }
@@ -281,34 +281,34 @@ int main()
         //     clear(i2c0, ISSI_ADDR_DEFAULT, frame);
         // }
 
-        if(rpm > 0) {
-            double rotation_time = 60.0 / rpm;
-            double wait_time = rotation_time / 24.0; //Seconds per frame
+        // if(rpm > 0) {
+        //     double rotation_time = 60.0 / rpm;
+        //     double wait_time = rotation_time / 24.0; //Seconds per frame
 
-            for (int i = 0; i < 24; i++) {
-                if(lastCleared) {
-                    displayImage(images[i]);
-                    lastCleared = false;
-                } else {
-                    setPixels(imagesoptimized[i]);
-                }
+        //     for (int i = 0; i < 24; i++) {
+        //         if(lastCleared) {
+        //             displayImage(images[i]);
+        //             lastCleared = false;
+        //         } else {
+        //             setPixels(imagesoptimized[i]);
+        //         }
 
-                //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
-                //setPixels(imagesoptimized[i], sizeof(imagesoptimized[i]) / sizeof(int));
-                //(rpm / 60000) / 24
-                //sleep_us(((float)rpm / 60000000) / 24); // Delay between images, adjust as needed
-                //sleep_us(1000);
-                //sleep_ms(6);
+        //         //clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+        //         //setPixels(imagesoptimized[i], sizeof(imagesoptimized[i]) / sizeof(int));
+        //         //(rpm / 60000) / 24
+        //         //sleep_us(((float)rpm / 60000000) / 24); // Delay between images, adjust as needed
+        //         //sleep_us(1000);
+        //         //sleep_ms(6);
 
-                sleep_us(5850); // convert wait_time to microseconds
+        //         sleep_us(5850); // convert wait_time to microseconds
 
-                //uint32_t start_time = to_us_since_boot(get_absolute_time());
-                //while (to_us_since_boot(get_absolute_time()) - start_time < wait_time * 1e6);
-            }
-        } else {
-            clear(i2c0, ISSI_ADDR_DEFAULT, frame);
-            lastCleared = true;
-        }
+        //         //uint32_t start_time = to_us_since_boot(get_absolute_time());
+        //         //while (to_us_since_boot(get_absolute_time()) - start_time < wait_time * 1e6);
+        //     }
+        // } else {
+        //     clear(i2c0, ISSI_ADDR_DEFAULT, frame);
+        //     lastCleared = true;
+        // }
 
 
         // for (int i = 0; i < 24; i++) {
